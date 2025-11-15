@@ -15,7 +15,7 @@ const countries = [
   { name: "Germany", flag: "https://flagcdn.com/de.svg" },
   { name: "Netherlands", flag: "https://flagcdn.com/nl.svg" },
   { name: "France", flag: "https://flagcdn.com/fr.svg" },
-  { name: "Ireland", flag: "https://flagcdn.com/ie.svg" },
+  // { name: "Ireland", flag: "https://flagcdn.com/ie.svg" },
 ];
 
 
@@ -32,16 +32,16 @@ const CountriesSection = () => {
           </p>
 
         {/* Country Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 place-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 place-items-center">
           {countries.map((country, index) => (
             <div
               key={index}
-              className="bg-white shadow-md hover:shadow-lg rounded-2xl p-4 transition duration-300 w-full max-w-[180px] flex flex-col items-center"
+              className="bg-white shadow-md hover:shadow-lg rounded-2xl p-4 transition duration-300 w-full max-w-[200px] flex flex-col items-center"
             >
               <img
                 src={country.flag}
                 alt={country.name}
-                className="w-24 h-16   object-cover border border-gray-200"
+                className="w-28 h-16   object-cover border border-gray-200"
               />
               <h3 className="text-gray-800 font-semibold">{country.name}</h3>
             </div>

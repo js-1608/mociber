@@ -114,8 +114,8 @@ export default function About() {
                     {/* Left: Heading + image */}
                     <div className="lg:col-span-5">
                         <h3 className="text-sm uppercase text-gray-400 mb-4">Vision  Mission & Values</h3>
-                        <h2 className="text-3xl lg:text-xl font-bold leading-tight mb-6">
-                            Simplifying the Future with Emerging Technologies. And change the Pic also. There is one leady with VR. 
+                        <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-6">
+                            Simplifying the Future with Emerging Technologies. 
                             </h2>
 
                         <div className="rounded-xl overflow-hidden shadow-lg mb-6">
@@ -209,7 +209,7 @@ export default function About() {
                                Our Business Approach
                             </div>
                             <h2 className="mt-2 text-3xl font-extrabold">How we deliver predictable, secure outcomes</h2>
-                            <p className="mt-2 text-gray-600 max-w-2xl">We follow a disciplined, customer-first approach across mindset, concept, team, solution and delivery — ensuring every engagement is clear, measurable, and aligned to your business goals.</p>
+                            <p className="mt-2 text-gray-200 max-w-2xl">We follow a disciplined, customer-first approach across mindset, concept, team, solution and delivery — ensuring every engagement is clear, measurable, and aligned to your business goals.</p>
                         </div>
                         <div className="hidden md:flex items-center gap-3">
                             {/* <button className="px-4 py-2 rounded-lg bg-emerald-600 text-white font-medium shadow">Get a roadmap</button> */}

@@ -8,7 +8,7 @@ const team = [
     bio: `Mohsin Margoob brings over 15 years of experience as a dynamic strategist, thought leader, and seasoned professional in information security, data privacy, cybersecurity, business continuity, digital transformation, and sustainability. He has executed managed security services, projects, and audits for renowned organisations and acted as a vCISO.`,
     certifications: ["CISM", "CRISC", "CEH", "CHFI", "LA-ISO27001", "LA-ISO22301", "AI in Cybersecurity"],
     highlights: `Projects for American Express, STC, Mobily, Altran, Yanal Finance, Sanctum, Riyadh Airport Company (RAC), Live Healthier, gMed, Canvas, Equinox, Sapienza, WorldPay, FINRA, and more. Experience across USA, UK, Middle East and India.`,
-    linkedIn: "https://www.linkedin.com/in/mohsinmargoob/",
+    linkedIn: "https://www.linkedin.com/in/mohsin-m-10b05549/",
   },
   {
     name: "Mohammad Iqbal",
@@ -48,7 +48,7 @@ export default function OurTeamSection() {
                     </div>
                     <h2 className="text-3xl md:text-4xl font-extrabold mt-6 leading-tight" data-aos="fade-up">
                         The minds, innovators, and problem-solvers <br className="hidden md:block" />
-                        driving our mission to <span className="text-blue-300">create safer</span>
+                        driving our mission to <span className="text-blue-300">real world</span>
                     </h2>
                 </div>
 

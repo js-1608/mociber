@@ -79,7 +79,7 @@ export default function Contact() {
             <div className="bg-transparent rounded-lg overflow-hidden border border-white/6">
               <iframe
                 title="Office location"
-                src="https://www.google.com/maps?q=new+york&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.20985976958!2d78.4004189743166!3d29.158487460004636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390bbb8014bd8bff%3A0x389b4805504fd6c6!2sWhite%20House!5e0!3m2!1sen!2sin!4v1763231760572!5m2!1sen!2sin"
                 className="w-full h-80 md:h-[420px] border-0"
                 allowFullScreen=""
                 loading="lazy"

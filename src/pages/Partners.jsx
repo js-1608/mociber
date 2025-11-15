@@ -37,7 +37,7 @@ export default function Partners() {
                     <div className="relative flex justify-center">
                         {/* <div className="w-72 h-72 md:w-96 md:h-96 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl shadow-2xl rotate-3"></div> */}
                         {/* <div className="absolute inset-0 m-auto w-60 h-60 md:w-80 md:h-80 bg-white/10 border border-white/20 backdrop-blur-xl rounded-3xl shadow-xl -rotate-3"></div> */}
-                        <img src="/partners.jpg" alt="Partnership" className=" inset-0 m-full object-contain rounded-2xl border-2" data-aos="fade-up"/>
+                        <img src="/about/partner.jpg" alt="Partnership" className=" inset-0 m-full object-contain rounded-2xl border-2" data-aos="fade-up"/>
                     </div>  
 
                 </div>
@@ -123,7 +123,7 @@ const PartnerSection = () => {
                         A win-win for you and your clients
                     </h2>
 
-                    <p className="text-gray-400 max-w-2xl mx-auto ">
+                    <p className="text-gray-200 max-w-2xl mx-auto ">
                         When you refer clients to Mociber through our partner program, you'll both benefit.
                     </p>
                 </div>

@@ -80,8 +80,8 @@ const Career = () => {
                            
 
                             <h2 className=" text-3xl md:text-4xl font-extrabold  mb-5" data-aos="fade-up">
-                                Mociber as an
-                                <span className="text-blue-600">Employer</span>
+                                Mociber as an 
+                                <span className="text-blue-600"> Employer</span>
                             </h2>
 
                             <p className="text-gray-300 mb-8">
