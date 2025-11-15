@@ -1,8 +1,6 @@
 import JobsSection from "@/components/JobSection";
-import LifeAtMociberAccordion from "@/components/LifeAtMociber";
 import HeroBanner from "@/components/ServiceHero";
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
 const Career = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
