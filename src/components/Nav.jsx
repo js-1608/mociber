@@ -671,11 +671,11 @@ const Header = () => {
                         <div className="px-4 pb-4 bg-[#141418]">
                           <ul className="space-y-2">
                             <li><Link to="/about" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">About Us</Link></li>
-                            <li><Link to="/platforms/vuln-management" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Partners</Link></li>
-                            <li><Link to="/platforms/grc" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">News</Link></li>
-                            <li><Link to="/platforms/esg" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Events</Link></li>
-                            <li><Link to="/platforms/esg" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Career</Link></li>
-                            <li><Link to="/platforms/esg" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Contact Us</Link></li>
+                            <li><Link to="/partners" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Partners</Link></li>
+                            <li><Link to="/News" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">News</Link></li>
+                            <li><Link to="/events" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Events</Link></li>
+                            <li><Link to="/careers" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Career</Link></li>
+                            <li><Link to="/contact" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Contact Us</Link></li>
                           </ul>
                         </div>
                       )}

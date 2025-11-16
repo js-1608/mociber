@@ -112,7 +112,7 @@ const PartnerSection = () => {
 
     return (
         <section className="">
-            <div className="max-w-6xl mx-auto px-6 py-16">
+            <div className="max-w-6xl mx-auto px-6 py-8">
                 {/* Top hero */}
                 <div className="text-center mb-10">
                     <div className="inline-block px-3 py-1 rounded-full border text-white text-xs font-semibold mb-4">
