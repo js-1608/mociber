@@ -9,9 +9,11 @@ import ServiceDetail from "./pages/Service";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Partners from "./pages/Partners";
 import ScrollToTop from "./components/ScrollToTop";
+import Blogs from "./pages/Blogs";
+import BlogDetail from "./pages/BlogDetail";
 
 function App() {
   useEffect(() => {
@@ -34,6 +36,8 @@ function App() {
           <Route path="/service" element={<ServiceDetail />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/blog" element={<Blogs/>} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<h1 className="text-white">Page Not Found</h1>} />
         </Routes>
