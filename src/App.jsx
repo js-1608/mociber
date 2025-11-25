@@ -14,6 +14,9 @@ import Partners from "./pages/Partners";
 import ScrollToTop from "./components/ScrollToTop";
 import Blogs from "./pages/Blogs";
 import BlogDetail from "./pages/BlogDetail";
+import WhitePapersPage from "./pages/Whitepaper";
+import Videos from "./pages/Video";
+import CaseStudies from "./pages/CaseStudies";
 
 function App() {
   useEffect(() => {
@@ -38,6 +41,11 @@ function App() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/blog" element={<Blogs/>} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/whitepaper" element={<WhitePapersPage/>} />
+          <Route path="/videos" element={<Videos/>} />
+          <Route path="/case-studies" element={<CaseStudies/>} />
+
+
           <Route path="/about" element={<About />} />
           <Route path="*" element={<h1 className="text-white">Page Not Found</h1>} />
         </Routes>
