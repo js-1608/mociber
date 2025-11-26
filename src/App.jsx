@@ -17,6 +17,7 @@ import BlogDetail from "./pages/BlogDetail";
 import WhitePapersPage from "./pages/Whitepaper";
 import Videos from "./pages/Video";
 import CaseStudies from "./pages/CaseStudies";
+import EBooks from "./pages/EBooks";
 
 function App() {
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/whitepaper" element={<WhitePapersPage/>} />
           <Route path="/videos" element={<Videos/>} />
           <Route path="/case-studies" element={<CaseStudies/>} />
+          <Route path="/ebooks" element={<EBooks/>} />
 
 
           <Route path="/about" element={<About />} />

@@ -1,23 +1,21 @@
-// CaseStudies.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import DOMPurify from "dompurify";
+import HeroBanner from "@/components/ServiceHero";
 
 /*
-  What this does
-  - Finds the WP tag whose name equals "case studies" (case-insensitive).
-  - Fetches posts that include that tag (WP endpoint: /posts?tags=<id>&_embed).
-  - Renders a hero, filter header, and a responsive card grid of posts.
-  - Uses a local hero image uploaded earlier:
-      /mnt/data/f7c8ca9b-cbbe-423f-a1d4-b163c032edb5.png
-  Notes:
-  - Tailwind CSS required for styles.
+  CaseStudiesList.jsx
+  - Fetches the tag "case studies" (robust lookup) and then fetches posts with that tag.
+  - Renders them in a vertical list layout (thumbnail left, content right) matching the provided design.
+  - Uses a developer-provided local fallback image for posts missing featured images:
+      /mnt/data/8e321088-9348-4be6-910b-3ab5e1f949e4.png
+  - Tailwind CSS required.
   - Install DOMPurify: npm i dompurify
-  - Set REACT_APP_WP_BASE in .env or edit WP_BASE below.
+  - Set REACT_APP_WP_BASE in .env to override WP_BASE if needed.
 */
 
 const WP_BASE = "https://blogs.esyride.in/wp-json/wp/v2";
-const HERO_IMG = "/mnt/data/f7c8ca9b-cbbe-423f-a1d4-b163c032edb5.png"; // developer-provided local image
+const FALLBACK_IMG = "/mnt/data/8e321088-9348-4be6-910b-3ab5e1f949e4.png"; // developer-provided image path
 
 function formatDate(iso) {
   try {
@@ -34,92 +32,80 @@ function estimateReadTime(html = "") {
   return `${mins} min read`;
 }
 
-function excerptText(html = "", maxWords = 28) {
-  const clean = DOMPurify.sanitize(html, { ALLOWED_TAGS: [] });
+function excerptText(html = "", maxWords = 30) {
+  const clean = DOMPurify.sanitize(html || "", { ALLOWED_TAGS: [] });
   const arr = clean.split(/\s+/).filter(Boolean);
   if (arr.length <= maxWords) return clean;
   return arr.slice(0, maxWords).join(" ") + "...";
 }
 
-export default function CaseStudies() {
+export default function CaseStudiesList() {
   const [tagId, setTagId] = useState(null);
   const [posts, setPosts] = useState([]);
-  const [loadingTag, setLoadingTag] = useState(true);
-  const [loadingPosts, setLoadingPosts] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // 1) resolve tag id for name "case studies" (case-insensitive)
+  // Resolve tag id for "case studies" (slug try then search)
   useEffect(() => {
     let mounted = true;
-    setLoadingTag(true);
-    setError(null);
-
-    // We try a couple of approaches:
-    //  - query by slug if likely 'case-studies'
-    //  - fallback to /tags?search=...
     async function findTag() {
       try {
-        // first try by slug (common): 'case-studies'
-        const slugTry = await fetch(`${WP_BASE}/tags?slug=case-studies`);
-        if (!slugTry.ok) throw new Error("Tag slug lookup failed");
-        const slugData = await slugTry.json();
-        if (mounted && Array.isArray(slugData) && slugData.length > 0) {
-          setTagId(slugData[0].id);
-          return;
+        const slugRes = await fetch(`${WP_BASE}/tags?slug=case-studies`);
+        if (slugRes.ok) {
+          const arr = await slugRes.json();
+          if (mounted && Array.isArray(arr) && arr.length > 0) {
+            setTagId(arr[0].id);
+            return;
+          }
         }
 
-        // fallback: search by name (case-insensitive)
         const searchRes = await fetch(`${WP_BASE}/tags?search=${encodeURIComponent("case studies")}&per_page=50`);
-        if (!searchRes.ok) throw new Error("Tag search failed");
-        const searchData = await searchRes.json();
-        if (mounted) {
-          // try to find exact name match (case-insensitive)
-          const found = (searchData || []).find(
-            (t) => typeof t.name === "string" && t.name.trim().toLowerCase() === "case studies"
-          );
-          if (found) {
-            setTagId(found.id);
-            return;
+        if (searchRes.ok) {
+          const data = await searchRes.json();
+          if (mounted) {
+            const found = (data || []).find(t => t.name && t.name.trim().toLowerCase() === "case studies");
+            if (found) {
+              setTagId(found.id);
+              return;
+            }
+            if (data && data.length > 0) {
+              setTagId(data[0].id);
+              return;
+            }
           }
-          // if no exact match, pick first reasonably matching tag (if present)
-          if (searchData && searchData.length > 0) {
-            setTagId(searchData[0].id);
-            return;
-          }
-          // not found
-          setError("Tag 'case studies' not found on this WordPress site.");
         }
+
+        if (mounted) setError("Tag 'case studies' not found on this site.");
       } catch (err) {
         console.error(err);
-        if (mounted) setError(err.message || "Failed to find tag");
-      } finally {
-        if (mounted) setLoadingTag(false);
+        if (mounted) setError(err.message || "Failed to resolve tag");
       }
     }
-
     findTag();
     return () => (mounted = false);
   }, []);
 
-  // 2) when tagId obtained, fetch posts with that tag
+  // Fetch posts when tagId is available
   useEffect(() => {
-    if (!tagId) return;
+    if (!tagId) {
+      setLoading(false);
+      return;
+    }
     let mounted = true;
-    setLoadingPosts(true);
+    setLoading(true);
     setError(null);
 
     async function loadPosts() {
       try {
-        // fetch posts for this tag (per_page default set to 12)
-        const res = await fetch(`${WP_BASE}/posts?_embed&per_page=12&tags=${tagId}`);
-        if (!res.ok) throw new Error(`Failed to fetch posts (status ${res.status})`);
+        const res = await fetch(`${WP_BASE}/posts?_embed&per_page=20&tags=${tagId}`);
+        if (!res.ok) throw new Error(`Failed to fetch posts: ${res.status}`);
         const data = await res.json();
         if (mounted) setPosts(data);
       } catch (err) {
         console.error(err);
         if (mounted) setError(err.message || "Failed to load posts");
       } finally {
-        if (mounted) setLoadingPosts(false);
+        if (mounted) setLoading(false);
       }
     }
 
@@ -128,96 +114,83 @@ export default function CaseStudies() {
   }, [tagId]);
 
   return (
-    <div className="max-w-7xl mx-auto">
-      {/* HERO */}
-      <div className="relative rounded-b-2xl overflow-hidden mb-8" style={{ height: "340px" }}>
-        <img src={HERO_IMG} alt="Case studies hero" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-        <div className="absolute left-8 bottom-8 text-white max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Case Studies</h1>
-          <p className="mt-2 text-sm sm:text-base text-white/80 max-w-xl">
-            Real results and deep dives — browse only posts tagged as <strong>Case Studies</strong>.
-          </p>
-        </div>
-      </div>
-
-      {/* Header & meta */}
-      <div className="px-4 sm:px-6 mb-6 flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-extrabold">Case Studies</h2>
-          <p className="text-gray-600 mt-1">In-depth project writeups and results tagged as case studies.</p>
-        </div>
-
-        <div className="text-sm text-gray-500">
-          {loadingTag ? "Resolving tag…" : tagId ? `Tag ID: ${tagId}` : "Tag not found"}
-        </div>
-      </div>
-
-      {/* Body */}
-      <div className="px-4 sm:px-6 pb-12">
-        {error && (
-          <div className="mb-6 text-red-600">
-            {error}
+    <>
+      <HeroBanner
+        image="/Banners/About.jpg"
+        heading={<></>}
+        subtext=""
+        primaryCta=""
+        secondaryCta=""
+      />
+      <div className="max-w-7xl mx-auto py-8 px-4">
+        {/* HERO */}
+        {/* <div className="relative rounded-b-2xl overflow-hidden mb-8" style={{ height: "340px" }}>
+          <img src="" alt="Case studies hero" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+          <div className="absolute left-8 bottom-8 text-white max-w-2xl">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Case Studies</h1>
+            <p className="mt-2 text-sm sm:text-base text-white/80 max-w-xl">
+              Real results and deep dives — browse only posts tagged as <strong>Case Studies</strong>.
+            </p>
           </div>
+        </div> */}
+
+
+        <header className="mb-6">
+          <h1 className="text-3xl font-extrabold mb-2">Case Studies</h1>
+          <p className="text-gray-300">In-depth writeups, project outcomes and learnings tagged as <strong>Case Studies</strong>.</p>
+        </header>
+
+        {error && <div className="mb-4 text-red-600">{error}</div>}
+        {loading && <div className="py-12 text-center text-gray-500">Loading case studies…</div>}
+
+        {!loading && !posts.length && !error && (
+          <div className="py-12 text-center text-gray-600">No case studies found.</div>
         )}
 
-        {loadingPosts ? (
-          <div className="min-h-[40vh] flex items-center justify-center text-gray-500">Loading posts…</div>
-        ) : posts.length === 0 ? (
-          <div className="min-h-[40vh] flex items-center justify-center text-gray-600">
-            No case studies found.
-          </div>
-        ) : (
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => {
-              const img =
-                post._embedded &&
-                post._embedded["wp:featuredmedia"] &&
-                post._embedded["wp:featuredmedia"][0]
-                  ? post._embedded["wp:featuredmedia"][0].source_url
-                  : null;
+        <div className="space-y-6">
+          {posts.map(post => {
+            const img = post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]
+              ? post._embedded['wp:featuredmedia'][0].source_url
+              : FALLBACK_IMG;
 
-              // find tag names for display (only those tags present on post)
-              const terms = post._embedded && post._embedded["wp:term"] ? post._embedded["wp:term"].flat() : [];
-              const postTags = terms.filter((t) => t.taxonomy === "post_tag");
+            // Short category/tag label — prefer categories
+            const terms = post._embedded && post._embedded['wp:term'] ? post._embedded['wp:term'].flat() : [];
+            const primaryCat = terms.find(t => t.taxonomy === 'category');
 
-              return (
-                <article key={post.id} className="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
-                  <div className="relative h-44">
-                    {img ? (
-                      <img src={img} alt={post.title.rendered} className="w-full h-full object-cover" />
-                    ) : (
-                      <div className="w-full h-full bg-gray-100 flex items-center justify-center text-gray-400">No image</div>
-                    )}
-                    {/* show "Case Studies" badge if present */}
-                    {postTags.some(t => t.name.toLowerCase() === "case studies" || t.slug === "case-studies") && (
-                      <span className="absolute left-4 top-4 bg-black/70 text-white text-xs px-3 py-1 rounded-full">
-                        Case Study
-                      </span>
-                    )}
-                  </div>
+            return (
+              <article key={post.id} className="flex gap-4 items-start bg-white border rounded-lg p-4 shadow-sm hover:shadow-md transition">
+                <Link to={`/blog/${post.slug}`} className="flex-shrink-0 w-64 h-auto overflow-hidden rounded-md">
+                  <img src={img} alt={post.title.rendered} className="w-full h-full object-cover" />
+                </Link>
 
-                  <div className="p-5 flex flex-col h-full">
-                    <h3 className="text-lg font-semibold mb-2" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.title.rendered) }} />
+                <div className="flex-1">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        {primaryCat && <span className="text-xs bg-gray-100 px-2 py-1 rounded-full text-gray-700">{primaryCat.name}</span>}
+                      </div>
 
-                    <p className="text-sm text-gray-600 mb-4 flex-grow">{excerptText(post.excerpt?.rendered || post.content?.rendered, 28)}</p>
+                      <h2 className="text-lg font-semibold leading-tight mb-2 text-black">
+                        <Link to={`/blog/${post.slug}`} className="hover:underline" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.title.rendered) }} />
+                      </h2>
 
-                    <div className="mt-4 flex items-center justify-between">
+                      <p className="text-sm text-gray-600 mb-3">{excerptText(post.excerpt?.rendered || post.content?.rendered, 28)}</p>
+
                       <div className="text-xs text-gray-500">{formatDate(post.date)} • {estimateReadTime(post.content.rendered)}</div>
-                      <Link to={`/blog/${post.slug}`} className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition">
-                        Read case study
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </Link>
+                    </div>
+
+                    <div className="flex flex-col items-end gap-2">
+                      <Link to={`/blog/${post.slug}`} className="px-4 py-2 border rounded-full text-sm text-blue-800 hover:bg-gray-50">See Details</Link>
+                      {/* <button className="px-3 py-2 bg-black text-white rounded-full text-sm">Buy ticket</button> */}
                     </div>
                   </div>
-                </article>
-              );
-            })}
-          </div>
-        )}
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
