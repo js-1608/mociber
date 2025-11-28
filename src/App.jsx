@@ -18,6 +18,9 @@ import WhitePapersPage from "./pages/Whitepaper";
 import Videos from "./pages/Video";
 import CaseStudies from "./pages/CaseStudies";
 import EBooks from "./pages/EBooks";
+import WebinarsPage from "./pages/Webinars";
+import ReportsPage from "./pages/reports";
+import Startup from "./industries/Startup";
 
 function App() {
   useEffect(() => {
@@ -40,12 +43,17 @@ function App() {
           <Route path="/service" element={<ServiceDetail />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/partners" element={<Partners />} />
-          <Route path="/blog" element={<Blogs/>} />
+          <Route path="/blog" element={<Blogs />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
-          <Route path="/whitepaper" element={<WhitePapersPage/>} />
-          <Route path="/videos" element={<Videos/>} />
-          <Route path="/case-studies" element={<CaseStudies/>} />
-          <Route path="/ebooks" element={<EBooks/>} />
+          <Route path="/whitepaper" element={<WhitePapersPage />} />
+          <Route path="/videos" element={<Videos playlistId="" />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/ebooks" element={<EBooks />} />
+          <Route path="/webinars" element={<WebinarsPage />} />
+          <Route path="/reports" element={<ReportsPage />} />
+
+          {/* industries */}
+          <Route path="/industries/startups" element={<Startup />} />
 
 
           <Route path="/about" element={<About />} />
