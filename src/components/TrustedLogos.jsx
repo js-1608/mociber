@@ -55,7 +55,7 @@ export default function TrustedLogos() {
   ];
 
   return (
-    <section className="bg-[#071024] text-white py-16 px-6">
+    <section className="bg-linear-to-b to-[#000A1F] from-[#0c1b34] text-white py-16 px-6">
       <div className="max-w-7xl mx-auto">
         {/* pill */}
         {/* <div className="flex justify-center">

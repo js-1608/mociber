@@ -21,6 +21,8 @@ import EBooks from "./pages/EBooks";
 import WebinarsPage from "./pages/Webinars";
 import ReportsPage from "./pages/reports";
 import Startup from "./industries/Startup";
+import MociberCybersecurityPage from "./industries/Cybersecurity";
+import GeopoliticalSecurityPage from "./solutions/Geopolitical";
 
 function App() {
   useEffect(() => {
@@ -40,7 +42,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/service" element={<ServiceDetail />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/blog" element={<Blogs />} />
@@ -53,7 +54,12 @@ function App() {
           <Route path="/reports" element={<ReportsPage />} />
 
           {/* industries */}
-          <Route path="/industries/startups" element={<Startup />} />
+          {/* <Route path="/industries/startups" element={<Startup />} /> */}
+          <Route path="/industries/startups" element={<ServiceDetail />} />
+
+          <Route path="/service" element={<MociberCybersecurityPage />} />
+
+                <Route path="/solutions/geopolitical" element={<GeopoliticalSecurityPage />} />
 
 
           <Route path="/about" element={<About />} />
