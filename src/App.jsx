@@ -56,10 +56,8 @@ function App() {
           {/* industries */}
           {/* <Route path="/industries/startups" element={<Startup />} /> */}
           <Route path="/industries/startups" element={<ServiceDetail />} />
-
           <Route path="/service" element={<MociberCybersecurityPage />} />
-
-                <Route path="/solutions/geopolitical" element={<GeopoliticalSecurityPage />} />
+          <Route path="/solutions/geopolitical" element={<GeopoliticalSecurityPage />} />
 
 
           <Route path="/about" element={<About />} />
