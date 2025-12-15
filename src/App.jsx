@@ -21,7 +21,7 @@ import EBooks from "./pages/EBooks";
 import WebinarsPage from "./pages/Webinars";
 import ReportsPage from "./pages/reports";
 import Startup from "./industries/Startup";
-import MociberCybersecurityPage from "./industries/Cybersecurity";
+import MociberCybersecurityPage from "./Services/Cybersecurity";
 import GeopoliticalSecurityPage from "./solutions/Geopolitical";
 
 function App() {
