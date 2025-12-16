@@ -9,10 +9,10 @@ export default function ContactCta() {
             {/* Outer gradient frame */}
             <div className="w-full max-w-7xl p-1 rounded-3xl bg-linear-to-br from-[#18024e]  to-[#5b2bd6]  shadow-2xl">
                 {/* Inner container (dark panels) */}
-                <div className="bg-[#070612] rounded-3xl p-8 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="bg-[#070612] rounded-3xl p-2 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                     {/* Left card */}
-                    <div className="relative rounded-2xl bg-linear-to-b from-[#090613] to-[#0e0816] p-8 overflow-hidden border border-white/5">
+                    <div className="relative rounded-2xl bg-linear-to-b from-[#090613] to-[#0e0816] p-2 lg:p-8 overflow-hidden border border-white/5">
                         {/* small top badge */}
                         <div className="inline-flex items-center gap-2 bg-[#0c0620] text-sm border  text-[#dcd6ff] px-3 py-1 rounded-full mb-6 w-max">
                             <svg className="w-4 h-4 text-[#b9a7ff]" viewBox="0 0 24 24" fill="none">

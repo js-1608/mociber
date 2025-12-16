@@ -21,7 +21,7 @@ export default function KeyRisks({
       className="relative mt-20 px-6"
     >
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b to-[#000A1F] from-[#0c1b34]" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b to-[#081a33] from-[#020617]" />
 
       <div className="max-w-7xl mx-auto py-20">
         {/* Header */}

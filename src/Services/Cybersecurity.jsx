@@ -10,6 +10,11 @@ import {
     FileWarning,
     KeyRound,
     WifiOff,
+    Radar,
+    Eye,
+    Siren,
+    GraduationCap,
+    Cloud,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -24,9 +29,6 @@ import FaqSection from "@/components/Faq";
 
 import ServiceSolution from "@/components/ServiceSolution";
 
-// MociberCybersecurityPage.jsx
-// Single-file React component styled with Tailwind CSS
-// Default export: <MociberCybersecurityPage />
 
 export default function MociberCybersecurityPage() {
 
@@ -86,48 +88,56 @@ export default function MociberCybersecurityPage() {
 
 
 
-    const services = [
+    const solutions = [
         {
             title: "Managed Security Operations Center (SOC 24×7)",
             description:
-                "AI-powered monitoring, threat hunting, centralized log correlation, and rapid incident response across endpoints, networks, and cloud environments.",
+                "Always-on monitoring, AI-driven threat detection, log correlation, and rapid incident response across endpoints, networks, and cloud.",
+            icon: ShieldCheck,
         },
         {
             title: "Vulnerability Management & Attack Surface Intelligence",
             description:
-                "Continuous vulnerability scanning, exploit-based risk scoring, attack surface discovery, and prioritized remediation planning.",
+                "Continuous discovery, exploit-based prioritization, attack surface mapping, and remediation strategy.",
+            icon: Radar,
         },
         {
             title: "Cloud Security & Zero Trust Architecture",
             description:
-                "Secure AWS, Azure, and GCP with identity-driven access controls, workload protection, micro-segmentation, and Zero Trust enforcement.",
+                "Secure AWS, Azure, and GCP using identity-first access, workload protection, and micro-segmentation.",
+            icon: Cloud,
         },
         {
             title: "Threat Intelligence & Digital Risk Protection",
             description:
-                "Dark-web monitoring, brand abuse detection, exposed credential tracking, APT activity monitoring, and geopolitical risk intelligence.",
+                "Dark-web intelligence, brand abuse monitoring, leaked credential detection, APT and geopolitical threat insights.",
+            icon: Eye,
         },
         {
             title: "Governance, Risk & Compliance (GRC)",
             description:
-                "End-to-end compliance readiness, audits, and controls mapping for global regulatory frameworks.",
+                "Compliance readiness, audits, and continuous control monitoring across global frameworks.",
             extra:
                 "ISO 27001 · SOC 2 · HIPAA · PCI DSS · GDPR · NIST · RBI · DPDP (India)",
+            icon: Lock,
         },
         {
             title: "Incident Response & Cyber Crisis Management",
             description:
-                "24×7 war-room operations, ransomware containment, negotiation support, digital forensics, and rapid business recovery.",
+                "War-room operations, ransomware containment, forensics, negotiation support, and recovery.",
+            icon: Siren,
         },
         {
             title: "OT / IoT & Industrial Cybersecurity",
             description:
-                "Purpose-built protection for SCADA, ICS, and industrial networks with continuous OT visibility and threat detection.",
+                "Specialized security for SCADA, ICS, and industrial networks with continuous OT visibility.",
+            icon: Cpu,
         },
         {
             title: "Cybersecurity Awareness & Human Risk Management",
             description:
-                "AI-simulated phishing campaigns, behavioral risk analytics, and customized security awareness training programs.",
+                "AI-based phishing simulations, human risk scoring, and tailored employee security training.",
+            icon: GraduationCap,
         },
     ];
 
@@ -211,7 +221,7 @@ export default function MociberCybersecurityPage() {
                 {/* HERO / INTRO */}
                 <motion.section id="intro" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-linear-to-b from-[#000A1F] to-[#0c1b34]">
                     <div className="grid md:grid-cols-2 gap-8 items-center max-w-7xl m-auto ">
-                        <div className=" rounded-2xl py-16">
+                        <div className=" rounded-2xl py-16 p-4">
                             <h2 className="text-2xl md:text-3xl font-bold mt-6 mb-2">Cybersecurity Services for Modern Enterprises</h2>
                             <h4 className="font-semibold text-blue-500">AI-Driven, Intelligence-Led, Compliance-Aligned Protection for a Digital World</h4>
                             <p className="mt-2 text-slate-300">
@@ -349,19 +359,12 @@ export default function MociberCybersecurityPage() {
                     </motion.div>
                 </section>
 
-
-                {/* <CyberChallenges
-                    challenges={challenges}
-                    conclusion={challengeConclusion}
-                /> */}
-
                 <KeyRisks
                     title="Key Cybersecurity Risks"
                     subtitle="Top risks enterprises face — prioritized for impact and exploitability."
                     risks={risks}
                 />
-
-                {/* <ServiceSolution services={services} /> */}
+                <ServiceSolution solutions={solutions}  heading={"Mociber’s Cybersecurity Services & Solutions"} />;
 
 
 

@@ -194,7 +194,7 @@ const Header = () => {
 
                   <div className="space-y-3">
                     <div>
-                      <Link to="/service" onClick={closeAll} className="text-white font-medium block">
+                      <Link to="/services/cybersecurity" onClick={closeAll} className="text-white font-medium block">
                         Cybersecurity
                       </Link>
                       <div className="text-xs text-gray-500">End-to-end protection across systems &amp; data</div>

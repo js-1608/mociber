@@ -68,7 +68,7 @@ export default function HeroBanner({
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 text-center">
         <div className="mx-auto max-w-4xl">
           {heading && (
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+            <h1 className="text-2xl lg:text-5xl  font-bold leading-tight text-white">
               {heading}
             </h1>
           )}

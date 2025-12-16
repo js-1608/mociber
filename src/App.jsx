@@ -23,6 +23,8 @@ import ReportsPage from "./pages/reports";
 import Startup from "./industries/Startup";
 import MociberCybersecurityPage from "./Services/Cybersecurity";
 import GeopoliticalSecurityPage from "./solutions/Geopolitical";
+import RiskManagementPage from "./Services/RiskManagement";
+import DefenseAndGovernmentPage from "./Services/DefenseAndGovernment";
 
 function App() {
   useEffect(() => {
@@ -56,7 +58,16 @@ function App() {
           {/* industries */}
           {/* <Route path="/industries/startups" element={<Startup />} /> */}
           <Route path="/industries/startups" element={<ServiceDetail />} />
-          <Route path="/service" element={<MociberCybersecurityPage />} />
+
+          {/* service */}
+          <Route path="/services/cybersecurity" element={<MociberCybersecurityPage />} />
+          <Route path="/services/risk-management" element={<RiskManagementPage />} />
+          <Route path="/services/ai-defense" element={<DefenseAndGovernmentPage />} />
+
+
+
+
+          {/* solutions */}
           <Route path="/solutions/geopolitical" element={<GeopoliticalSecurityPage />} />
 
 
