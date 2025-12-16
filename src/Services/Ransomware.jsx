@@ -36,7 +36,7 @@ import FaqSection from "@/components/Faq";
 import ServiceSolution from "@/components/ServiceSolution";
 
 
-export default function DefenseAndGovernmentPage() {
+export default function RansomwarePage() {
     const [open, setOpen] = useState(null);
 
   const faqs = [
@@ -245,7 +245,7 @@ export default function DefenseAndGovernmentPage() {
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={"AI-Powered Defense & Government Security"}
+                heading={"Ransomware & Business Resilience"}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""
