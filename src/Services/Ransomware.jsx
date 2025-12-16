@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import {
-    CrossIcon,
     ShieldCheck,
-} from "lucide-react";
-
-import {
     Bot,
     Bug,
     AudioLines,
@@ -13,17 +9,28 @@ import {
     GlobeLock,
     Truck,
     Brain,
-    Lock
+    Lock,
+    ChevronDown,
+    ShieldAlert,
+    DatabaseBackup,
+    Shield,
+    Users,
+    Siren,
+    GraduationCap,
+    Database,
 } from "lucide-react";
 
 import {
-    Radar,
-    ClipboardCheck,
-    Fingerprint,
-    Vote,
-    ChevronDown,
+    LockKeyhole,
+    Building2,
+    Cloud,
+    Network,
+    ShoppingBag,
+    MailWarning,
+    Scale,
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+
+import { motion } from "framer-motion";
 import ContactCta from "@/components/ContactCta";
 import HeroBanner from "@/components/ServiceHero";
 import Service from "@/components/Service";
@@ -39,204 +46,207 @@ import ServiceSolution from "@/components/ServiceSolution";
 export default function RansomwarePage() {
     const [open, setOpen] = useState(null);
 
-  const faqs = [
-  {
-    question: "What is AI-powered defense in government cybersecurity?",
-    answer:
-      "AI-powered defense uses artificial intelligence, machine learning, and automation to detect, prevent, and respond to nation-state attacks, cyberwarfare, disinformation, and critical infrastructure threats faster than traditional security systems.",
-  },
-  {
-    question: "How does Mociber support national security agencies and government departments?",
-    answer:
-      "Mociber provides AI-driven threat intelligence, sovereign cloud security, OT/ICS protection, zero-trust frameworks, cyberwarfare readiness, and 24×7 monitoring tailored for ministries, defense agencies, public-sector bodies, and critical infrastructure organizations.",
-  },
-  {
-    question: "What types of cyber threats do governments face today?",
-    answer:
-      "Governments face AI-generated malware, nation-state espionage, deepfake disinformation, zero-day exploits, supply-chain attacks, critical infrastructure sabotage, cloud sovereignty risks, and emerging quantum computing threats.",
-  },
-  {
-    question: "Does Mociber offer cybersecurity for critical infrastructure?",
-    answer:
-      "Yes. Mociber secures power grids, water systems, transportation networks, healthcare, telecom, aviation, oil & gas, and other OT/ICS environments through AI-based anomaly detection and industrial-grade defense technologies.",
-  },
-  {
-    question: "What is sovereign cloud security and why is it important?",
-    answer:
-      "Sovereign cloud security ensures that government data, identities, and workloads remain under national jurisdiction, isolated from foreign influence, global data laws, and unauthorized third-party access.",
-  },
-  {
-    question: "Can Mociber help government agencies prevent deepfake and information warfare attacks?",
-    answer:
-      "Yes. Mociber provides AI-based deepfake detection, influence-monitoring analytics, election security frameworks, and counter-disinformation intelligence to protect public trust and national stability.",
-  },
-  {
-    question: "Do you support compliance with defense and government regulations?",
-    answer:
-      "Absolutely. Mociber aligns agencies with NIST, CISA, ENISA, MITRE, IT Act, DPDP India, national data sovereignty standards, and ministry- or defense-specific regulatory requirements.",
-  },
-  {
-    question: "How does Mociber detect nation-state cyberattacks quickly?",
-    answer:
-      "Our AI-driven threat intelligence engine analyzes global threat signals, geopolitical indicators, malware behavior, and cross-border attack patterns to identify nation-state activity in real time.",
-  },
-  {
-    question: "Does Mociber provide SOC services for government agencies?",
-    answer:
-      "Yes. Mociber operates a military-grade, 24×7 Cyber Command Center delivering continuous monitoring, advanced threat hunting, incident response, and digital forensics for government environments.",
-  },
-  {
-    question: "How can government organizations request an assessment or proposal from Mociber?",
-    answer:
-      "Government agencies can contact Mociber through the secure form on our website. Our defense cybersecurity specialists respond within 24 hours with a tailored assessment or proposal.",
-  },
-];
-
-
-
-
-    const solutions = [
+    const faqs = [
         {
-            title: "AI-Powered National Threat Intelligence",
-            icon: Radar,
-            summary:
-                "Predict, detect, and correlate nation-state cyber threats before they impact national systems.",
-            details: [
-                "AI-based geopolitical risk analytics",
-                "MITRE ATT&CK aligned threat detection",
-                "Real-time cross-border intelligence correlation",
-            ],
+            question: "What is ransomware resilience?",
+            answer:
+                "Ransomware resilience is the ability of an organization to prevent, detect, contain, and recover from ransomware attacks while maintaining business continuity and minimizing operational, financial, and reputational impact.",
         },
         {
-            title: "Zero-Trust Security for Government & Defense",
-            icon: ShieldCheck,
-            summary:
-                "Identity-first security architecture designed for ministries, defense agencies, and classified departments.",
-            details: [
-                "Multi-level identity and access governance",
-                "Passwordless and hardware-based authentication",
-                "Segmentation for sensitive and classified networks",
-            ],
+            question: "How does Mociber help organizations recover without paying ransom?",
+            answer:
+                "Mociber combines immutable and air-gapped backups, isolated recovery environments, deception traps, and rapid response protocols to restore systems safely—without negotiating or paying attackers.",
         },
         {
-            title: "Critical Infrastructure Protection (ICS / OT / SCADA)",
-            icon: Factory,
-            summary:
-                "Protect power grids, transport, oil & gas, water, and healthcare systems from cyber sabotage.",
-            details: [
-                "AI-driven OT anomaly detection",
-                "ICS firewalls and secure remote operations",
-                "Compliance with NERC-CIP and NIST 800-82",
-            ],
+            question: "What makes ransomware attacks more dangerous today?",
+            answer:
+                "Modern ransomware campaigns leverage AI-powered social engineering, double and triple extortion, supply chain compromise, automated lateral movement, and data exfiltration before encryption.",
         },
         {
-            title: "Digital Sovereignty & Government Cloud Security",
-            icon: CloudOff,
-            summary:
-                "Ensure national data sovereignty while modernizing government cloud infrastructure.",
-            details: [
-                "Sovereign encryption and independent key ownership",
-                "Secure government cloud migrations",
-                "Post-quantum cryptography readiness",
-            ],
+            question: "How quickly can Mociber respond to a ransomware incident?",
+            answer:
+                "Our ransomware incident response specialists can engage within hours, providing rapid containment, forensic investigation, system restoration, and business recovery support.",
         },
         {
-            title: "Cyberwarfare Readiness & Incident Response",
-            icon: CrossIcon,
-            summary:
-                "Prepare government institutions for cyber conflict and large-scale incidents.",
-            details: [
-                "Cyber range and war-game simulations",
-                "Red team / blue team exercises",
-                "24×7 nation-state threat hunting and war room response",
-            ],
+            question: "Does Mociber help with cyber insurance and compliance?",
+            answer:
+                "Yes. Mociber assists organizations with cyber insurance alignment, policy gap analysis, evidence collection, breach documentation, regulatory reporting, and post-incident compliance requirements.",
         },
         {
-            title: "AI-Assisted Governance, Risk & Compliance",
-            icon: ClipboardCheck,
-            summary:
-                "Automated compliance monitoring across global and national regulations.",
-            details: [
-                "GDPR, DPDP India, NIS2, ISO 27001",
-                "Defense-specific compliance frameworks",
-                "Continuous audit and reporting readiness",
-            ],
+            question: "What industries are most targeted by ransomware?",
+            answer:
+                "Banking, healthcare, manufacturing, retail, government, education, logistics, and supply chain–dependent industries are among the most frequently targeted sectors.",
         },
         {
-            title: "Public Sector Fraud & Identity Protection",
-            icon: Fingerprint,
-            summary:
-                "Protect citizen identities and prevent large-scale fraud across public systems.",
-            details: [
-                "AI-driven identity verification",
-                "Document forgery detection",
-                "Fraud analytics for public services",
-            ],
+            question: "What makes Mociber’s ransomware resilience approach unique?",
+            answer:
+                "Mociber delivers a unified framework combining AI-driven detection, deception technology, resilient backup architecture, vendor risk intelligence, and business continuity planning.",
         },
         {
-            title: "Election Security & Counter-Disinformation",
-            icon: Vote,
-            summary:
-                "Safeguard democratic processes and public trust in elections.",
-            details: [
-                "Deepfake detection and media verification",
-                "Influence and disinformation monitoring",
-                "Election infrastructure hardening",
-            ],
+            question: "Can Mociber help with ransomware tabletop exercises and simulations?",
+            answer:
+                "Absolutely. We conduct executive war-room simulations, leadership decision drills, and full restoration exercises to validate ransomware readiness across technical and business teams.",
+        },
+        {
+            question: "Do you provide 24/7 ransomware monitoring?",
+            answer:
+                "Yes. Our 24×7 SOC continuously monitors ransomware behaviors, anomalies, lateral movement indicators, and suspicious activity across endpoints, networks, and cloud environments.",
+        },
+        {
+            question: "How can organizations start a ransomware resilience assessment with Mociber?",
+            answer:
+                "Organizations can initiate a ransomware resilience assessment by contacting us through the consultation form. Our specialists respond within 24 hours with a tailored assessment and roadmap.",
         },
     ];
 
 
-
+    const solutions = [
+        {
+            title: "Ransomware Resilience Assessment & Risk Index",
+            icon: ShieldAlert,
+            summary:
+                "Establish a clear, quantifiable view of ransomware exposure across business, technology, and third-party ecosystems.",
+            details: [
+                "Complete ransomware risk profiling",
+                "Business-critical system and dependency mapping",
+                "Vendor exposure and lateral movement scoring",
+                "Backup readiness and recovery time objective (RTO) analysis",
+            ],
+        },
+        {
+            title: "Immutable, Air-Gapped & Real-Time Backup Architecture",
+            icon: DatabaseBackup,
+            summary:
+                "Ensure data survivability and rapid recovery even during advanced ransomware events.",
+            details: [
+                "Immutable snapshot-based backups",
+                "Air-gapped and cloud-isolated storage",
+                "Real-time decoupled backup architecture",
+                "Automated backup testing and failover validation",
+            ],
+        },
+        {
+            title: "AI-Driven Detection, Deception & Rapid Response",
+            icon: Bot,
+            summary:
+                "Detect ransomware activity early and automatically disrupt attack chains before encryption spreads.",
+            details: [
+                "Behavior-based AI detection engines",
+                "Graph-based anomaly and lateral movement scoring",
+                "Deception traps, honeypots, and ransomware lures",
+                "Autonomous endpoint and network isolation",
+            ],
+        },
+        {
+            title: "Vendor & Supply Chain Risk Monitoring",
+            icon: Users,
+            summary:
+                "Reduce ransomware entry points introduced through third-party vendors and service providers.",
+            details: [
+                "Third-party security posture scoring",
+                "Continuous vendor threat monitoring",
+                "Breach likelihood and impact modeling",
+                "Vendor compromise response and containment planning",
+            ],
+        },
+        {
+            title: "Incident Response, Business Continuity & War-Room Operations",
+            icon: Siren,
+            summary:
+                "Minimize downtime and financial impact through coordinated ransomware response and recovery operations.",
+            details: [
+                "Ransomware-specific response playbooks",
+                "Containment, eradication, and forensic investigation",
+                "Backup recovery and controlled system restoration",
+                "Tabletop exercises and business continuity drills",
+            ],
+        },
+        {
+            title: "Cyber Insurance Advisory",
+            icon: Shield,
+            summary:
+                "Align technical readiness with cyber insurance requirements and post-breach obligations.",
+            details: [
+                "Policy gap and coverage analysis",
+                "Ransom negotiation and decision playbooks",
+                "Evidence and documentation readiness",
+                "Breach notification and compliance alignment",
+            ],
+        },
+        {
+            title: "Executive, Employee & Leadership Awareness",
+            icon: GraduationCap,
+            summary:
+                "Reduce human-driven ransomware risk through targeted training and leadership preparedness.",
+            details: [
+                "AI-aware phishing and ransomware training",
+                "Crisis leadership and executive workshops",
+                "Ransom negotiation and decision simulations",
+                "Social engineering and insider risk resilience training",
+            ],
+        },
+    ];
 
     const risks = [
         {
-            title: "AI-Enhanced Nation-State Attacks",
+            title: "Double & Triple Extortion",
             subtext:
-                "Autonomous malware, rapid reconnaissance, and AI-driven exploit chains reduce detection and response windows to seconds.",
-            icon: Bot,
+                "Attackers encrypt data, steal sensitive information, threaten public leaks, and even target customers and business partners.",
+            icon: LockKeyhole,
         },
         {
-            title: "Zero-Day Warfare & Exploit Market Growth",
+            title: "Supply Chain & Vendor Compromise",
             subtext:
-                "Unpatched vulnerabilities are weaponized at unprecedented speed, impacting ministries, military networks, and national systems.",
-            icon: Bug,
+                "Breaches in MSPs, software vendors, and third parties act as covert ransomware entry points into core environments.",
+            icon: Users,
         },
         {
-            title: "Deepfake & Information Warfare",
+            title: "Disruption of Critical Operations",
             subtext:
-                "Manipulated audio and video used to destabilize elections, influence policy decisions, and erode public trust.",
-            icon: AudioLines,
+                "Ransomware targeting ERP, finance, CRM, manufacturing, or healthcare systems can halt business operations entirely.",
+            icon: Building2,
         },
         {
-            title: "ICS / OT Critical Infrastructure Attacks",
+            title: "Cloud Ransomware & Misconfigurations",
             subtext:
-                "Power grids, water systems, aviation, oil & gas, and healthcare targeted through ICS and OT exploit campaigns.",
-            icon: Factory,
+                "Weak identity policies, exposed storage, and insecure SaaS integrations significantly expand ransomware attack paths.",
+            icon: Cloud,
         },
         {
-            title: "Cloud Sovereignty Risks",
+            title: "Rapid Lateral Movement",
             subtext:
-                "Sensitive national data hosted on foreign-controlled cloud platforms creates geopolitical, legal, and regulatory exposure.",
-            icon: CloudOff,
+                "Credential theft, automation tools, and living-off-the-land techniques enable attackers to spread across networks in minutes.",
+            icon: Network,
         },
         {
-            title: "Cross-Border Cyber Espionage",
+            title: "Backup Corruption & Integrity Failures",
             subtext:
-                "Nation-state APTs infiltrate ministries, embassies, intelligence networks, and cloud APIs for long-term espionage.",
-            icon: GlobeLock,
+                "Attackers delete, encrypt, or poison backups—making recovery impossible without immutable and isolated backup controls.",
+            icon: Database,
         },
         {
-            title: "Defense Supply Chain Compromise",
+            title: "Ransomware-as-a-Service (RaaS) Growth",
             subtext:
-                "Adversaries infiltrate defense contractors, logistics partners, and third-party vendors to breach government ecosystems.",
-            icon: Truck,
+                "Cybercriminal marketplaces dramatically increase ransomware scale, speed, and sophistication across industries.",
+            icon: ShoppingBag,
         },
         {
-            title: "AI Model Poisoning in Government Systems",
+            title: "AI-Driven Phishing & Social Engineering",
             subtext:
-                "Manipulated datasets corrupt AI-driven intelligence, analytics platforms, and autonomous decision-making systems.",
-            icon: Brain,
+                "Hyper-realistic emails, voice spoofing, and deepfake impersonation dramatically increase initial compromise rates.",
+            icon: MailWarning,
+        },
+        {
+            title: "Weak Incident Response",
+            subtext:
+                "Delayed detection, unclear escalation paths, and outdated playbooks significantly increase downtime and losses.",
+            icon: Siren,
+        },
+        {
+            title: "Regulatory, Legal & Insurance Exposure",
+            subtext:
+                "Mandatory breach reporting, regulatory penalties, and tightening cyber insurance requirements amplify financial risk.",
+            icon: Scale,
         },
     ];
 
@@ -256,16 +266,16 @@ export default function RansomwarePage() {
                 <motion.section id="intro" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-linear-to-b from-[#000A1F] to-[#0c1b34]">
                     <div className="grid md:grid-cols-2 gap-8 items-center max-w-7xl m-auto ">
                         <div className=" rounded-2xl py-16 p-4">
-                            <h2 className="text-2xl md:text-4xl font-bold mt-6 mb-2">AI-Powered Defense & Government Security</h2>
-                            <h4 className="font-semibold text-blue-500 mt-3">Smarter, Faster & Autonomous Protection for National Infrastructure</h4>
+                            <h2 className="text-2xl md:text-4xl font-bold mt-6 mb-2">Ransomware & Business Resilience</h2>
+                            <h4 className="font-semibold text-blue-500 mt-3">Recover Faster. Defend Smarter. Stay Operational Under Attack</h4>
                             <p className="mt-2 text-slate-300">
-                                Governments today face unprecedented threats—AI-generated cyberattacks, geopolitical conflicts, deepfake warfare, critical infrastructure vulnerabilities, and rapid cloud expansion. Traditional defenses can no longer keep pace with nation-state adversaries who weaponize AI, automate reconnaissance, and exploit zero-day vulnerabilities within seconds.
+                                Ransomware remains one of the most disruptive and financially devastating cyber threats facing organizations today. Modern attacks combine encryption, data theft, extortion, and lateral movement—often executed by highly coordinated criminal groups and nation-state actors.
                             </p>
                             <h4 className="font-semibold text-blue-500">
-                                Mociber delivers next-generation, AI-driven cybersecurity built specifically for government agencies, defense organizations, and national-critical sectors.</h4>
+                                Mociber strengthens enterprise resilience through proactive preparation, AI-driven detection, immutable backups, vendor risk control, and rapid recovery frameworks.
+                            </h4>
                             <p className="mt-2 text-slate-300">
-                                We combine <b>military-grade intelligence, sovereign cloud security, critical infrastructure protection, and autonomous cyber operations</b> to safeguard national assets from modern threats.
-                            </p>
+                                We transform ransomware from a crisis into a manageable, recoverable event—allowing businesses to continue operating with confidence.                            </p>
 
                             <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <li className="flex items-start gap-3">
@@ -338,7 +348,7 @@ export default function RansomwarePage() {
                             {/* RIGHT — TEXT */}
                             <div>
                                 <h3 className="text-2xl md:text-3xl font-extrabold text-white/95 mb-4">
-                                    Key Challenges for Governments & National Security
+                                    Key Challenges in Ransomware & Business Resilience
                                 </h3>
 
                                 <p className="text-slate-300 leading-relaxed">
@@ -347,12 +357,14 @@ export default function RansomwarePage() {
 
                                 <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-md text-slate-200">
                                     {[
-                                        "Rapid escalation of AI-powered nation-state attacks",
-                                        "Hybrid warfare combining cyber, physical, and psychological operations",
-                                        "Legacy IT systems are unable to withstand modern threats",
-                                        "Shortage of high-end cybersecurity talent",
-                                        "Rising data sovereignty conflicts across borders",
-                                        "Vulnerable national surveillance, biometrics & digital ID systems",
+                                        "AI-powered phishing and targeted attacks",
+                                        "Backups lacking immutability or offline protection",
+                                        "Vendor and supply chain weaknesses",
+                                        "Shortage of skilled ransomware responders",
+                                        "Outdated playbooks and untested recovery processes",
+                                        "Complex threat landscape evolving faster than defenses",
+                                        "Fragmented tools with no unified resilience strategy",
+                                        "High financial impact and growing insurance exclusions"
 
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-3">
@@ -363,7 +375,7 @@ export default function RansomwarePage() {
                                 </ul>
 
                                 <p className="text-base text-center font-semibold text-white mt-8">
-                                    Mociber solves these challenges with a future-ready AI defense ecosystem.
+                                    Enterprises must adopt resilience-first cybersecurity—not just detection-only strategies.
                                 </p>
                             </div>
                         </div>
@@ -372,24 +384,19 @@ export default function RansomwarePage() {
 
 
                 <KeyRisks
-                    title="Top Geo-Cyber Risks"
+                    title="Top Ransomware & Business Resilience Risks"
                     subtitle="Our AI research and global intelligence teams highlight nine critical risks transforming government cybersecurity:"
                     risks={risks}
                 />
 
                 <section className="bg-linear-to-b from-[#081a33] to-[#000A1F] text-white py-20">
+                    <h2 className="text-3xl md:text-4xl font-bold leading-tight text-center mb-12">
+                        Mociber’s Ransomware & Business Resilience Solutions
+                    </h2>
+
                     <div className="max-w-7xl mx-auto px-6">
                         {/* Header */}
-                        <div className="mb-14 max-w-3xl">
-                            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                                Defense & Government Cybersecurity Solutions
-                            </h2>
-                            <p className="mt-4 text-slate-300">
-                                Mociber delivers an AI-powered national cyber defense architecture
-                                built on automation, digital sovereignty, and compliance with global
-                                frameworks including NIST, CISA, ENISA, MITRE, and CERT-In.
-                            </p>
-                        </div>
+
 
                         {/* Content */}
                         <div className="grid lg:grid-cols-3 gap-14 items-start">
@@ -423,10 +430,8 @@ export default function RansomwarePage() {
                                             </button>
 
                                             {isOpen && (
-                                                <> 
-                                                <p className="text-sm text-slate-400 mt-4">
-                                                    {item.summary}
-                                                </p>
+                                                <>
+
                                                     <ul className="mt-4 ml-10 text-sm text-slate-300 list-disc space-y-2">
                                                         {item.details.map((d, i) => (
                                                             <li key={i}>{d}</li>
@@ -476,8 +481,8 @@ export default function RansomwarePage() {
                 <ContactCta id="contact" />
 
                 <FaqSection
-                    title="Cybersecurity – FAQs"
-                    subtitle="Common questions about our cybersecurity services, platforms, and approach."
+                    title="Ransomware & Business Resilience - FAQs"
+                    subtitle="Common questions about Ransomware & Business Resilience services and solutions."
                     faqs={faqs}
                 />
 

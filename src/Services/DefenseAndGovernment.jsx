@@ -476,7 +476,7 @@ export default function DefenseAndGovernmentPage() {
                 <ContactCta id="contact" />
 
                 <FaqSection
-                    title="Cybersecurity – FAQs"
+                    title="AI-Powered Defense & Government Security  FAQs"
                     subtitle="Common questions about our cybersecurity services, platforms, and approach."
                     faqs={faqs}
                 />

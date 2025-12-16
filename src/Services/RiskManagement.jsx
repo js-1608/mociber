@@ -369,7 +369,7 @@ export default function RiskManagementPage() {
                     risks={risks}
                 />
 
-                
+
                 <ServiceSolution solutions={solutions} heading={"Top Enterprise Risks Reshaping Global Organizations"} />;
 
 
@@ -385,8 +385,8 @@ export default function RiskManagementPage() {
                 <ContactCta id="contact" />
 
                 <FaqSection
-                    title="Cybersecurity – FAQs"
-                    subtitle="Common questions about our cybersecurity services, platforms, and approach."
+                    title="Enterprise Risk Management - FAQs "
+                    subtitle=""
                     faqs={faqs}
                 />
 
