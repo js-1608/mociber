@@ -135,12 +135,6 @@ export default function RiskManagementPage() {
             icon: FileCheck2,
         },
         {
-            title: "Reputational & Trust Risks",
-            description:
-                "Deepfakes, misinformation, influence operations, and digital brand manipulation.",
-            icon: BadgeAlert,
-        },
-        {
             title: "Financial & Credit Market Instability",
             description:
                 "Market stress, liquidity shocks, inflation volatility, and global financial uncertainty.",
@@ -235,7 +229,7 @@ export default function RiskManagementPage() {
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={"Enterprise Risk Management Services"}
+                heading={"Enterprise Risk Management"}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""
@@ -363,6 +357,10 @@ export default function RiskManagementPage() {
                 </section>
 
 
+
+
+
+                <ServiceSolution solutions={solutions} heading={"Top Enterprise Risks Reshaping Global Organizations"} />
                 <KeyRisks
                     title="Mociber’s Enterprise Risk Management Services"
                     subtitle="Top risks enterprises face — prioritized for impact and exploitability."
@@ -370,13 +368,9 @@ export default function RiskManagementPage() {
                 />
 
 
-                <ServiceSolution solutions={solutions} heading={"Top Enterprise Risks Reshaping Global Organizations"} />;
-
-
-
                 <YouTubeAutoplaySection />
                 {/* SERVICES */}
-                <Service />
+                {/* <Service /> */}
                 <ToolsTabs />
 
 

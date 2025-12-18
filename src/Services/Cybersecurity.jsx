@@ -196,17 +196,6 @@ export default function MociberCybersecurityPage() {
     ];
 
 
-    const tools = [
-        "CrowdStrike Falcon",
-        "SentinelOne",
-        "Microsoft Defender XDR",
-        "Splunk",
-        "Tenable One",
-        "Wiz",
-        "Recorded Future",
-        "Okta",
-    ];
-
     return (
         <div className="min-h-screen">
             <HeroBanner
@@ -286,7 +275,7 @@ export default function MociberCybersecurityPage() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.45 }}
-                        className="rounded-2xl bg-gradient-to-br from-[#061025] to-[#00102a] shadow-2xl ring-1 ring-white/5 p-8 "
+                        className="rounded-2xl bg-gray-100/10 shadow-2xl ring-1 ring-white/5 p-8 "
                     >
                         <h3 className="text-3xl md:text-4xl font-extrabold text-white/95 mb-4">
                             The Problem — Modern Cybersecurity Challenges
@@ -359,12 +348,13 @@ export default function MociberCybersecurityPage() {
                     </motion.div>
                 </section>
 
+                <ServiceSolution solutions={solutions} heading={"Mociber’s Cybersecurity Services & Solutions"} />
+
                 <KeyRisks
                     title="Key Cybersecurity Risks"
                     subtitle="Top risks enterprises face — prioritized for impact and exploitability."
                     risks={risks}
                 />
-                <ServiceSolution solutions={solutions}  heading={"Mociber’s Cybersecurity Services & Solutions"} />;
 
 
 

@@ -39,58 +39,58 @@ import ServiceSolution from "@/components/ServiceSolution";
 export default function DefenseAndGovernmentPage() {
     const [open, setOpen] = useState(null);
 
-  const faqs = [
-  {
-    question: "What is AI-powered defense in government cybersecurity?",
-    answer:
-      "AI-powered defense uses artificial intelligence, machine learning, and automation to detect, prevent, and respond to nation-state attacks, cyberwarfare, disinformation, and critical infrastructure threats faster than traditional security systems.",
-  },
-  {
-    question: "How does Mociber support national security agencies and government departments?",
-    answer:
-      "Mociber provides AI-driven threat intelligence, sovereign cloud security, OT/ICS protection, zero-trust frameworks, cyberwarfare readiness, and 24×7 monitoring tailored for ministries, defense agencies, public-sector bodies, and critical infrastructure organizations.",
-  },
-  {
-    question: "What types of cyber threats do governments face today?",
-    answer:
-      "Governments face AI-generated malware, nation-state espionage, deepfake disinformation, zero-day exploits, supply-chain attacks, critical infrastructure sabotage, cloud sovereignty risks, and emerging quantum computing threats.",
-  },
-  {
-    question: "Does Mociber offer cybersecurity for critical infrastructure?",
-    answer:
-      "Yes. Mociber secures power grids, water systems, transportation networks, healthcare, telecom, aviation, oil & gas, and other OT/ICS environments through AI-based anomaly detection and industrial-grade defense technologies.",
-  },
-  {
-    question: "What is sovereign cloud security and why is it important?",
-    answer:
-      "Sovereign cloud security ensures that government data, identities, and workloads remain under national jurisdiction, isolated from foreign influence, global data laws, and unauthorized third-party access.",
-  },
-  {
-    question: "Can Mociber help government agencies prevent deepfake and information warfare attacks?",
-    answer:
-      "Yes. Mociber provides AI-based deepfake detection, influence-monitoring analytics, election security frameworks, and counter-disinformation intelligence to protect public trust and national stability.",
-  },
-  {
-    question: "Do you support compliance with defense and government regulations?",
-    answer:
-      "Absolutely. Mociber aligns agencies with NIST, CISA, ENISA, MITRE, IT Act, DPDP India, national data sovereignty standards, and ministry- or defense-specific regulatory requirements.",
-  },
-  {
-    question: "How does Mociber detect nation-state cyberattacks quickly?",
-    answer:
-      "Our AI-driven threat intelligence engine analyzes global threat signals, geopolitical indicators, malware behavior, and cross-border attack patterns to identify nation-state activity in real time.",
-  },
-  {
-    question: "Does Mociber provide SOC services for government agencies?",
-    answer:
-      "Yes. Mociber operates a military-grade, 24×7 Cyber Command Center delivering continuous monitoring, advanced threat hunting, incident response, and digital forensics for government environments.",
-  },
-  {
-    question: "How can government organizations request an assessment or proposal from Mociber?",
-    answer:
-      "Government agencies can contact Mociber through the secure form on our website. Our defense cybersecurity specialists respond within 24 hours with a tailored assessment or proposal.",
-  },
-];
+    const faqs = [
+        {
+            question: "What is AI-powered defense in government cybersecurity?",
+            answer:
+                "AI-powered defense uses artificial intelligence, machine learning, and automation to detect, prevent, and respond to nation-state attacks, cyberwarfare, disinformation, and critical infrastructure threats faster than traditional security systems.",
+        },
+        {
+            question: "How does Mociber support national security agencies and government departments?",
+            answer:
+                "Mociber provides AI-driven threat intelligence, sovereign cloud security, OT/ICS protection, zero-trust frameworks, cyberwarfare readiness, and 24×7 monitoring tailored for ministries, defense agencies, public-sector bodies, and critical infrastructure organizations.",
+        },
+        {
+            question: "What types of cyber threats do governments face today?",
+            answer:
+                "Governments face AI-generated malware, nation-state espionage, deepfake disinformation, zero-day exploits, supply-chain attacks, critical infrastructure sabotage, cloud sovereignty risks, and emerging quantum computing threats.",
+        },
+        {
+            question: "Does Mociber offer cybersecurity for critical infrastructure?",
+            answer:
+                "Yes. Mociber secures power grids, water systems, transportation networks, healthcare, telecom, aviation, oil & gas, and other OT/ICS environments through AI-based anomaly detection and industrial-grade defense technologies.",
+        },
+        {
+            question: "What is sovereign cloud security and why is it important?",
+            answer:
+                "Sovereign cloud security ensures that government data, identities, and workloads remain under national jurisdiction, isolated from foreign influence, global data laws, and unauthorized third-party access.",
+        },
+        {
+            question: "Can Mociber help government agencies prevent deepfake and information warfare attacks?",
+            answer:
+                "Yes. Mociber provides AI-based deepfake detection, influence-monitoring analytics, election security frameworks, and counter-disinformation intelligence to protect public trust and national stability.",
+        },
+        {
+            question: "Do you support compliance with defense and government regulations?",
+            answer:
+                "Absolutely. Mociber aligns agencies with NIST, CISA, ENISA, MITRE, IT Act, DPDP India, national data sovereignty standards, and ministry- or defense-specific regulatory requirements.",
+        },
+        {
+            question: "How does Mociber detect nation-state cyberattacks quickly?",
+            answer:
+                "Our AI-driven threat intelligence engine analyzes global threat signals, geopolitical indicators, malware behavior, and cross-border attack patterns to identify nation-state activity in real time.",
+        },
+        {
+            question: "Does Mociber provide SOC services for government agencies?",
+            answer:
+                "Yes. Mociber operates a military-grade, 24×7 Cyber Command Center delivering continuous monitoring, advanced threat hunting, incident response, and digital forensics for government environments.",
+        },
+        {
+            question: "How can government organizations request an assessment or proposal from Mociber?",
+            answer:
+                "Government agencies can contact Mociber through the secure form on our website. Our defense cybersecurity specialists respond within 24 hours with a tailored assessment or proposal.",
+        },
+    ];
 
 
 
@@ -99,7 +99,7 @@ export default function DefenseAndGovernmentPage() {
         {
             title: "AI-Powered National Threat Intelligence",
             icon: Radar,
-            summary:
+            description:
                 "Predict, detect, and correlate nation-state cyber threats before they impact national systems.",
             details: [
                 "AI-based geopolitical risk analytics",
@@ -110,7 +110,7 @@ export default function DefenseAndGovernmentPage() {
         {
             title: "Zero-Trust Security for Government & Defense",
             icon: ShieldCheck,
-            summary:
+            description:
                 "Identity-first security architecture designed for ministries, defense agencies, and classified departments.",
             details: [
                 "Multi-level identity and access governance",
@@ -121,7 +121,7 @@ export default function DefenseAndGovernmentPage() {
         {
             title: "Critical Infrastructure Protection (ICS / OT / SCADA)",
             icon: Factory,
-            summary:
+            description:
                 "Protect power grids, transport, oil & gas, water, and healthcare systems from cyber sabotage.",
             details: [
                 "AI-driven OT anomaly detection",
@@ -132,7 +132,7 @@ export default function DefenseAndGovernmentPage() {
         {
             title: "Digital Sovereignty & Government Cloud Security",
             icon: CloudOff,
-            summary:
+            description:
                 "Ensure national data sovereignty while modernizing government cloud infrastructure.",
             details: [
                 "Sovereign encryption and independent key ownership",
@@ -143,7 +143,7 @@ export default function DefenseAndGovernmentPage() {
         {
             title: "Cyberwarfare Readiness & Incident Response",
             icon: CrossIcon,
-            summary:
+            description:
                 "Prepare government institutions for cyber conflict and large-scale incidents.",
             details: [
                 "Cyber range and war-game simulations",
@@ -154,7 +154,7 @@ export default function DefenseAndGovernmentPage() {
         {
             title: "AI-Assisted Governance, Risk & Compliance",
             icon: ClipboardCheck,
-            summary:
+            description:
                 "Automated compliance monitoring across global and national regulations.",
             details: [
                 "GDPR, DPDP India, NIS2, ISO 27001",
@@ -165,7 +165,7 @@ export default function DefenseAndGovernmentPage() {
         {
             title: "Public Sector Fraud & Identity Protection",
             icon: Fingerprint,
-            summary:
+            description:
                 "Protect citizen identities and prevent large-scale fraud across public systems.",
             details: [
                 "AI-driven identity verification",
@@ -176,7 +176,7 @@ export default function DefenseAndGovernmentPage() {
         {
             title: "Election Security & Counter-Disinformation",
             icon: Vote,
-            summary:
+            description:
                 "Safeguard democratic processes and public trust in elections.",
             details: [
                 "Deepfake detection and media verification",
@@ -370,16 +370,8 @@ export default function DefenseAndGovernmentPage() {
                     </motion.div>
                 </section>
 
-
-                <KeyRisks
-                    title="Top Geo-Cyber Risks"
-                    subtitle="Our AI research and global intelligence teams highlight nine critical risks transforming government cybersecurity:"
-                    risks={risks}
-                />
-
-                <section className="bg-linear-to-b from-[#081a33] to-[#000A1F] text-white py-20">
+                {/* <section className="bg-linear-to-b from-[#081a33] to-[#000A1F] text-white py-20">
                     <div className="max-w-7xl mx-auto px-6">
-                        {/* Header */}
                         <div className="mb-14 max-w-3xl">
                             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
                                 Defense & Government Cybersecurity Solutions
@@ -391,10 +383,8 @@ export default function DefenseAndGovernmentPage() {
                             </p>
                         </div>
 
-                        {/* Content */}
                         <div className="grid lg:grid-cols-3 gap-14 items-start">
 
-                            {/* LEFT — Accordion */}
                             <div className="divide-y divide-white/10 lg:col-span-2">
                                 {solutions.map((item, idx) => {
                                     const Icon = item.icon;
@@ -423,10 +413,10 @@ export default function DefenseAndGovernmentPage() {
                                             </button>
 
                                             {isOpen && (
-                                                <> 
-                                                <p className="text-sm text-slate-400 mt-4">
-                                                    {item.summary}
-                                                </p>
+                                                <>
+                                                    <p className="text-sm text-slate-400 mt-4">
+                                                        {item.description}
+                                                    </p>
                                                     <ul className="mt-4 ml-10 text-sm text-slate-300 list-disc space-y-2">
                                                         {item.details.map((d, i) => (
                                                             <li key={i}>{d}</li>
@@ -440,7 +430,6 @@ export default function DefenseAndGovernmentPage() {
                                 })}
                             </div>
 
-                            {/* RIGHT — Visual */}
                             <div className="hidden lg:block sticky top-28">
                                 <div className="relative m-auto ">
                                     <img
@@ -448,11 +437,9 @@ export default function DefenseAndGovernmentPage() {
                                         alt="Government Cyber Defense"
                                         className="w-auto m-auto rounded-lg shadow-lg"
                                     />
-                                    {/* soft overlay */}
-                                    {/* <div className="absolute inset-0 bg-linear-to-t from-[#0b1220]/70 to-transparent" /> */}
+                                    <div className="absolute inset-0 bg-linear-to-t from-[#0b1220]/70 to-transparent" />
                                 </div>
 
-                                {/* Optional caption */}
                                 <p className="mt-4 text-xs text-slate-400">
                                     AI-driven cyber defense for national infrastructure, defense agencies,
                                     and public sector institutions.
@@ -460,7 +447,19 @@ export default function DefenseAndGovernmentPage() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
+
+                <ServiceSolution solutions={solutions} heading={"Defense & Government Cybersecurity Solution"} />
+
+
+
+
+                <KeyRisks
+                    title="Top Geo-Cyber Risks"
+                    subtitle="Our AI research and global intelligence teams highlight nine critical risks transforming government cybersecurity:"
+                    risks={risks}
+                />
+
 
 
 

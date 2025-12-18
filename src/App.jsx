@@ -26,6 +26,7 @@ import GeopoliticalSecurityPage from "./solutions/Geopolitical";
 import RiskManagementPage from "./Services/RiskManagement";
 import DefenseAndGovernmentPage from "./Services/DefenseAndGovernment";
 import RansomwarePage from "./Services/Ransomware";
+import Compliance from "./Services/compliance";
 
 function App() {
   useEffect(() => {
@@ -65,6 +66,7 @@ function App() {
           <Route path="/services/risk-management" element={<RiskManagementPage />} />
           <Route path="/services/ai-defense" element={<DefenseAndGovernmentPage />} />
           <Route path="/services/ransomware" element={<RansomwarePage />} />
+          <Route path="/services/compliance" element={<Compliance />} />
 
 
 

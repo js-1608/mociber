@@ -18,19 +18,19 @@ export default function KeyRisks({
   return (
     <section
       id="risks"
-      className="relative mt-20 px-6"
+      className="relative px-6"
     >
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b to-[#081a33] from-[#020617]" />
+      <div className="absolute inset-0 -z-10" />
 
       <div className="max-w-7xl mx-auto py-20">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <h3 className="text-3xl md:text-4xl font-extrabold text-white">
+          <h3 className="text-3xl md:text-4xl font-extrabold ">
             {title}
           </h3>
           {subtitle && (
-            <p className="mt-3 text-slate-300 text-sm md:text-base">
+            <p className="mt-3 text-sm md:text-base">
               {subtitle}
             </p>
           )}
@@ -48,7 +48,9 @@ export default function KeyRisks({
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
                 whileHover={{ y: -6 }}
-                className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md hover:border-[#4da3ff]/40 transition"
+                className="group relative rounded-2xl border  bg-gray-100 p-6 backdrop-blur-md border-[#4da3ff]/40 transition"
+                data-aos="fade-up "
+                data-aos-delay={idx * 100}
               >
                 {/* Glow */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition bg-linear-to-br from-[#4da3ff]/10 to-transparent" />
@@ -60,11 +62,11 @@ export default function KeyRisks({
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h4 className="text-white font-semibold text-lg leading-snug">
+                  <h4 className="text-black font-semibold text-lg leading-snug">
                     {risk.title}
                   </h4>
 
-                  <p className="mt-2 text-sm text-slate-400">
+                  <p className="mt-2 text-sm text-slate-900">
                     {risk.subtext}
                   </p>
                 </div>

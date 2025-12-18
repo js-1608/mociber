@@ -104,7 +104,7 @@ export default function RansomwarePage() {
         {
             title: "Ransomware Resilience Assessment & Risk Index",
             icon: ShieldAlert,
-            summary:
+            description:
                 "Establish a clear, quantifiable view of ransomware exposure across business, technology, and third-party ecosystems.",
             details: [
                 "Complete ransomware risk profiling",
@@ -116,7 +116,7 @@ export default function RansomwarePage() {
         {
             title: "Immutable, Air-Gapped & Real-Time Backup Architecture",
             icon: DatabaseBackup,
-            summary:
+            description:
                 "Ensure data survivability and rapid recovery even during advanced ransomware events.",
             details: [
                 "Immutable snapshot-based backups",
@@ -128,7 +128,7 @@ export default function RansomwarePage() {
         {
             title: "AI-Driven Detection, Deception & Rapid Response",
             icon: Bot,
-            summary:
+            description:
                 "Detect ransomware activity early and automatically disrupt attack chains before encryption spreads.",
             details: [
                 "Behavior-based AI detection engines",
@@ -140,7 +140,7 @@ export default function RansomwarePage() {
         {
             title: "Vendor & Supply Chain Risk Monitoring",
             icon: Users,
-            summary:
+            description:
                 "Reduce ransomware entry points introduced through third-party vendors and service providers.",
             details: [
                 "Third-party security posture scoring",
@@ -152,7 +152,7 @@ export default function RansomwarePage() {
         {
             title: "Incident Response, Business Continuity & War-Room Operations",
             icon: Siren,
-            summary:
+            description:
                 "Minimize downtime and financial impact through coordinated ransomware response and recovery operations.",
             details: [
                 "Ransomware-specific response playbooks",
@@ -164,7 +164,7 @@ export default function RansomwarePage() {
         {
             title: "Cyber Insurance Advisory",
             icon: Shield,
-            summary:
+            description:
                 "Align technical readiness with cyber insurance requirements and post-breach obligations.",
             details: [
                 "Policy gap and coverage analysis",
@@ -176,7 +176,7 @@ export default function RansomwarePage() {
         {
             title: "Executive, Employee & Leadership Awareness",
             icon: GraduationCap,
-            summary:
+            description:
                 "Reduce human-driven ransomware risk through targeted training and leadership preparedness.",
             details: [
                 "AI-aware phishing and ransomware training",
@@ -382,6 +382,7 @@ export default function RansomwarePage() {
                     </motion.div>
                 </section>
 
+                <ServiceSolution solutions={solutions} heading={"Defense & Government Cybersecurity Solution"} />
 
                 <KeyRisks
                     title="Top Ransomware & Business Resilience Risks"
@@ -389,83 +390,7 @@ export default function RansomwarePage() {
                     risks={risks}
                 />
 
-                <section className="bg-linear-to-b from-[#081a33] to-[#000A1F] text-white py-20">
-                    <h2 className="text-3xl md:text-4xl font-bold leading-tight text-center mb-12">
-                        Mociber’s Ransomware & Business Resilience Solutions
-                    </h2>
-
-                    <div className="max-w-7xl mx-auto px-6">
-                        {/* Header */}
-
-
-                        {/* Content */}
-                        <div className="grid lg:grid-cols-3 gap-14 items-start">
-
-                            {/* LEFT — Accordion */}
-                            <div className="divide-y divide-white/10 lg:col-span-2">
-                                {solutions.map((item, idx) => {
-                                    const Icon = item.icon;
-                                    const isOpen = open === idx;
-
-                                    return (
-                                        <div key={idx} className="py-6">
-                                            <button
-                                                onClick={() => setOpen(isOpen ? null : idx)}
-                                                className="w-full flex items-start justify-between text-left gap-6"
-                                            >
-                                                <div className="flex gap-4">
-                                                    <Icon className="w-6 h-6 text-cyan-400 mt-1 shrink-0" />
-                                                    <div>
-                                                        <h3 className="text-lg font-semibold">
-                                                            {item.title}
-                                                        </h3>
-
-                                                    </div>
-                                                </div>
-
-                                                <ChevronDown
-                                                    className={`w-5 h-5 mt-1 text-slate-400 transition-transform ${isOpen ? "rotate-180" : ""
-                                                        }`}
-                                                />
-                                            </button>
-
-                                            {isOpen && (
-                                                <>
-
-                                                    <ul className="mt-4 ml-10 text-sm text-slate-300 list-disc space-y-2">
-                                                        {item.details.map((d, i) => (
-                                                            <li key={i}>{d}</li>
-                                                        ))}
-                                                    </ul>
-                                                </>
-
-                                            )}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-
-                            {/* RIGHT — Visual */}
-                            <div className="hidden lg:block sticky top-28">
-                                <div className="relative m-auto ">
-                                    <img
-                                        src="https://skill-mine.com/wp-content/uploads/2021/10/skillki.png"
-                                        alt="Government Cyber Defense"
-                                        className="w-auto m-auto rounded-lg shadow-lg"
-                                    />
-                                    {/* soft overlay */}
-                                    {/* <div className="absolute inset-0 bg-linear-to-t from-[#0b1220]/70 to-transparent" /> */}
-                                </div>
-
-                                {/* Optional caption */}
-                                <p className="mt-4 text-xs text-slate-400">
-                                    AI-driven cyber defense for national infrastructure, defense agencies,
-                                    and public sector institutions.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+               
 
 
 
