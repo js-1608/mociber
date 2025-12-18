@@ -30,6 +30,8 @@ import Compliance from "./Services/compliance";
 import DataPrivacy from "./Services/DataPrivacy";
 import ESG from "./Services/Esg";
 import Talent from "./Services/Talent";
+import SupplyChain from "./Services/SupplyChain";
+import OtIot from "./Services/OtIot";
 
 function App() {
   useEffect(() => {
@@ -73,9 +75,8 @@ function App() {
           <Route path="/services/data-privacy" element={<DataPrivacy />} />
           <Route path="/services/esg" element={<ESG />} />
           <Route path="/services/talent" element={<Talent />} />
-
-
-
+          <Route path="/services/supply-chain" element={<SupplyChain />} />
+          <Route path="/services/ot-iot" element={<OtIot />} />
 
 
           {/* solutions */}

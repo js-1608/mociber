@@ -361,7 +361,7 @@ export default function Compliance() {
                 <ContactCta id="contact" />
 
                 <FaqSection
-                    title="Cybersecurity – FAQs"
+                    title="Compliance & Auditing Services – FAQs"
                     subtitle="Common questions about our cybersecurity services, platforms, and approach."
                     faqs={faqs}
                 />

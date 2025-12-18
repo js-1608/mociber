@@ -449,21 +449,13 @@ export default function DefenseAndGovernmentPage() {
                     </div>
                 </section> */}
 
-                 <KeyRisks
+                <KeyRisks
                     title="Top Geo-Cyber Risks"
                     subtitle="Our AI research and global intelligence teams highlight nine critical risks transforming government cybersecurity:"
                     risks={risks}
                 />
 
                 <ServiceSolution solutions={solutions} heading={"Defense & Government Cybersecurity Solution"} />
-
-
-
-
-               
-
-
-
 
 
                 <YouTubeAutoplaySection />

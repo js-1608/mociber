@@ -1,28 +1,17 @@
 import React from "react";
 import {
-    ShieldCheck,
-    Users,
-    Scale,
-    ShieldAlert,
-    DatabaseBackup,
-    Database,
-
-} from "lucide-react";
-import {
-  CloudRain,
-  
-  Truck,
-  Factory,
-  AlertTriangle,
-  
-  TrendingDown,
-  ClipboardX,
-} from "lucide-react";
-import {
-
-    LockKeyhole,
-    Code,
     Siren,
+    BrainCircuit,
+    DollarSign,
+    Cpu,
+    GlobeLock,
+    Factory,
+    RefreshCcw,
+    ShieldAlert,
+    ShieldCheck,
+    CloudCog,
+    Briefcase,
+    Scale,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -40,182 +29,161 @@ import ServiceSolution from "@/components/ServiceSolution";
 
 export default function Talent() {
 
-const faqs = [
-  {
-    question: "What is included in Mociber’s ESG Advisory services?",
-    answer:
-      "Mociber provides end-to-end ESG advisory services including ESG strategy and framework development, carbon accounting, supply chain ESG audits, ESG data and reporting automation, digital governance, and regulatory compliance aligned with global sustainability standards.",
-  },
-  {
-    question: "Why is ESG important for modern organizations?",
-    answer:
-      "ESG strengthens investor confidence, reduces environmental and regulatory risk, improves compliance, enhances brand reputation, and supports long-term operational and financial resilience.",
-  },
-  {
-    question: "Which ESG standards and frameworks does Mociber support?",
-    answer:
-      "Mociber supports leading global ESG frameworks including GRI, SASB, CSRD, TCFD, BRSR, UN Sustainable Development Goals (SDGs), and country-specific sustainability regulations.",
-  },
-  {
-    question: "How does Mociber help with carbon accounting and climate risk?",
-    answer:
-      "We measure and model Scope 1, Scope 2, and Scope 3 emissions, assess climate-related risks, and design science-based carbon reduction and net-zero strategies aligned with global standards.",
-  },
-  {
-    question: "Can Mociber help with supply chain ESG assessments?",
-    answer:
-      "Yes. Mociber evaluates supplier environmental impact, labor practices, governance controls, ethical sourcing, and compliance using structured ESG audit and due diligence models.",
-  },
-  {
-    question: "How does Mociber ensure ESG reporting accuracy?",
-    answer:
-      "Through AI-driven ESG data pipelines, automated reporting workflows, validation checks, and audit-ready documentation aligned with regulatory and assurance requirements.",
-  },
-  {
-    question: "Does Mociber support ESG governance and board oversight?",
-    answer:
-      "Absolutely. We design ESG governance structures, internal controls, KPIs, board-level oversight models, and accountability mechanisms to strengthen enterprise ESG maturity.",
-  },
-  {
-    question: "How does Mociber address digital ESG risks?",
-    answer:
-      "Mociber assesses AI ethics, cyber governance, data privacy risks, and digital sustainability practices, enabling responsible AI adoption and transparent ESG reporting.",
-  },
-  {
-    question: "What industries benefit from Mociber’s ESG advisory services?",
-    answer:
-      "Our ESG advisory services support BFSI, healthcare, manufacturing, telecom, government, energy, retail, and global enterprises pursuing sustainability and regulatory transformation.",
-  },
-  {
-    question: "How can my organization begin its ESG journey with Mociber?",
-    answer:
-      "Simply contact us through the consultation form. A Mociber ESG specialist will engage within 24 hours to provide a tailored ESG assessment and implementation roadmap.",
-  },
-];
-
-
-
-
-
-
-
-
-    const risks = [
+    const faqs = [
         {
-            title: "Climate & Environmental Exposure",
-            subtext:
-                "Extreme weather events, energy dependence, and environmental impacts threaten operational continuity and regulatory compliance.",
-            icon: CloudRain,
+            question: "What is Niche Talent, and why is it important?",
+            answer:
+                "Niche Talent refers to highly specialized professionals with deep expertise in cybersecurity, AI, cloud engineering, GRC, data protection, and emerging technologies. Organizations rely on niche talent to accelerate digital transformation, reduce risk, and maintain a competitive advantage.",
         },
         {
-            title: "Inaccurate or Non-Auditable ESG Data",
-            subtext:
-                "Poor ESG data quality, fragmented sources, and manual reporting processes create audit failures, investor distrust, and disclosure risks.",
-            icon: Database,
+            question: "Which industries require niche talent the most?",
+            answer:
+                "BFSI, healthcare, government, telecom, IT services, manufacturing, and critical infrastructure sectors face the highest demand due to increasing cyber threats, regulatory pressures, and rapid digital modernization.",
         },
         {
-            title: "Regulatory Non-Compliance",
-            subtext:
-                "Failure to meet CSRD, SEC Climate Rule, GRI, SASB, or BRSR requirements results in legal exposure, financial penalties, and reputational damage.",
-            icon: Scale,
+            question: "How does Mociber source and verify niche talent?",
+            answer:
+                "Mociber leverages global talent intelligence networks, AI-driven sourcing, multi-stage technical evaluations, certification validation, background checks, and performance screening to ensure quality and reliability.",
         },
         {
-            title: "Supply Chain Sustainability Gaps",
-            subtext:
-                "Lack of visibility into supplier practices increases environmental, ethical, labor, and operational risk across the value chain.",
-            icon: Truck,
+            question: "Can Mociber provide on-demand or project-based talent?",
+            answer:
+                "Yes. We deploy on-demand cloud engineers, cybersecurity analysts, DevSecOps experts, AI specialists, and crisis response professionals for short-term, project-based, or long-term engagements.",
         },
         {
-            title: "Mismanaged Carbon Emissions",
-            subtext:
-                "Incomplete or inaccurate tracking of Scope 1, 2, and 3 emissions undermines climate commitments and regulatory readiness.",
-            icon: Factory,
+            question: "Does Mociber offer leadership-level talent such as CISOs or CIOs?",
+            answer:
+                "Absolutely. Mociber provides fractional and interim CISOs, CIOs, CDOs, CTOs, and transformation leaders to drive strategic programs, risk initiatives, and enterprise change.",
         },
         {
-            title: "Greenwashing & ESG Misrepresentation",
-            subtext:
-                "Unsubstantiated sustainability claims expose organizations to regulatory scrutiny, lawsuits, and long-term brand damage.",
-            icon: AlertTriangle,
+            question: "What tools and technologies do Mociber’s specialists support?",
+            answer:
+                "Our talent supports leading platforms including AWS, Azure, GCP, Kubernetes, Terraform, CrowdStrike, SentinelOne, Databricks, OneTrust, ServiceNow, and other enterprise-grade technologies.",
         },
         {
-            title: "Workforce, Ethics & Social Risk",
-            subtext:
-                "Weak diversity, health & safety, labor practices, and employee engagement erode trust among employees, customers, and regulators.",
-            icon: Users,
+            question: "Can Mociber support regulatory and compliance requirements?",
+            answer:
+                "Yes. We provide specialists with expertise in ISO 27001, SOC 2, GDPR, DPDP Act, HIPAA, PCI DSS, ESG, and privacy engineering to support audits and regulatory compliance.",
         },
         {
-            title: "Cyber Governance & Data Ethics Gaps",
-            subtext:
-                "Poor AI ethics, weak cyber governance, and inadequate data protection threaten ESG transparency and digital trust.",
-            icon: ShieldAlert,
+            question: "How quickly can Mociber deploy niche talent?",
+            answer:
+                "Depending on urgency and role complexity, Mociber can deploy niche talent within 24–72 hours for critical roles and within a few days for complex or large-scale project requirements.",
         },
         {
-            title: "Financial & Operational Sustainability Risks",
-            subtext:
-                "ESG failures restrict access to capital, increase cost of financing, and weaken long-term business resilience.",
-            icon: TrendingDown,
+            question: "Does Mociber offer global or region-specific talent?",
+            answer:
+                "We offer both globally vetted professionals and region-specific specialists aligned with local regulations, data residency requirements, and geopolitical considerations.",
         },
         {
-            title: "Weak Corporate Governance & Oversight",
-            subtext:
-                "Insufficient board oversight, internal controls, and accountability slow ESG maturity and strategic execution.",
-            icon: ClipboardX,
+            question: "How can organizations request niche talent from Mociber?",
+            answer:
+                "Organizations can reach out through our contact form. A Mociber talent advisory expert will respond within 24 hours to assess requirements and initiate deployment.",
         },
     ];
 
-
-
     const solutions = [
         {
-            title: "Data Privacy Compliance & Governance",
+            title: "Cybersecurity & GRC Specialized Talent",
             description:
-                "Implementation and ongoing governance of enterprise-wide data privacy programs aligned with global regulations and industry frameworks.",
+                "Deployment of certified cybersecurity and governance professionals to strengthen security operations, risk management, and regulatory compliance.",
             extra:
-                "GDPR · DPDP Act (India) · HIPAA · CCPA · ISO 27701 · ISO 27001 · NIST Privacy Framework · Automated audits & reporting",
+                "SOC · Threat Intelligence · DFIR · Penetration Testing · Cloud Security · Risk & Compliance · Governance",
             icon: ShieldCheck,
         },
         {
-            title: "Data Discovery, Classification & Mapping",
+            title: "On-Demand Digital & Cloud Engineering Pods",
             description:
-                "AI-powered discovery and classification of sensitive data across on-premise, cloud, SaaS, endpoints, databases, and email systems.",
+                "Rapidly scalable engineering pods delivering secure cloud, platform, and automation capabilities aligned to business priorities.",
             extra:
-                "PII & PHI discovery · Data lineage · Sensitivity labeling · Multi-cloud & SaaS visibility",
-            icon: DatabaseBackup,
+                "Cloud Engineers · DevSecOps · SREs · Kubernetes Architects · Automation Engineers",
+            icon: CloudCog,
         },
         {
-            title: "Data Protection Technologies",
+            title: "AI, Data & Emerging Technology Talent",
             description:
-                "Deployment of enterprise-grade technologies to safeguard sensitive data across its entire lifecycle—at rest, in use, and in transit.",
+                "Specialized talent to design, secure, and govern advanced AI, data, and automation platforms across the enterprise.",
             extra:
-                "Encryption & tokenization · Data masking & anonymization · Secure file transfers · Key management & vaulting",
-            icon: LockKeyhole,
+                "GenAI · ML Engineering · LLM Security · Data Engineering · AI Governance · Automation Architecture",
+            icon: BrainCircuit,
         },
         {
-            title: "Privacy-by-Design for Applications & AI Systems",
+            title: "Interim Leadership & Fractional Executives",
             description:
-                "Embedding privacy and security controls into application development, DevSecOps pipelines, and AI/ML model lifecycles.",
+                "Experienced interim and fractional executives providing strategic leadership during transformation, crisis, or growth phases.",
             extra:
-                "SDLC & DevSecOps integration · AI governance controls · Model risk management · Privacy impact assessments (PIA/DPIA)",
-            icon: Code,
+                "Fractional CISO · CIO · CDO · CTO · Cyber Program Leaders · Transformation Heads",
+            icon: Briefcase,
         },
         {
-            title: "Third-Party Risk & Vendor Compliance",
+            title: "Compliance & Regulatory Talent",
             description:
-                "Continuous assessment and governance of vendors’ data handling practices, cyber posture, and contractual privacy obligations.",
+                "On-demand compliance and privacy specialists supporting audits, certifications, regulatory readiness, and continuous governance.",
             extra:
-                "Vendor due diligence · Privacy & security questionnaires · Contractual compliance · Continuous monitoring",
-            icon: Users,
+                "GDPR · DPDP · ISO 27001 · SOC 2 · HIPAA · PCI DSS · ESG · Privacy Engineering",
+            icon: Scale,
         },
         {
-            title: "Data Breach Response & Incident Management",
+            title: "Crisis Response & Incident Support Talent",
             description:
-                "24×7 data breach response covering investigation, containment, regulatory notifications, and post-incident privacy assessments.",
+                "Immediate access to highly specialized experts for cyber incidents, ransomware events, and high-impact security crises.",
             extra:
-                "Digital forensics · Breach containment · Regulatory reporting · Incident response playbooks · Privacy impact analysis",
+                "Breach Analysts · Digital Forensics · Ransomware Negotiators · Threat Hunters · Incident Responders",
             icon: Siren,
         },
     ];
 
+
+    const risks = [
+        {
+            title: "Severe Shortage of Specialized Skills",
+            subtext:
+                "Global demand for expertise in AI, cybersecurity, cloud-native engineering, digital forensics, and GRC significantly exceeds available talent.",
+            icon: BrainCircuit,
+        },
+        {
+            title: "Rising Talent Costs & High Attrition",
+            subtext:
+                "Skill scarcity drives premium compensation, while competition from big tech and global consulting firms accelerates attrition.",
+            icon: DollarSign,
+        },
+        {
+            title: "Cyber, Cloud & AI Readiness Gaps",
+            subtext:
+                "Workforce capabilities lag behind rapidly evolving cyber threats, cloud architectures, and AI-driven technologies.",
+            icon: Cpu,
+        },
+        {
+            title: "Geopolitical & Compliance Constraints",
+            subtext:
+                "Cross-border hiring restrictions, sanctions, data residency laws, and regulatory barriers limit access to global talent pools.",
+            icon: GlobeLock,
+        },
+        {
+            title: "Supply Chain & Operational Skill Gaps",
+            subtext:
+                "Lack of specialists in resilience engineering, ESG compliance, risk intelligence, and digital operations weakens execution.",
+            icon: Factory,
+        },
+        {
+            title: "Legacy-to-Modern Infrastructure Migration Risks",
+            subtext:
+                "Shortage of experts capable of securely modernizing legacy systems increases transformation delays and operational risk.",
+            icon: RefreshCcw,
+        },
+        {
+            title: "Privacy, Data & AI Governance Shortfalls",
+            subtext:
+                "Rising regulatory and ethical demands outpace the availability of privacy engineers, AI governance, and data protection specialists.",
+            icon: ShieldAlert,
+        },
+        {
+            title: "Crisis Response & Incident Readiness Gaps",
+            subtext:
+                "Organizations struggle to rapidly source threat hunters, DFIR analysts, and incident responders during critical cyber events.",
+            icon: Siren,
+        },
+    ];
 
 
     return (
@@ -233,15 +201,15 @@ const faqs = [
                 <motion.section id="intro" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-linear-to-b from-[#000A1F] to-[#0c1b34]">
                     <div className="grid md:grid-cols-2 gap-8 items-center max-w-7xl m-auto ">
                         <div className=" rounded-2xl py-16 p-4">
-                            <h2 className="text-2xl md:text-4xl font-bold mt-6 mb-4">ESG Advisory</h2>
+                            <h2 className="text-2xl md:text-4xl font-bold mt-6 mb-4">Niche Talent Services</h2>
                             <h4 className="font-semibold text-blue-500">
-                                Future-Ready. Responsible. Resilient.
+                                Specialized Talent That Accelerates Innovation, Resilience & Competitive Advantage
                             </h4>
                             <p className="mt-2 text-slate-300">
-                                Sustainability is no longer optional—it is a global business mandate. With rising regulatory expectations, investor scrutiny, climate risk, and the shift toward responsible operations, organizations must build ESG programs that are transparent, measurable, and integrated into core governance.
+                                Digital transformation, AI disruption, rising cyber threats, regulatory complexity, and global workforce shortages have intensified the need for Niche Talent—highly skilled, domain-specific professionals who can solve complex challenges, drive modernization, and enable organizations to scale with confidence.
                             </p>
                             <h4 className="font-semibold text-blue-500">
-                                Mociber’s ESG Advisory empowers enterprises to accelerate sustainability transformation using data intelligence, automation, governance frameworks, and climate-focused insights—ensuring resilience, compliance, and long-term value creation.
+                                Mociber provides specialized, globally vetted talent across cybersecurity, cloud, AI, data, GRC, and transformation programs—helping enterprises fill critical gaps quickly and sustainably.
                             </h4>
                             {/* <div className="mt-6 flex gap-3">
                                 <Link to="/contact" className="inline-flex items-center gap-2 bg-[#032152] text-white px-5 py-3 rounded-md">Contact Sales</Link>
@@ -297,7 +265,7 @@ const faqs = [
                             {/* RIGHT — TEXT */}
                             <div>
                                 <h3 className="text-2xl md:text-3xl font-extrabold text-white/95 mb-4">
-                                    Key Challenges in ESG
+                                    Key Challenges in Niche Talent
                                 </h3>
 
                                 <p className="text-slate-300 leading-relaxed">
@@ -306,14 +274,12 @@ const faqs = [
 
                                 <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-md text-slate-200">
                                     {[
-                                        "Rapidly evolving ESG regulations across markets",
-                                        "Inconsistent or inaccurate ESG data collection",
-                                        "Complex measurement of Scope 3 emissions",
-                                        "Rising climate-related risks impacting assets and operations",
-                                        "Increasing stakeholder expectations for transparency",
-                                        "Cyber governance, AI ethics, and digital sustainability issues",
-                                        "Fragmented ESG ownership and poor governance alignment",
-                                        "Fear of greenwashing or reputational exposure"
+                                        "Global deficit of 85+ million skilled professionals",
+                                        "40% higher demand for AI, cybersecurity, cloud, and GRC talent",
+                                        "Digital transformation creating roles faster than talent can be trained",
+                                        "Hybrid skills spanning cyber + cloud + compliance are extremely rare",
+                                        "Slow hiring cycles delay innovation, cloud migration, and security programs",
+                                        "Competition from global tech giants and government agencies limits access to top talent"
 
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-3">
@@ -324,7 +290,7 @@ const faqs = [
                                 </ul>
 
                                 <p className="text-base text-center font-semibold text-white mt-8">
-                                    Mociber addresses these challenges with structured ESG frameworks, automated data intelligence, and globally aligned methodologies.
+                                    Niche talent has become a strategic differentiator—not just an HR requirement.
                                 </p>
                             </div>
                         </div>
@@ -334,12 +300,12 @@ const faqs = [
 
 
                 <KeyRisks
-                    title="Top ESG Risks Impacting Modern Enterprises"
+                    title="Top Niche Talent Risks"
                     subtitle="Modern organizations face a combination of regulatory, operational, and cyber risks that directly impact compliance integrity:"
                     risks={risks}
                 />
 
-                <ServiceSolution solutions={solutions} heading={"Mociber’s ESG Advisory Services"} />
+                <ServiceSolution solutions={solutions} heading={"Mociber’s Niche Talent Services & Solutions"} />
 
 
                 <YouTubeAutoplaySection />
@@ -353,7 +319,7 @@ const faqs = [
                 <ContactCta id="contact" />
 
                 <FaqSection
-                    title="Data Privacy & Protection — FAQs"
+                    title="Niche Talent Services — FAQs"
                     subtitle="Common questions about our Data Privacy & Protection."
                     faqs={faqs}
                 />
