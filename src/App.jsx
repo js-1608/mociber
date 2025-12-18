@@ -27,6 +27,9 @@ import RiskManagementPage from "./Services/RiskManagement";
 import DefenseAndGovernmentPage from "./Services/DefenseAndGovernment";
 import RansomwarePage from "./Services/Ransomware";
 import Compliance from "./Services/compliance";
+import DataPrivacy from "./Services/DataPrivacy";
+import ESG from "./Services/Esg";
+import Talent from "./Services/Talent";
 
 function App() {
   useEffect(() => {
@@ -67,6 +70,10 @@ function App() {
           <Route path="/services/ai-defense" element={<DefenseAndGovernmentPage />} />
           <Route path="/services/ransomware" element={<RansomwarePage />} />
           <Route path="/services/compliance" element={<Compliance />} />
+          <Route path="/services/data-privacy" element={<DataPrivacy />} />
+          <Route path="/services/esg" element={<ESG />} />
+          <Route path="/services/talent" element={<Talent />} />
+
 
 
 

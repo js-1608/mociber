@@ -348,13 +348,15 @@ export default function MociberCybersecurityPage() {
                     </motion.div>
                 </section>
 
-                <ServiceSolution solutions={solutions} heading={"Mociber’s Cybersecurity Services & Solutions"} />
-
                 <KeyRisks
                     title="Key Cybersecurity Risks"
                     subtitle="Top risks enterprises face — prioritized for impact and exploitability."
                     risks={risks}
                 />
+
+                <ServiceSolution solutions={solutions} heading={"Mociber’s Cybersecurity Services & Solutions"} />
+
+                
 
 
 

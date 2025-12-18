@@ -382,15 +382,16 @@ export default function RansomwarePage() {
                     </motion.div>
                 </section>
 
-                <ServiceSolution solutions={solutions} heading={"Defense & Government Cybersecurity Solution"} />
-
                 <KeyRisks
                     title="Top Ransomware & Business Resilience Risks"
                     subtitle="Our AI research and global intelligence teams highlight nine critical risks transforming government cybersecurity:"
                     risks={risks}
                 />
+                <ServiceSolution solutions={solutions} heading={"Defense & Government Cybersecurity Solution"} />
 
-               
+
+
+
 
 
 

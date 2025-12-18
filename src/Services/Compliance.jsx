@@ -13,10 +13,10 @@ import {
 } from "lucide-react";
 
 import {
-    
+
     FileSearch,
     Layers,
-    
+
     CheckCircle,
     Activity,
     FileText,
@@ -40,57 +40,57 @@ export default function Compliance() {
 
 
     const faqs = [
-  {
-    question: "What is included in Mociber’s Compliance & Auditing services?",
-    answer:
-      "Mociber provides end-to-end compliance management, internal and external audit readiness, GRC framework development, policy creation and modernization, third-party and vendor audits, automated compliance monitoring, and regulatory advisory aligned with global standards.",
-  },
-  {
-    question: "Why is compliance important for modern organizations?",
-    answer:
-      "Compliance reduces legal and regulatory risk, avoids penalties and fines, builds customer and stakeholder trust, protects sensitive data, improves governance, and strengthens long-term operational resilience.",
-  },
-  {
-    question: "Which compliance standards does Mociber support?",
-    answer:
-      "Mociber supports ISO 27001, ISO 27701, ISO 22301, SOC 2, GDPR, DPDP India, HIPAA, PCI DSS, NIST, RBI cybersecurity guidelines, and industry-specific regulatory frameworks.",
-  },
-  {
-    question: "What industries benefit from Mociber’s compliance services?",
-    answer:
-      "BFSI, healthcare, retail, technology, government, telecom, manufacturing, energy, and other regulated industries benefit from Mociber’s compliance, audit, and governance services.",
-  },
-  {
-    question: "Can Mociber help with internal and external audit preparation?",
-    answer:
-      "Yes. Mociber conducts audit gap assessments, documentation restructuring, evidence collection automation, process readiness validation, and remediation planning to ensure successful internal and external audits.",
-  },
-  {
-    question: "Does Mociber offer automated compliance monitoring?",
-    answer:
-      "Absolutely. Mociber deploys AI-powered continuous compliance monitoring dashboards, automated policy tracking, real-time control testing, and continuous audit trails for proactive audit readiness.",
-  },
-  {
-    question: "What is a GRC framework and why is it important?",
-    answer:
-      "A GRC (Governance, Risk, and Compliance) framework integrates governance, risk management, and compliance into a unified operating model, enabling consistent controls, better decision-making, and regulatory alignment.",
-  },
-  {
-    question: "How does Mociber handle third-party and vendor compliance risks?",
-    answer:
-      "Mociber evaluates vendor security controls, contractual compliance, data handling practices, cyber posture, and supply-chain risks through structured assessments and continuous third-party monitoring.",
-  },
-  {
-    question: "Can Mociber assist with GDPR, SOC 2, or DPDP India compliance?",
-    answer:
-      "Yes. Mociber provides implementation guidance, documentation support, data mapping, risk assessments, DPO advisory, and audit assistance for GDPR, SOC 2, DPDP India, and other regulations.",
-  },
-  {
-    question: "How can my organization start a compliance assessment with Mociber?",
-    answer:
-      "Organizations can begin by filling out our contact form. A Mociber compliance specialist will reach out within 24 hours to assess requirements and propose a structured compliance roadmap.",
-  },
-];
+        {
+            question: "What is included in Mociber’s Compliance & Auditing services?",
+            answer:
+                "Mociber provides end-to-end compliance management, internal and external audit readiness, GRC framework development, policy creation and modernization, third-party and vendor audits, automated compliance monitoring, and regulatory advisory aligned with global standards.",
+        },
+        {
+            question: "Why is compliance important for modern organizations?",
+            answer:
+                "Compliance reduces legal and regulatory risk, avoids penalties and fines, builds customer and stakeholder trust, protects sensitive data, improves governance, and strengthens long-term operational resilience.",
+        },
+        {
+            question: "Which compliance standards does Mociber support?",
+            answer:
+                "Mociber supports ISO 27001, ISO 27701, ISO 22301, SOC 2, GDPR, DPDP India, HIPAA, PCI DSS, NIST, RBI cybersecurity guidelines, and industry-specific regulatory frameworks.",
+        },
+        {
+            question: "What industries benefit from Mociber’s compliance services?",
+            answer:
+                "BFSI, healthcare, retail, technology, government, telecom, manufacturing, energy, and other regulated industries benefit from Mociber’s compliance, audit, and governance services.",
+        },
+        {
+            question: "Can Mociber help with internal and external audit preparation?",
+            answer:
+                "Yes. Mociber conducts audit gap assessments, documentation restructuring, evidence collection automation, process readiness validation, and remediation planning to ensure successful internal and external audits.",
+        },
+        {
+            question: "Does Mociber offer automated compliance monitoring?",
+            answer:
+                "Absolutely. Mociber deploys AI-powered continuous compliance monitoring dashboards, automated policy tracking, real-time control testing, and continuous audit trails for proactive audit readiness.",
+        },
+        {
+            question: "What is a GRC framework and why is it important?",
+            answer:
+                "A GRC (Governance, Risk, and Compliance) framework integrates governance, risk management, and compliance into a unified operating model, enabling consistent controls, better decision-making, and regulatory alignment.",
+        },
+        {
+            question: "How does Mociber handle third-party and vendor compliance risks?",
+            answer:
+                "Mociber evaluates vendor security controls, contractual compliance, data handling practices, cyber posture, and supply-chain risks through structured assessments and continuous third-party monitoring.",
+        },
+        {
+            question: "Can Mociber assist with GDPR, SOC 2, or DPDP India compliance?",
+            answer:
+                "Yes. Mociber provides implementation guidance, documentation support, data mapping, risk assessments, DPO advisory, and audit assistance for GDPR, SOC 2, DPDP India, and other regulations.",
+        },
+        {
+            question: "How can my organization start a compliance assessment with Mociber?",
+            answer:
+                "Organizations can begin by filling out our contact form. A Mociber compliance specialist will reach out within 24 hours to assess requirements and propose a structured compliance roadmap.",
+        },
+    ];
 
 
 
@@ -338,14 +338,15 @@ export default function Compliance() {
                     </motion.div>
                 </section>
 
-
-                <ServiceSolution solutions={solutions} heading={"Mociber’s Cybersecurity Services & Solutions"} />
-
                 <KeyRisks
                     title="Top Enterprise Compliance & Auditing Risks"
                     subtitle="Modern organizations face a combination of regulatory, operational, and cyber risks that directly impact compliance integrity:"
                     risks={risks}
                 />
+
+                <ServiceSolution solutions={solutions} heading={"Mociber’s Cybersecurity Services & Solutions"} />
+
+
 
 
 
