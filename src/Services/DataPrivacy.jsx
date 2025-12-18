@@ -338,7 +338,7 @@ export default function DataPrivacy() {
 
                 <YouTubeAutoplaySection />
                 {/* SERVICES */}
-                <Service />
+                {/* <Service /> */}
                 <ToolsTabs />
 
 

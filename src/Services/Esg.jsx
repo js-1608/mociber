@@ -344,7 +344,7 @@ const faqs = [
 
                 <YouTubeAutoplaySection />
                 {/* SERVICES */}
-                <Service />
+                {/* <Service /> */}
                 <ToolsTabs />
 
 

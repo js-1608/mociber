@@ -310,7 +310,7 @@ export default function Talent() {
 
                 <YouTubeAutoplaySection />
                 {/* SERVICES */}
-                <Service />
+                {/* <Service /> */}
                 <ToolsTabs />
 
 

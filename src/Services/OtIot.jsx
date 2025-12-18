@@ -6,7 +6,7 @@ import {
     ShieldCheck,
     Target,
     ClipboardCheck,
-    
+
     Siren,
 } from "lucide-react";
 import {
@@ -39,56 +39,57 @@ export default function OtIot() {
 
     const faqs = [
         {
-            question: "What is included in Mociber’s ESG Advisory services?",
+            question: "What does OT, IoT & Edge Security include?",
             answer:
-                "Mociber provides end-to-end ESG advisory services including ESG strategy and framework development, carbon accounting, supply chain ESG audits, ESG data and reporting automation, digital governance, and regulatory compliance aligned with global sustainability standards.",
+                "OT, IoT & Edge Security includes asset and device discovery, continuous threat detection, Zero Trust segmentation, supply chain security, compliance alignment, secure edge architecture, and dedicated OT incident response.",
         },
         {
-            question: "Why is ESG important for modern organizations?",
+            question: "Why are OT and IoT environments highly vulnerable?",
             answer:
-                "ESG strengthens investor confidence, reduces environmental and regulatory risk, improves compliance, enhances brand reputation, and supports long-term operational and financial resilience.",
+                "OT and IoT environments often rely on legacy systems, lack regular patching cycles, use weak authentication mechanisms, and were originally designed for uptime and availability rather than cybersecurity.",
         },
         {
-            question: "Which ESG standards and frameworks does Mociber support?",
+            question: "How does Mociber secure critical infrastructure and industrial systems?",
             answer:
-                "Mociber supports leading global ESG frameworks including GRI, SASB, CSRD, TCFD, BRSR, UN Sustainable Development Goals (SDGs), and country-specific sustainability regulations.",
+                "Mociber uses ICS-specific monitoring, AI-driven anomaly detection, Zero Trust access controls, network segmentation, and 24×7 MDR-OT operations to protect critical infrastructure.",
         },
         {
-            question: "How does Mociber help with carbon accounting and climate risk?",
+            question: "Which industries benefit most from OT/IoT security?",
             answer:
-                "We measure and model Scope 1, Scope 2, and Scope 3 emissions, assess climate-related risks, and design science-based carbon reduction and net-zero strategies aligned with global standards.",
+                "Manufacturing, healthcare, energy, utilities, banking, transportation, oil & gas, and government agencies benefit most from robust OT and IoT security programs.",
         },
         {
-            question: "Can Mociber help with supply chain ESG assessments?",
+            question: "Does Mociber support compliance like IEC 62443 and NIST 800-82?",
             answer:
-                "Yes. Mociber evaluates supplier environmental impact, labor practices, governance controls, ethical sourcing, and compliance using structured ESG audit and due diligence models.",
+                "Yes. Mociber helps organizations implement, audit, and maintain compliance with global OT and ICS security standards including IEC 62443, NIST 800-82, and related frameworks.",
         },
         {
-            question: "How does Mociber ensure ESG reporting accuracy?",
+            question: "Can Mociber protect IoT devices against botnets and ransomware?",
             answer:
-                "Through AI-driven ESG data pipelines, automated reporting workflows, validation checks, and audit-ready documentation aligned with regulatory and assurance requirements.",
+                "Absolutely. Our solutions prevent device hijacking, block lateral movement, mitigate DDoS attacks, and stop ransomware from spreading into OT and industrial environments.",
         },
         {
-            question: "Does Mociber support ESG governance and board oversight?",
+            question: "How fast can Mociber respond to an OT/IoT cyber incident?",
             answer:
-                "Absolutely. We design ESG governance structures, internal controls, KPIs, board-level oversight models, and accountability mechanisms to strengthen enterprise ESG maturity.",
+                "Mociber’s OT incident response specialists provide rapid containment, digital forensics, and operational recovery—often within hours of threat detection.",
         },
         {
-            question: "How does Mociber address digital ESG risks?",
+            question: "What tools does Mociber use for OT/IoT threat detection?",
             answer:
-                "Mociber assesses AI ethics, cyber governance, data privacy risks, and digital sustainability practices, enabling responsible AI adoption and transparent ESG reporting.",
+                "We leverage industry-leading platforms such as Nozomi Networks, Claroty, Dragos, Microsoft Defender for IoT, Tenable.ot, and Palo Alto Networks IoT Security.",
         },
         {
-            question: "What industries benefit from Mociber’s ESG advisory services?",
+            question: "How does Zero Trust work in industrial environments?",
             answer:
-                "Our ESG advisory services support BFSI, healthcare, manufacturing, telecom, government, energy, retail, and global enterprises pursuing sustainability and regulatory transformation.",
+                "Zero Trust enforces micro-segmentation, identity-based access, encrypted communications, least-privilege policies, and continuous validation across IT–OT environments.",
         },
         {
-            question: "How can my organization begin its ESG journey with Mociber?",
+            question: "How can organizations start their OT/IoT security program with Mociber?",
             answer:
-                "Simply contact us through the consultation form. A Mociber ESG specialist will engage within 24 hours to provide a tailored ESG assessment and implementation roadmap.",
+                "Organizations can contact Mociber through the website form. We begin with an OT/IoT visibility assessment and then build a customized security and compliance roadmap.",
         },
     ];
+
 
 
 
@@ -356,7 +357,7 @@ export default function OtIot() {
 
                 <YouTubeAutoplaySection />
                 {/* SERVICES */}
-                <Service />
+                {/* <Service /> */}
                 <ToolsTabs />
 
 

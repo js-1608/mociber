@@ -352,7 +352,7 @@ export default function Compliance() {
 
                 <YouTubeAutoplaySection />
                 {/* SERVICES */}
-                <Service />
+                {/* <Service /> */}
                 <ToolsTabs />
 
 

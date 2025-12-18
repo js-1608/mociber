@@ -362,7 +362,7 @@ export default function MociberCybersecurityPage() {
 
                 <YouTubeAutoplaySection />
                 {/* SERVICES */}
-                <Service />
+                {/* <Service /> */}
                 <ToolsTabs />
 
 
