@@ -26,7 +26,7 @@ export default function KeyRisks({
       <div className="max-w-7xl mx-auto py-20">
         {/* Header */}
         <div className="text-center max-w-5xl mx-auto">
-          <h3 className="text-3xl md:text-5xl font-extrabold ">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-white leading-tight max-w-4xl text-center m-auto">
             {title}
           </h3>
           {subtitle && (

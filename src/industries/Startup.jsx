@@ -1,235 +1,340 @@
-"use client";
+// ServiceDetail.jsx
+import HeroBanner from "@/components/ServiceHero";
+import React from "react";
+import {
+  ShieldCheck,
+  Cloud,
+  Code,
+  Lock,
+  Users,
+  Database,
+  Bug,
+  Zap,
+  FileCheck,
+  ShieldAlert,
+  TrendingDown,
+  FileWarning,
+  Layers2Icon,
+  GitBranch,
+  KeyRound,
+  Siren,
+} from "lucide-react";
+import FaqSection from "@/components/Faq";
 import ContactCta from "@/components/ContactCta";
-import React, { useState } from "react";
+import KeyRisks from "@/components/Risks";
+import ServiceSolution from "@/components/ServiceSolution";
+import TrustedLogos from "@/components/TrustedLogos";
 
-/**
- * IndustryStartupsCybersecurity.jsx
- * - Tailwind CSS required
- * - Drop into pages/ or components/ and wire APIs where noted
- *
- * Props:
- * - companyName (string)
- * - heroImg (string) override hero image
- * - onContact (fn) optional callback receiving form data
- *
- * Replace sample data with your real content as needed.
- */
 
-export default function Startup({
-  companyName = "Mociber",
-  heroImg = "/Banners/About.jpg",
-  onContact = null,
-}) {
-  const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+export default function ServiceDetail() {
 
-  function handleChange(e) {
-    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    // Basic client-side validation
-    if (!form.name || !form.email) return alert("Please enter name and email.");
-    // If caller provided handler, call it
-    if (typeof onContact === "function") {
-      onContact(form);
-    }
-    // TODO: replace with API call (POST to /api/leads) in production
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-  }
-
-  const offerings = [
+  const risks = [
     {
-      id: "o1",
-      title: "Security-by-Design Architecture",
-      desc: "Embed security into product and platform decisions early — threat models, secure defaults, and architecture reviews.",
-      icon: "🏗️",
+      title: "Early-Stage Data Breaches",
+      subtext:
+        "Weak access controls and misconfigured cloud environments expose sensitive customer and business data.",
+      icon: Database,
     },
     {
-      id: "o2",
-      title: "Lean Incident Response",
-      desc: "Practical runbooks and playbooks for fast containment, tailored for small teams with limited resources.",
-      icon: "🚨",
+      title: "Cloud Misconfigurations & Shadow IT",
+      subtext:
+        "Rapid cloud adoption without governance leads to exposed storage, APIs, credentials, and unmanaged SaaS usage.",
+      icon: Cloud,
     },
     {
-      id: "o3",
-      title: "DevSecOps & CI/CD Security",
-      desc: "Automated SCA, SAST, dependency management and security gates straight into CI pipelines.",
-      icon: "⚙️",
+      title: "Insecure Product Development",
+      subtext:
+        "Speed-focused development introduces application, API, and source code vulnerabilities.",
+      icon: Code,
     },
     {
-      id: "o4",
-      title: "Threat Intelligence for Startups",
-      desc: "Relevant, noise-reduced signals and prioritized IOCs so you act on what's important, not everything.",
-      icon: "🔎",
-    },
-  ];
-
-  const stats = [
-    { id: "s1", value: "3–5x", label: "Faster incident containment" },
-    { id: "s2", value: "60%", label: "Reduction in false positives" },
-    { id: "s3", value: "95%", label: "Dev pipeline coverage (SAST/SCA)" },
-  ];
-
-  const caseStudies = [
-    {
-      id: "c1",
-      title: "Seed-stage SaaS: achieved SOC-lite in 6 weeks",
-      company: "SecuredApp",
-      snippet:
-        "Implemented automated SCA + incident playbooks — reduced mean time to detect by 4x and freed developer time.",
+      title: "Compliance & Regulatory Gaps",
+      subtext:
+        "Lack of readiness for SOC 2, ISO 27001, GDPR, DPDP, or PCI DSS delays enterprise sales and funding.",
+      icon: FileWarning,
     },
     {
-      id: "c2",
-      title: "Series A Fintech: PCI-lite readiness",
-      company: "FinStart",
-      snippet:
-        "Architected tokenization model and introduced continuous compliance checks to accelerate customer onboarding.",
+      title: "API & Integration Attacks",
+      subtext:
+        "Poorly secured APIs expose platforms to data scraping, abuse, and account takeover.",
+      icon: Bug,
+    },
+    {
+      title: "Identity & Access Weaknesses",
+      subtext:
+        "Shared credentials, weak MFA, and over-privileged access significantly increase breach risk.",
+      icon: Lock,
+    },
+    {
+      title: "Third-Party & Open-Source Risk",
+      subtext:
+        "Dependencies, SaaS tools, and vendors introduce hidden security, legal, and supply-chain exposure.",
+      icon: Users,
+    },
+    {
+      title: "Ransomware & Operational Disruption",
+      subtext:
+        "Single ransomware or extortion incidents can halt operations and severely damage brand credibility.",
+      icon: Zap,
+    },
+    {
+      title: "Lack of Incident Response Readiness",
+      subtext:
+        "Absence of response plans, tooling, and expertise increases impact and recovery time during incidents.",
+      icon: ShieldAlert,
+    },
+    {
+      title: "Investor & Customer Trust Erosion",
+      subtext:
+        "Security incidents and failed audits negatively affect valuation, funding, and partnerships.",
+      icon: TrendingDown,
     },
   ];
 
+
+
+  const solutions = [
+    {
+      title: "Startup Cyber Risk & Security Baseline Assessment",
+      description:
+        "Quick, cost-effective assessment of cloud environments, applications, APIs, identities, and data exposure to identify immediate risks and priorities.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Secure-by-Design Product & Architecture Review",
+      description:
+        "Embedding security into product design, APIs, and platform architecture to reduce systemic risk before scale.",
+      icon: Layers2Icon,
+    },
+    {
+      title: "Cloud Security & Configuration Hardening",
+      description:
+        "Securing AWS, Azure, and GCP environments using least-privilege IAM, secure configurations, and continuous monitoring.",
+      icon: Cloud,
+    },
+    {
+      title: "Application & API Security Testing",
+      description:
+        "Vulnerability testing for web apps, mobile apps, and APIs aligned with OWASP standards to prevent exploit-driven attacks.",
+      icon: Bug,
+    },
+    {
+      title: "DevSecOps & Secure Software Development",
+      description:
+        "Integrating security controls into CI/CD pipelines to maintain release velocity without compromising security.",
+      icon: GitBranch,
+    },
+    {
+      title: "Compliance Readiness for Startups",
+      description:
+        "Lean, fast-track readiness for SOC 2, ISO 27001, GDPR, DPDP, and PCI DSS to accelerate enterprise deals and funding.",
+      icon: FileCheck,
+    },
+    {
+      title: "Identity, Access & Secrets Management",
+      description:
+        "Strong IAM, MFA enforcement, and secrets management for founders, developers, and operations teams.",
+      icon: KeyRound,
+    },
+    {
+      title: "Third-Party & SaaS Risk Management",
+      description:
+        "Assessment and governance of SaaS tools, vendors, and open-source dependencies to reduce hidden risk exposure.",
+      icon: Users,
+    },
+    {
+      title: "Incident Response Planning & Startup SOC Support",
+      description:
+        "Incident response playbooks, lightweight monitoring, and on-demand response support tailored for startups.",
+      icon: Siren,
+    },
+  ];
+
+
+  const faqs = [
+    {
+      question: "Why do startups need cybersecurity early?",
+      answer: "Early security avoids costly breaches, protects customer trust, and prevents delays in funding and enterprise deals.",
+    },
+    {
+      question: "Is cybersecurity expensive for startups?",
+      answer: "No. Lean, automation-first security keeps cost low and scales with growth.",
+    },
+    {
+      question: "Which compliance standards matter most?",
+      answer: "SOC 2, ISO 27001, GDPR, DPDP, and PCI DSS depending on customers and industry.",
+    },
+    {
+      question: "How does security help fundraising?",
+      answer: "Investors prefer startups with clear security posture and audit readiness.",
+    },
+  ];
   return (
-    <main className="min-h-screen">
-      {/* HERO */}
-      <section
-        className="relative bg-cover bg-center"
-        style={{ backgroundImage: `linear-gradient(180deg, rgba(3,33,82,0.7), rgba(3,33,82,0.6)), url(${heroImg})` }}
-        aria-label="Startups in cybersecurity hero"
-      >
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-white">
-              <p className="uppercase text-sm tracking-widest text-amber-200">Industry focus</p>
-              <h1 className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
-                Security solutions for startups — move fast, stay secure
-              </h1>
-              <p className="mt-4 text-slate-200 max-w-xl">
-                We help early-stage and growth-stage cybersecurity startups build secure products, scale operations, and gain customer trust — without slowing development.
-              </p>
+    <div className="">
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href="#contact" className="inline-block px-5 py-3 bg-amber-500 text-black font-semibold rounded-lg shadow hover:scale-[1.02] transition">
-                  Request a Demo
-                </a>
-                <a href="#offerings" className="inline-block px-5 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition">
-                  See Offerings
-                </a>
-              </div>
-
-              {/* quick stats */}
-              <ul className="mt-8 flex gap-6">
-                {stats.map((s) => (
-                  <li key={s.id} className="flex flex-col">
-                    <span className="text-2xl md:text-3xl font-bold">{s.value}</span>
-                    <span className="text-sm text-slate-200">{s.label}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="hidden md:block rounded-xl overflow-hidden shadow-lg">
-              {/* illustrative panel — replace with real screenshot or product image */}
-              <div className="bg-white p-6">
-                <h3 className="text-lg font-semibold mb-2">Startup quick pack</h3>
-                <p className="text-sm text-slate-700 mb-4">
-                  Pre-built security templates, starter playbooks, and CI/CD integrations to secure your MVP quickly.
-                </p>
-
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="flex-none bg-slate-100 rounded p-2">🔧</div>
-                    <div>
-                      <div className="font-medium">Automated dependency scanning</div>
-                      <div className="text-xs text-slate-500">Weekly scans with prioritized fixes</div>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="flex-none bg-slate-100 rounded p-2">🧭</div>
-                    <div>
-                      <div className="font-medium">Threat mapping</div>
-                      <div className="text-xs text-slate-500">Focused on your tech stack and market</div>
-                    </div>
-                  </li>
-                </ul>
-
-                <div className="mt-6">
-                  <a href="#contact" className="inline-block px-4 py-2 bg-[#032152] text-white rounded">Talk to an engineer</a>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* ---------------- HERO BANNER ---------------- */}
+      <section className="relative min-h-[80vh] flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f"
+            alt="Startup Cybersecurity"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0b1220] via-[#0b1220cc] to-transparent" />
         </div>
-      </section>
 
-      {/* WHY STARTUPS CHOOSE US */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-bold">Why startups choose us</h2>
-          <p className="text-slate-600 mt-2 max-w-2xl">
-            We align security goals with product velocity. Our approach focuses on high-impact, low-friction controls that free your team to build.
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold max-w-4xl leading-tight  text-center">
+            Cybersecurity Built for <span className="text-cyan-400">Startups</span>
+          </h1>
+          {/* <p className="mt-6 text-lg text-slate-300 max-w-3xl">
+            Secure growth, protect investor confidence, and achieve compliance
+            readiness—without slowing innovation or increasing burn.
           </p>
 
-          <div id="offerings" className="mt-8 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {offerings.map((o) => (
-              <div key={o.id} className="bg-white rounded-xl p-5 shadow hover:shadow-lg transition">
-                <div className="text-2xl">{o.icon}</div>
-                <h3 className="mt-3 font-semibold">{o.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{o.desc}</p>
+          <div className="mt-8 flex gap-4">
+            <button className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold">
+              Get Security Assessment
+            </button>
+            <button className="border border-white/30 px-6 py-3 rounded-xl">
+              Talk to an Expert
+            </button>
+          </div> */}
+        </div>
+      </section>
+
+      {/* ---------------- STARTUP REALITY ---------------- */}
+      <section className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <h2 className="text-2xl md:text-4xl font-bold mt-6 mb-4">
+            Secure Growth, Investor Trust, and Regulatory Readiness for High-Growth Startups
+          </h2>
+          <p className="text-slate-300 mb-6">
+            Startups grow fast, innovate faster, and often operate with limited security resources. Cloud-native platforms, rapid product releases, APIs, and global customers create massive opportunities—but also expose startups to <b className="text-blue-500">cyber threats, data breaches, compliance failures, and investor risk.</b></p>
+          <p className="text-slate-300 mb-6"><b className="text-blue-500">Mociber helps startups embed security, compliance, and resilience from Day One</b>, enabling safe scaling, faster enterprise deals, and investor confidence—without slowing innovation or increasing burn.</p>
+          <p className="text-slate-300 mb-6">Our approach focuses on <b className="text-blue-500"></b>lean security, automation-first compliance, and risk-based controls <b />designed specifically for early-stage, growth-stage, and scale-up startups.<br />
+
+          </p>
+        </div>
+
+        <div className="rounded-3xl overflow-hidden border border-white/10">
+          <img
+            src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+            alt="Startup engineering team"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* MAIN CONTENT + RIGHT SIDEBAR */}
+      <main className="max-w-7xl mx-auto pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Left — main content */}
+          <article className="lg:col-span-8 space-y-10">
+            {/* Overview / Key benefits */}
+            <div className="bg-[#000A1F] text-white overflow-hidden">
+              <section className="bg-[#071226] text-white p-2 lg:p-4 rounded-2xl">
+                <div className="max-w-7xl mx-auto">
+                  {/* Heading */}
+                  <h2 className="text-3xl md:text-4xl font-semibold mb-8">
+                    Why BFSI Security Is Uniquely Complex
+                  </h2>
+
+                  {/* Bullet Points */}
+                  <ul className="space-y-1 text-slate-300 text-lg">
+                    <li>• Limited security budgets and teams</li>
+                    <li>• Rapid product and feature releases</li>
+                    <li>• Cloud-first and API-driven architectures</li>
+                    <li>• High dependency on third-party services</li>
+                    <li>• Strong pressure from investors and enterprise customers</li>
+                  </ul>
+
+                  {/* Highlight Line */}
+                  <p className="mt-10 text-xl font-medium text-white">
+                    In BFSI, cybersecurity is inseparable from
+                    <span className="text-cyan-400">
+                      {" "}
+                      financial stability and customer confidence.
+                    </span>
+                  </p>
+                </div>
+              </section>
+
+              {/* Case studies */}
+              <section id="case-studies" className="space-y-6 mt-8 p-2 lg:p-4">
+                <h3 className="text-3xl md:text-4xl font-semibold mb-8">Case studies</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {[1, 2].map((i) => (
+                    <article key={i} className="bg-[#071226] rounded-xl overflow-hidden border border-white/6 shadow-md">
+                      <img
+                        src={`https://images.unsplash.com/photo-1505686994434-e3cc3d4a5f6d?q=80&w=1200&auto=format&fit=crop`}
+                        alt={`case ${i}`}
+                        className="w-full h-44 object-cover"
+                      />
+                      <div className="p-5">
+                        <h4 className="font-semibold mb-2">Cloud migration for GlobalBank</h4>
+                        <p className="text-sm text-gray-300 mb-3">Reduced TCO by 32% and improved security posture across core systems.</p>
+                        <a href="#" className="text-sm inline-flex items-center gap-2 text-indigo-300">Read story →</a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+
+
+            </div>
+          </article>
+
+          {/* Right — sticky sidebar */}
+          <aside className="lg:col-span-4">
+            <div className="lg:sticky lg:top-24 space-y-6">
+              {/* Quick facts / metrics */}
+              <div className="bg-[#071226] p-6 rounded-xl border border-white/6">
+                <h4 className="text-lg font-semibold mb-3">Quick facts</h4>
+                <ul className="text-sm text-gray-300 space-y-2">
+                  <li><strong>99.99%</strong> availability SLA</li>
+                  <li><strong>32%</strong> avg. cost reduction</li>
+                  <li><strong>Automated</strong> compliance checks</li>
+                </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CASE STUDIES / SUCCESS */}
-      <section className="bg-white py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h2 className="text-2xl font-bold">Startup success stories</h2>
-              <p className="text-slate-600 mt-1">Small teams, big outcomes — real examples.</p>
+              {/* Contact CTA */}
+              <div id="contact" className="bg-linear-to-br from-[#6f2df2] to-[#5b2bd6] p-6 rounded-xl shadow-lg">
+                <h4 className="text-lg font-semibold mb-2">Talk to an expert</h4>
+                <p className="text-sm text-white/90 mb-4">Book a free consultation to discuss migration strategy and security plan.</p>
+                <a href="#" className="block text-center bg-white text-[#4b21b8] px-4 py-3 rounded-md font-semibold">Request a consultation</a>
+              </div>
             </div>
-            <a href="#resources" className="text-sm text-amber-600">See all resources →</a>
-          </div>
-
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {caseStudies.map((c) => (
-              <blockquote key={c.id} className="p-5 rounded-lg border-l-4 border-amber-300 bg-amber-50">
-                <p className="font-semibold">{c.title}</p>
-                <p className="text-sm text-slate-700 mt-2">{c.snippet}</p>
-                <footer className="text-xs text-slate-500 mt-3">— {c.company}</footer>
-              </blockquote>
-            ))}
-          </div>
+          </aside>
         </div>
-      </section>
+      </main>
 
-      {/* RESOURCES CTA */}
-      <section id="resources" className="py-12">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 items-center bg-gradient-to-r from-slate-800 to-[#032152] text-white rounded-xl p-8">
-          <div>
-            <h3 className="text-2xl font-bold">Resources tailored for startup founders & engineers</h3>
-            <p className="mt-2 text-slate-200 max-w-xl">E-books, playbooks, and live workshops to help your security and product teams ship with confidence.</p>
-            <div className="mt-4 flex gap-3">
-              <a href="/ebooks" className="px-4 py-2 bg-amber-400 text-black rounded font-semibold">Download E-books</a>
-              <a href="/webinars" className="px-4 py-2 border border-white/30 rounded">Watch Webinars</a>
-            </div>
-          </div>
-          <div className="text-sm text-slate-200">
-            <ul className="space-y-2">
-              <li>✅ Starter security blueprint for SaaS</li>
-              <li>✅ CI/CD security checklist</li>
-              <li>✅ Incident response templates</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <TrustedLogos />
 
-        {/* CONTACT FORM */}
+      <KeyRisks
+        title="Startup Cyber & Business Risks"
+        subtitle="Top risks enterprises face — prioritized for impact and exploitability."
+        risks={risks}
+      />
 
-        <ContactCta/>
-    </main>
+
+      {/* ---------------- SOLUTIONS ---------------- */}
+      <ServiceSolution solutions={solutions} heading={"Mociber’s Cybersecurity Services & Solutions"} />
+
+
+      <ContactCta id="contact" />
+
+      {/* ---------------- FAQ ---------------- */}
+      <FaqSection
+        title="Startup FAQs"
+        subtitle=""
+        faqs={faqs}
+      />
+
+
+
+
+    </div>
   );
 }

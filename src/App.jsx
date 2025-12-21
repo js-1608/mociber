@@ -32,6 +32,17 @@ import ESG from "./Services/Esg";
 import Talent from "./Services/Talent";
 import SupplyChain from "./Services/SupplyChain";
 import OtIot from "./Services/OtIot";
+import Bfsi from "./industries/Bfsi";
+import Fintech from "./industries/Fintech";
+import Healthcare from "./industries/Healthcare";
+import EnergyOilGas from "./industries/Energy";
+import TelecomMedia from "./industries/Telecom";
+import Manufacturing from "./industries/Manufacturing";
+import SaaSPaaSIaaS from "./industries/SaaSPaaSIaaS";
+import AerospaceDefense from "./industries/AerospaceDefense";
+import Automotive from "./industries/Automotive";
+import RetailEcommerce from "./industries/RetailEcommerce";
+import GovernmentPublicSector from "./industries/GovernmentPublicSector";
 
 function App() {
   useEffect(() => {
@@ -64,7 +75,20 @@ function App() {
 
           {/* industries */}
           {/* <Route path="/industries/startups" element={<Startup />} /> */}
-          <Route path="/industries/startups" element={<ServiceDetail />} />
+          <Route path="/industries/startups" element={<Startup />} />
+          <Route path="/industries/Bfsi" element={<Bfsi />} />
+          <Route path="/industries/fintech" element={<Fintech />} />
+          <Route path="/industries/healthcare" element={<Healthcare />} />
+          <Route path="/industries/energy" element={<EnergyOilGas />} />
+          <Route path="/industries/telecom" element={<TelecomMedia />} />
+          <Route path="/industries/manufacturing" element={<Manufacturing />} />
+          <Route path="/industries/tech" element={<SaaSPaaSIaaS />} />
+          <Route path="/industries/aerospace" element={<AerospaceDefense />} />
+          <Route path="/industries/automotive" element={<Automotive />} />
+          <Route path="/industries/retail" element={<RetailEcommerce />} />
+          <Route path="/industries/gov" element={<GovernmentPublicSector />} />
+          
+
 
           {/* service */}
           <Route path="/services/cybersecurity" element={<MociberCybersecurityPage />} />
