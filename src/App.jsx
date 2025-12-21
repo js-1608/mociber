@@ -26,7 +26,7 @@ import GeopoliticalSecurityPage from "./solutions/Geopolitical";
 import RiskManagementPage from "./Services/RiskManagement";
 import DefenseAndGovernmentPage from "./Services/DefenseAndGovernment";
 import RansomwarePage from "./Services/Ransomware";
-import Compliance from "./Services/compliance";
+import Compliance from "./Services/Compliance";
 import DataPrivacy from "./Services/DataPrivacy";
 import ESG from "./Services/Esg";
 import Talent from "./Services/Talent";
