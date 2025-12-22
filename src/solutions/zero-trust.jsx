@@ -12,7 +12,7 @@ import YouTubeAutoplaySection from "@/components/Video";
 
 
 
-export default function GeopoliticalSecurityPage() {
+export default function ZeroTrustPage() {
   const risks = [
     {
       title: "State-Sponsored Advanced Persistent Threats (APTs)",

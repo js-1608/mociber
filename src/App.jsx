@@ -43,7 +43,10 @@ import AerospaceDefense from "./industries/AerospaceDefense";
 import Automotive from "./industries/Automotive";
 import RetailEcommerce from "./industries/RetailEcommerce";
 import GovernmentPublicSector from "./industries/GovernmentPublicSector";
-
+import AiMss from "./platforms/AiMss";
+import CloudMigration from "./solutions/CloudMigration";
+import ZeroTrustPage from "./solutions/zero-trust";
+import AiAutomation from "./solutions/AiAutomation";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -87,7 +90,7 @@ function App() {
           <Route path="/industries/automotive" element={<Automotive />} />
           <Route path="/industries/retail" element={<RetailEcommerce />} />
           <Route path="/industries/gov" element={<GovernmentPublicSector />} />
-          
+
 
 
           {/* service */}
@@ -105,6 +108,13 @@ function App() {
 
           {/* solutions */}
           <Route path="/solutions/geopolitical" element={<GeopoliticalSecurityPage />} />
+          <Route path="/solutions/zero-trust" element={<ZeroTrustPage />} />
+          <Route path="/solutions/ai-automation" element={<AiAutomation />} />
+          <Route path="/solutions/cloud" element={<CloudMigration />} />
+
+
+          {/* platforms */}
+          <Route path="/platforms/managed-security" element={<AiMss />} />
 
 
           <Route path="/about" element={<About />} />

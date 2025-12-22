@@ -383,7 +383,7 @@ export default function YouTubeAutoplaySection({ videoId = "OwHwUwBJrf0" }) {
   return (
     <section
       ref={containerRef}
-      className="relative max-w-6xl mx-auto my-24 rounded-2xl overflow-hidden bg-slate-900/60"
+      className="relative max-w-6xl mx-auto my-2 lg:my-24 rounded-2xl overflow-hidden bg-slate-900/60"
       aria-label="Autoplay video section"
     >
       {/* Iframe placeholder controlled by YT API */}
