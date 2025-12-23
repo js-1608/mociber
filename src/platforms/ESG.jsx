@@ -32,7 +32,7 @@ import FaqSection from "@/components/Faq";
 import ServiceSolution from "@/components/ServiceSolution";
 import KeyRisks from "@/components/Risks";
 
-export default function VulnManagementPlatform() {
+export default function ESG() {
     const faqs = [
         {
             question: "What is Vulnerability & Exposure Management?",
