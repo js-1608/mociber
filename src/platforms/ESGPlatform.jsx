@@ -253,7 +253,7 @@ export default function ESGPlatform() {
             {/* ================= WHY TRADITIONAL SOC FAILS ================= */}
             <section className="bg-[#050814] py-24">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl font-bold mb-10">
+                    <h2 className="text-3xl md:text-4xl max-w-5xl font-extrabold text-white leading-tight  text-center m-auto mb-5">
                         Why ESG Programs Commonly Fail
                     </h2>
 
@@ -285,21 +285,7 @@ export default function ESGPlatform() {
             <ServiceSolution solutions={solutions} heading={"Mociber ESG & Sustainability Solutions & Servicess"} />
 
 
-            {/* ================= HOW IT WORKS ================= */}
-            <section className="bg-[#050814] py-24">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-4xl font-bold mb-16 text-center">
-                        How AI-Powered Managed Security Works
-                    </h2>
-
-                    <div className="grid md:grid-cols-4 gap-10 text-center">
-                        <Step number="01" title="Collect" text="Signals from endpoints, identity, cloud, SaaS, network, and email." />
-                        <Step number="02" title="Analyze" text="ML models correlate behavior and predict attack paths." />
-                        <Step number="03" title="Respond" text="SOAR playbooks contain and remediate threats in seconds." />
-                        <Step number="04" title="Govern" text="Human experts validate actions, tune models, and ensure compliance." />
-                    </div>
-                </div>
-            </section>
+          
 
             {/* ================= CTA ================= */}
             <ContactCta
@@ -334,16 +320,6 @@ function Failure({ icon: Icon, text }) {
         <div className="bg-[#0b1220] border border-white/10 rounded-2xl p-6 flex gap-1">
             <Icon className="text-cyan-400 mb-3" />
             <p className="text-slate-300">{text}</p>
-        </div>
-    );
-}
-
-function Step({ number, title, text }) {
-    return (
-        <div>
-            <p className="text-cyan-400 text-3xl font-bold mb-2">{number}</p>
-            <h4 className="font-semibold mb-2">{title}</h4>
-            <p className="text-slate-400 text-sm">{text}</p>
         </div>
     );
 }

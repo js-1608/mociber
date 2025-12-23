@@ -212,39 +212,54 @@ export default function Grc() {
         <div className="bg-[#060917] text-white overflow-hidden">
 
             {/* ================= HERO ================= */}
-            <section className="relative min-h-screen flex items-center">
+            <section className="relative min-h-screen flex items-center overflow-hidden">
+                {/* Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#5b2df2]/30 via-[#0b1220] to-[#020617]" />
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <span className="inline-block mb-4 px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-sm">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-5">
+
+                    {/* ================= LEFT ================= */}
+                    <div className="text-center lg:text-left">
+                        <span className="inline-block mb-4 px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs sm:text-sm">
                             GRC & Auditing Platform
                         </span>
-                        <h1 className="text-5xl md:text-4xl font-bold leading-tight">
+
+                        <h1 className="text-2xl  md:text-4xl lg:text-4xl font-bold ">
                             Unified Governance, Risk, Compliance, and Audit <br />
-                            <span className="text-cyan-400">Intelligence for Digital Enterprises </span>
+                            <span className="text-cyan-400">
+                                Intelligence for Digital Enterprises
+                            </span>
                         </h1>
-                        <p className="mt-6 text-base text-slate-300 max-w-xl">
-                            Mociber’s GRC & Auditing Platform delivers a centralized, automated, and intelligence-driven system to manage governance, enterprise risk, compliance obligations, and audits across the organization and its ecosystem.
+
+                        <p className="mt-5 sm:mt-6 text-sm sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0">
+                            Mociber’s GRC & Auditing Platform delivers a centralized,
+                            automated, and intelligence-driven system to manage governance,
+                            enterprise risk, compliance obligations, and audits across the
+                            organization and its ecosystem.
                         </p>
 
-                        <div className="mt-8 flex gap-4">
-                            <button className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold">
+                        {/* CTAs */}
+                        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <button className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold transition">
                                 Get AI SOC Assessment
                             </button>
-                            <button className="border border-white/20 px-6 py-3 rounded-xl">
+                            <button className="border border-white/20 px-6 py-3 rounded-xl hover:bg-white/5 transition">
                                 Explore Capabilities
                             </button>
                         </div>
                     </div>
 
-                    <div className="relative">
-                        <div className="absolute -inset-6 bg-cyan-500/20 blur-3xl rounded-full" />
-                        <div className="relative bg-[#0b1220] border border-white/10 rounded-3xl p-8">
-                            <h3 className="text-xl font-semibold mb-6">
+                    {/* ================= RIGHT ================= */}
+                    <div className="relative w-full max-w-md mx-auto lg:max-w-none">
+                        {/* Glow (hidden on very small screens) */}
+                        <div className="absolute -inset-6 bg-cyan-500/20 blur-3xl rounded-full hidden sm:block" />
+
+                        <div className="relative bg-[#0b1220] border border-white/10 rounded-3xl p-6 sm:p-8">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-6 text-center lg:text-left">
                                 AI-Driven Security Metrics
                             </h3>
-                            <div className="grid grid-cols-2 gap-6 text-sm">
+
+                            <div className="grid grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm">
                                 <Stat label="Threat Signals / Day" value="10M+" />
                                 <Stat label="Mean Response Time" value="< 30 sec" />
                                 <Stat label="Automation Coverage" value="90%" />
@@ -252,16 +267,15 @@ export default function Grc() {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
-
-            {/* ================= RISKS ================= */}
 
 
             {/* ================= WHY TRADITIONAL SOC FAILS ================= */}
             <section className="bg-[#050814] py-24">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl font-bold mb-10">
+                    <h2 className="text-3xl md:text-4xl max-w-5xl font-extrabold text-white leading-tight  text-center m-auto mb-5">
                         Why Traditional GRC & Audit Programs Fail
                     </h2>
 
@@ -276,9 +290,9 @@ export default function Grc() {
 
                     <p className="text-xl text-slate-300">
                         <span className="text-cyan-400 font-semibold">
-                            Modern GRC requires a  
+                            Modern GRC requires a
                         </span>{" "}
-                       platform approach—not isolated processes
+                        platform approach—not isolated processes
                     </p>
                 </div>
             </section>
@@ -292,22 +306,6 @@ export default function Grc() {
 
             <ServiceSolution solutions={solutions} heading={"Mociber GRC & Auditing Platform – Solutions & Services"} />
 
-
-            {/* ================= HOW IT WORKS ================= */}
-            <section className="bg-[#050814] py-24">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-4xl font-bold mb-16 text-center">
-                        How AI-Powered Managed Security Works
-                    </h2>
-
-                    <div className="grid md:grid-cols-4 gap-10 text-center">
-                        <Step number="01" title="Collect" text="Signals from endpoints, identity, cloud, SaaS, network, and email." />
-                        <Step number="02" title="Analyze" text="ML models correlate behavior and predict attack paths." />
-                        <Step number="03" title="Respond" text="SOAR playbooks contain and remediate threats in seconds." />
-                        <Step number="04" title="Govern" text="Human experts validate actions, tune models, and ensure compliance." />
-                    </div>
-                </div>
-            </section>
 
             {/* ================= CTA ================= */}
             <ContactCta
@@ -346,12 +344,3 @@ function Failure({ icon: Icon, text }) {
     );
 }
 
-function Step({ number, title, text }) {
-    return (
-        <div>
-            <p className="text-cyan-400 text-3xl font-bold mb-2">{number}</p>
-            <h4 className="font-semibold mb-2">{title}</h4>
-            <p className="text-slate-400 text-sm">{text}</p>
-        </div>
-    );
-}

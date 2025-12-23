@@ -204,35 +204,49 @@ export default function VulnManagementPlatform() {
         <div className="bg-[#060917] text-white overflow-hidden">
 
             {/* ================= HERO ================= */}
-            <section className="relative min-h-screen flex items-center">
+            <section className="relative min-h-screen flex items-center overflow-hidden">
+                {/* Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#5b2df2]/30 via-[#0b1220] to-[#020617]" />
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <span className="inline-block mb-4 px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-sm">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                    {/* ================= LEFT ================= */}
+                    <div className="text-center lg:text-left">
+                        <span className="inline-block mb-4 px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs sm:text-sm">
                             AI-Powered Vulnerability & Exposure Management
                         </span>
-                        <h1 className="text-5xl md:text-4xl font-bold leading-tight">
-                            Predictive, Risk-Driven Vulnerability Reduction for <br />
-                            <span className="text-cyan-400">Modern Enterprises</span>
+
+                        <h1 className="text-2xl  md:text-4xl lg:text-4xl font-bold ">
+                            Predictive, Risk-Driven Vulnerability Reduction for 
+                            <span className="text-cyan-400 ml-2">
+                              Modern Enterprises
+                            </span>
                         </h1>
-                        <p className="mt-6 text-base text-slate-300 max-w-xl">
-                            Mociber’s AI-Powered Vulnerability & Exposure Management (AI-VEM) transforms vulnerability operations from reactive scanning into continuous, intelligence-led risk reduction.
+
+                        <p className="mt-5 sm:mt-6 text-sm sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0">
+                            Mociber’s AI-Powered Vulnerability & Exposure Management (AI-VEM)
+                            transforms vulnerability operations from reactive scanning into
+                            continuous, intelligence-led risk reduction.
                         </p>
 
-                        <p className="mt-6 text-base text-slate-300 max-w-xl">
-                            We combine AI, exploit intelligence, attack-path analytics, and automated remediation to help organizations focus on what is truly exploitable and business-critical.
+                        <p className="mt-4 sm:mt-6 text-sm sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0">
+                            We combine AI, exploit intelligence, attack-path analytics, and
+                            automated remediation to help organizations focus on what is
+                            truly exploitable and business-critical.
                         </p>
-
                     </div>
 
-                    <div className="relative">
-                        <div className="absolute -inset-6 bg-cyan-500/20 blur-3xl rounded-full" />
-                        <div className="relative bg-[#0b1220] border border-white/10 rounded-3xl p-8">
-                            <h3 className="text-xl font-semibold mb-6">
+                    {/* ================= RIGHT ================= */}
+                    <div className="relative w-full max-w-md mx-auto lg:max-w-none">
+                        {/* Glow (disabled on very small screens) */}
+                        <div className="absolute -inset-6 bg-cyan-500/20 blur-3xl rounded-full hidden sm:block" />
+
+                        <div className="relative bg-[#0b1220] border border-white/10 rounded-3xl p-6 sm:p-8">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-6 text-center lg:text-left">
                                 AI-Driven Security Metrics
                             </h3>
-                            <div className="grid grid-cols-2 gap-6 text-sm">
+
+                            <div className="grid grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm">
                                 <Stat label="Threat Signals / Day" value="10M+" />
                                 <Stat label="Mean Response Time" value="< 30 sec" />
                                 <Stat label="Automation Coverage" value="90%" />
@@ -240,8 +254,10 @@ export default function VulnManagementPlatform() {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
+
 
             {/* ================= RISKS ================= */}
 
@@ -249,7 +265,7 @@ export default function VulnManagementPlatform() {
             {/* ================= WHY TRADITIONAL SOC FAILS ================= */}
             <section className="bg-[#050814] py-24">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl font-bold mb-10">
+                    <h2 className="text-3xl md:text-4xl max-w-5xl font-extrabold text-white leading-tight  text-center m-auto mb-5">
                         Why Traditional Vulnerability Management Fails
                     </h2>
 
@@ -281,7 +297,7 @@ export default function VulnManagementPlatform() {
 
 
             {/* ================= HOW IT WORKS ================= */}
-            <section className="bg-[#050814] py-24">
+            {/* <section className="bg-[#050814] py-24">
                 <div className="max-w-7xl mx-auto px-6">
                     <h2 className="text-4xl font-bold mb-16 text-center">
                         How AI-Powered Managed Security Works
@@ -294,7 +310,7 @@ export default function VulnManagementPlatform() {
                         <Step number="04" title="Govern" text="Human experts validate actions, tune models, and ensure compliance." />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ================= CTA ================= */}
             <ContactCta
@@ -333,12 +349,12 @@ function Failure({ icon: Icon, text }) {
     );
 }
 
-function Step({ number, title, text }) {
-    return (
-        <div>
-            <p className="text-cyan-400 text-3xl font-bold mb-2">{number}</p>
-            <h4 className="font-semibold mb-2">{title}</h4>
-            <p className="text-slate-400 text-sm">{text}</p>
-        </div>
-    );
-}
+// function Step({ number, title, text }) {
+//     return (
+//         <div>
+//             <p className="text-cyan-400 text-3xl font-bold mb-2">{number}</p>
+//             <h4 className="font-semibold mb-2">{title}</h4>
+//             <p className="text-slate-400 text-sm">{text}</p>
+//         </div>
+//     );
+// }
