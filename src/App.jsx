@@ -127,6 +127,9 @@ function App() {
 
           {/* platforms */}
           <Route path="/platforms/managed-security" element={<AiMss />} />
+          <Route path="/platforms/grc" element={<AiMss />} />
+          <Route path="/platforms/vuln-management" element={<AiMss />} />
+          <Route path="/platforms/esg" element={<AiMss />} />
 
 
           <Route path="/about" element={<About />} />
