@@ -199,14 +199,12 @@ export default function AiMss() {
             <span className="inline-block mb-4 px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-sm">
               AI-Powered Managed Security Services
             </span>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-4xl font-bold leading-tight">
               Autonomous, Intelligent <br />
               <span className="text-cyan-400">24×7 Cyber Defense</span>
             </h1>
-            <p className="mt-6 text-lg text-slate-300 max-w-xl">
-              Cyber threats now move at machine speed. Our AI-Powered Managed Security
-              Services detect, predict, and respond to attacks in real time—combining
-              autonomous defense with expert human oversight.
+            <p className="mt-6 text-base text-slate-300 max-w-xl">
+             Cyber threats now move at machine speed. Attackers leverage automation, AI-driven malware, deepfakes, and large-scale attack campaigns that overwhelm traditional SOCs and manual security operations. Legacy SIEMs, rule-based alerts, and human-only monitoring can no longer keep pace.
             </p>
 
             <div className="mt-8 flex gap-4">
@@ -320,7 +318,7 @@ function Stat({ label, value }) {
 
 function Failure({ icon: Icon, text }) {
   return (
-    <div className="bg-[#0b1220] border border-white/10 rounded-2xl p-6">
+    <div className="bg-[#0b1220] border border-white/10 rounded-2xl p-6 flex gap-1">
       <Icon className="text-cyan-400 mb-3" />
       <p className="text-slate-300">{text}</p>
     </div>
