@@ -4,241 +4,245 @@ import {
 
     Cloud,
     Database,
-    LayoutDashboard,
-    EyeOff,
     Scan,
     ScrollTextIcon,
     TerminalSquare,
-    Globe,
-    Bug,
-    CloudOff,
-    Filter,
-    Clock,
-    Link,
-    BellOff,
-    Radar,
-    ScanSearch,
-    SlidersHorizontal,
-    Share2,
-    CloudCog,
     Zap,
-    Wrench,
-    PackageSearch,
+    EqualApproximatelyIcon,
+    DatabaseZap,
+    Factory,
+    ClipboardList,
+
+    Route,
+    BrainCircuit,
+    ShieldCheck,
 
 } from "lucide-react";
+
+import {
+    CloudRain,
+    Scale,
+    BarChart4,
+    Users2,
+    Leaf,
+    Truck,
+    Gavel,
+    Handshake,
+} from "lucide-react";
+
 
 import ContactCta from "@/components/ContactCta";
 import FaqSection from "@/components/Faq";
 import ServiceSolution from "@/components/ServiceSolution";
 import KeyRisks from "@/components/Risks";
+import HeroBanner from "@/components/ServiceHero";
 
 export default function ESGPlatform() {
     const faqs = [
         {
-            question: "What is Vulnerability & Exposure Management?",
+            question: "What is ESG & Sustainability Management?",
             answer:
-                "Vulnerability & Exposure Management is the continuous process of identifying, prioritizing, and reducing vulnerabilities based on real exploitability, attack paths, and business impact."
+                "ESG & Sustainability Management is a structured approach to managing environmental impact, social responsibility, and governance practices using measurable, auditable, and regulatory-aligned frameworks."
         },
         {
-            question: "How is AI-powered vulnerability management different?",
+            question: "Why is ESG important for enterprises?",
             answer:
-                "AI-powered vulnerability management prioritizes issues using threat intelligence, exploit likelihood, and business context instead of relying only on static severity scores."
+                "ESG directly impacts regulatory compliance, investor confidence, operational resilience, brand reputation, and long-term business value creation."
         },
         {
-            question: "What is exposure management in cybersecurity?",
+            question: "Which ESG frameworks does Mociber support?",
             answer:
-                "Exposure management focuses on how vulnerabilities, misconfigurations, identities, and access paths combine to create real-world attack paths that attackers can exploit."
+                "Mociber supports CSRD, EU Taxonomy, GRI, BRSR, CDP, SASB, TCFD, and relevant industry-specific ESG standards."
         },
         {
-            question: "Which tools are used for AI-powered vulnerability management?",
+            question: "How does Mociber manage Scope 3 emissions?",
             answer:
-                "Common tools include Tenable, Qualys, Rapid7, Wiz, CrowdStrike Falcon Spotlight, Recorded Future, and ServiceNow, typically integrated into a unified exposure management workflow."
+                "Scope 3 emissions are managed through supplier data integration, lifecycle assessments, value-chain mapping, and AI-driven emissions modeling."
         },
         {
-            question: "How does this help prevent ransomware attacks?",
+            question: "What tools are used for ESG reporting and carbon accounting?",
             answer:
-                "By identifying and remediating the vulnerabilities and exposures that ransomware groups actively exploit, organizations can significantly reduce the likelihood of ransomware incidents."
+                "Commonly used tools include IBM Envizi, Microsoft Sustainability Manager, SAP Sustainability Control Tower, Persefoni, and Watershed, integrated into a unified ESG reporting workflow."
         },
         {
-            question: "Is this suitable for cloud and hybrid environments?",
+            question: "Can ESG reporting be automated?",
             answer:
-                "Yes. AI-powered Vulnerability & Exposure Management is designed for cloud environments, containers, SaaS platforms, APIs, endpoints, and hybrid infrastructure."
+                "Yes. ESG automation improves data accuracy, reduces manual effort and cost, and ensures continuous audit readiness and traceability."
         },
         {
-            question: "Does vulnerability management support compliance requirements?",
+            question: "How does ESG link to enterprise risk management?",
             answer:
-                "Yes. Continuous vulnerability and exposure management is a core requirement across most cybersecurity, privacy, and regulatory frameworks."
+                "ESG risks—such as climate exposure, governance failures, and supply chain issues—directly influence financial, operational, regulatory, and reputational risk."
         },
         {
-            question: "How often should vulnerabilities be assessed?",
+            question: "Is ESG mandatory for compliance?",
             answer:
-                "Continuously. Modern IT environments change daily, making periodic or point-in-time scans insufficient to manage real security risk."
+                "In many jurisdictions, ESG disclosures are now mandatory, particularly for listed companies, large enterprises, and multinational organizations."
         },
         {
-            question: "Can remediation be automated safely?",
+            question: "How long does an ESG transformation take?",
             answer:
-                "Yes. Remediation automation is governed through approval workflows, testing, staged rollouts, and rollback mechanisms to ensure operational safety."
+                "Initial ESG reporting can often be achieved within a few months, while full ESG maturity is built through phased, multi-year implementation."
         },
         {
-            question: "How can an organization start with Vulnerability & Exposure Management?",
+            question: "How can an organization start its ESG journey?",
             answer:
-                "Organizations should begin with an exposure maturity assessment to identify gaps, prioritize risks, and define a phased remediation roadmap."
+                "Organizations should begin with an ESG maturity and risk assessment to identify gaps, prioritize initiatives, and define a regulatory-aligned implementation roadmap."
         }
     ];
 
 
 
+
+
     const risks = [
         {
-            title: "Expanding Attack Surface Exposure",
+            title: "Climate & Environmental Exposure",
             subtext:
-                "Cloud assets, APIs, containers, IoT, and shadow IT continuously introduce new, unmanaged vulnerabilities.",
-            icon: Globe,
+                "Extreme weather events, water stress, and resource scarcity disrupt business operations and global supply chains.",
+            icon: CloudRain,
         },
         {
-            title: "Exploitable CVEs & Zero-Day Threats",
+            title: "Regulatory Non-Compliance Risk",
             subtext:
-                "Public exploits and zero-day vulnerabilities are weaponized faster than manual remediation cycles can respond.",
-            icon: Bug,
+                "Failure to meet ESG disclosure mandates such as CSRD, EU Taxonomy, SEC Climate Rules, and SEBI BRSR leads to penalties and enforcement actions.",
+            icon: Scale,
         },
         {
-            title: "Cloud & Identity Misconfigurations",
+            title: "Carbon Emissions Misreporting",
             subtext:
-                "Over-permissive IAM roles, exposed storage services, and weak API security create direct breach paths.",
-            icon: CloudOff,
+                "Inaccurate Scope 1, Scope 2, and Scope 3 emissions data undermines audit credibility, investor confidence, and regulatory trust.",
+            icon: BarChart4,
         },
         {
-            title: "Poor Vulnerability Prioritization",
+            title: "Social & Labor Governance Failures",
             subtext:
-                "Severity-only scoring ignores exploitability, real attack paths, and true business impact.",
-            icon: Filter,
+                "DEI gaps, labor violations, and human rights issues create reputational damage and legal exposure.",
+            icon: Users2,
         },
         {
-            title: "Delayed Remediation & Patch Backlogs",
+            title: "Greenwashing & Misrepresentation Risk",
             subtext:
-                "Manual workflows and resource constraints leave organizations exposed for weeks or months after discovery.",
-            icon: Clock,
+                "Unverified or misleading sustainability claims trigger litigation, regulatory scrutiny, and shareholder backlash.",
+            icon: Leaf,
         },
         {
-            title: "Supply Chain & Third-Party Exposure",
+            title: "Supply Chain Sustainability Gaps",
             subtext:
-                "Vendors, SaaS integrations, and open-source components introduce indirect but high-impact security risks.",
-            icon: Link,
+                "Third-party vendors and suppliers introduce hidden environmental, ethical, and compliance risks.",
+            icon: Truck,
         },
         {
-            title: "Lack of Asset & Exposure Visibility",
+            title: "Inefficient Resource & Energy Utilization",
             subtext:
-                "Ephemeral cloud workloads, unmanaged devices, and shadow assets remain outside traditional scanning scope.",
-            icon: EyeOff,
+                "Excessive energy and resource consumption increases operational costs and weakens sustainability performance.",
+            icon: Zap,
         },
         {
-            title: "Alert Fatigue & Analyst Overload",
+            title: "ESG Data Fragmentation & Integrity Issues",
             subtext:
-                "Excessive vulnerability findings dilute focus and slow response to truly critical threats.",
-            icon: BellOff,
+                "Disconnected data sources result in inconsistent ESG reporting, weak traceability, and audit failures.",
+            icon: Database,
+        },
+        {
+            title: "Weak Governance & Ethics Controls",
+            subtext:
+                "Poor transparency, ineffective board oversight, and weak ethics programs elevate enterprise-wide risk.",
+            icon: Gavel,
+        },
+        {
+            title: "Stakeholder Trust Erosion",
+            subtext:
+                "Inability to demonstrate measurable ESG impact leads to loss of investor, customer, and regulator confidence.",
+            icon: Handshake,
         },
     ];
-
 
 
 
     const solutions = [
         {
-            title: "AI-Driven Asset Discovery & Attack Surface Management",
+            title: "ESG Data Automation & Centralized Reporting",
             description:
-                "Continuous discovery of all assets across cloud, on-prem, endpoints, APIs, containers, OT environments, and shadow IT to eliminate blind spots.",
-            icon: Radar,
+                "Automated ESG data collection and consolidation across departments, geographies, and supply chains aligned with CSRD, GRI, BRSR, CDP, SASB, and TCFD reporting frameworks.",
+            icon: DatabaseZap,
         },
         {
-            title: "Continuous Vulnerability Scanning & Validation",
+            title: "Carbon Footprint Accounting & Emissions Intelligence",
             description:
-                "Always-on vulnerability scanning combined with AI-based validation to reduce false positives and confirm exploitable risk.",
-            icon: ScanSearch,
+                "AI-powered tracking of Scope 1, Scope 2, and Scope 3 emissions with predictive insights to support decarbonization and net-zero strategies.",
+            icon: Factory,
         },
         {
-            title: "Risk-Based Vulnerability Prioritization",
+            title: "ESG Risk Assessment & Governance Audits",
             description:
-                "Advanced correlation of CVSS, EPSS, Known Exploited Vulnerabilities (KEV), threat intelligence, and business context to focus on what matters most.",
-            icon: SlidersHorizontal,
+                "Comprehensive evaluation of environmental, social, and governance risks integrated with enterprise risk management and internal audit programs.",
+            icon: ClipboardList,
         },
         {
-            title: "Exposure & Attack-Path Analysis",
+            title: "Sustainable Supply Chain & Vendor ESG Management",
             description:
-                "Graph-based modeling to identify how attackers can pivot from initial weaknesses to full environment compromise.",
-            icon: Share2,
+                "Supplier ESG scoring, due diligence, lifecycle emissions tracking, and continuous third-party sustainability monitoring.",
+            icon: Truck,
         },
         {
-            title: "Cloud, Container & API Exposure Management",
+            title: "Sustainability Strategy & Net-Zero Roadmapping",
             description:
-                "Detection and remediation of misconfigurations and vulnerabilities across AWS, Azure, GCP, Kubernetes, Docker, and serverless services.",
-            icon: CloudCog,
+                "Design and execution of long-term sustainability programs including renewable energy transition, circular economy initiatives, and social impact planning.",
+            icon: Route,
         },
         {
-            title: "Zero-Day & Exploit Intelligence Monitoring",
+            title: "AI-Driven Materiality & ESG Risk Modeling",
             description:
-                "AI-driven tracking of emerging exploits, ransomware campaigns, and adversary techniques in real time.",
-            icon: Zap,
+                "Advanced analytics to identify material ESG risks influencing regulatory exposure, investor expectations, and long-term business resilience.",
+            icon: BrainCircuit,
         },
         {
-            title: "Automated Patch & Remediation Orchestration",
+            title: "ESG Assurance & Audit Readiness",
             description:
-                "Integration with ITSM and DevOps tools to automatically trigger patches, compensating controls, and security policy enforcement.",
-            icon: Wrench,
+                "Audit-ready documentation, control validation, and external ESG reporting preparation to meet regulator, auditor, and investor scrutiny.",
+            icon: ShieldCheck,
         },
         {
-            title: "Third-Party & Supply Chain Risk Management",
+            title: "Governance, Ethics & Compliance Automation",
             description:
-                "Continuous monitoring of vendor exposure, SaaS risk, and open-source dependency vulnerabilities across the supply chain.",
-            icon: PackageSearch,
-        },
-        {
-            title: "Executive Dashboards & Compliance Reporting",
-            description:
-                "CISO-ready dashboards delivering risk reduction metrics, MTTR tracking, SLA adherence, and audit-ready compliance reporting.",
-            icon: LayoutDashboard,
+                "Automated board reporting, ethics risk management, whistleblower workflows, and policy compliance tracking to strengthen governance.",
+            icon: Scale,
         },
     ];
 
 
+
     return (
         <div className="bg-[#060917] text-white overflow-hidden">
+            <HeroBanner
+                image="/Banners/About.jpg"
+                heading={<>ESG & Sustainability Management</>}
+                subtext=""
+                primaryCta=""
+                secondaryCta=""
+            />
 
             {/* ================= HERO ================= */}
-            <section className="relative min-h-screen flex items-center">
+            <section className="relative py-24 flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#5b2df2]/30 via-[#0b1220] to-[#020617]" />
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                <div className="relative z-10 max-w-7xl mx-auto px-6 gap-16 items-center">
                     <div>
-                        <span className="inline-block mb-4 px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-sm">
-                            AI-Powered Vulnerability & Exposure Management
-                        </span>
-                        <h1 className="text-5xl md:text-4xl font-bold leading-tight">
-                            Predictive, Risk-Driven Vulnerability Reduction for <br />
-                            <span className="text-cyan-400">Modern Enterprises</span>
+                        <h1 className="text-5xl md:text-4xl font-bold leading-tight text-center">
+                            Technology-Driven ESG Governance, Risk Control, and  <br />
+                            <span className="text-cyan-400">Sustainable Business Transformation</span>
                         </h1>
-                        <p className="mt-6 text-base text-slate-300 max-w-xl">
-                            Mociber’s AI-Powered Vulnerability & Exposure Management (AI-VEM) transforms vulnerability operations from reactive scanning into continuous, intelligence-led risk reduction.
+                        <p className="mt-6 text-base text-slate-300 ">
+                            Environmental, Social, and Governance (ESG) is no longer a reporting exercise—it is a board-level, investor-driven, and regulator-mandated business imperative. Organizations must demonstrate measurable sustainability performance, transparent governance, and defensible ESG data across global operations and supply chains.
                         </p>
 
-                        <p className="mt-6 text-base text-slate-300 max-w-xl">
-                            We combine AI, exploit intelligence, attack-path analytics, and automated remediation to help organizations focus on what is truly exploitable and business-critical.
+                        <p className="mt-6 text-base text-slate-300">
+                            Mociber’s ESG & Sustainability Management services help organizations move from fragmented compliance to integrated, technology-enabled sustainability leadership.
+                            We combine AI, automation, advanced analytics, and global ESG frameworks to deliver audit-ready reporting, risk visibility, and long-term value creation.
+
                         </p>
 
-                    </div>
-
-                    <div className="relative">
-                        <div className="absolute -inset-6 bg-cyan-500/20 blur-3xl rounded-full" />
-                        <div className="relative bg-[#0b1220] border border-white/10 rounded-3xl p-8">
-                            <h3 className="text-xl font-semibold mb-6">
-                                AI-Driven Security Metrics
-                            </h3>
-                            <div className="grid grid-cols-2 gap-6 text-sm">
-                                <Stat label="Threat Signals / Day" value="10M+" />
-                                <Stat label="Mean Response Time" value="< 30 sec" />
-                                <Stat label="Automation Coverage" value="90%" />
-                                <Stat label="SOC Availability" value="24×7×365" />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -250,34 +254,35 @@ export default function ESGPlatform() {
             <section className="bg-[#050814] py-24">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h2 className="text-4xl font-bold mb-10">
-                        Why Traditional Vulnerability Management Fails
+                        Why ESG Programs Commonly Fail
                     </h2>
 
                     <div className="grid md:grid-cols-3 gap-8 mb-12">
-                        <Failure icon={Scan} text="Scans generate noise, not priorities" />
-                        <Failure icon={ScrollTextIcon} text="CVSS scores don’t reflect real attack likelihood" />
-                        <Failure icon={Database} text="Exploit intelligence is not contextualized" />
-                        <Failure icon={Cloud} text="Cloud, identity, and runtime exposure are fragmented" />
-                        <Failure icon={TerminalSquare} text="Security teams lack automation and scale" />
+                        <Failure icon={Scan} text="Manual and spreadsheet-driven ESG data collection" />
+                        <Failure icon={ScrollTextIcon} text="Rapidly evolving and overlapping ESG frameworks" />
+                        <Failure icon={Database} text="Poor Scope 3 emissions visibility" />
+                        <Failure icon={Cloud} text="Lack of automation and analytics" />
+                        <Failure icon={TerminalSquare} text="High reporting costs and audit fatigue" />
+                        <Failure icon={EqualApproximatelyIcon} text="Limited internal ESG expertise" />
                     </div>
 
                     <p className="text-xl text-slate-300">
                         <span className="text-cyan-400 font-semibold">
-                            Modern GRC requires a
+                            Effective ESG management requires technology,
                         </span>{" "}
-                        platform approach—not isolated processes
+                        governance, and intelligence—not just reporting.
                     </p>
                 </div>
             </section>
 
             {/* KEY RISKS */}
             <KeyRisks
-                title="GRC & Auditing Risks"
+                title="ESG & Sustainability Risks"
                 subtitle="Modern organizations face a combination of regulatory, operational, and cyber risks that directly impact compliance integrity:"
                 risks={risks}
             />
 
-            <ServiceSolution solutions={solutions} heading={"Mociber Vulnerability & Exposure Management Solutions"} />
+            <ServiceSolution solutions={solutions} heading={"Mociber ESG & Sustainability Solutions & Servicess"} />
 
 
             {/* ================= HOW IT WORKS ================= */}
@@ -304,7 +309,7 @@ export default function ESGPlatform() {
 
             {/* ================= FAQ ================= */}
             <FaqSection
-                title="AI-Powered Vulnerability & Exposure Management - FAQs"
+                title="ESG & Sustainability Management - FAQs"
                 subtitle=""
                 faqs={faqs}
             />
