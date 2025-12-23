@@ -50,6 +50,9 @@ import AiAutomation from "./solutions/AiAutomation";
 import IAM from "./solutions/IAM";
 import Devsecops from "./solutions/Devsecops";
 import VulnManagement from "./solutions/VulnManagement";
+import RedTeam from "./solutions/RedTeam";
+import SoftwareIntegrity from "./solutions/SoftwareIntegrity";
+import AdversarialMl from "./solutions/AdversarialMl";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -117,6 +120,9 @@ function App() {
           <Route path="/solutions/iam" element={<IAM />} />
           <Route path="/solutions/devsecops" element={<Devsecops />} />
           <Route path="/solutions/vuln-management" element={<VulnManagement />} />
+          <Route path="/solutions/red-team" element={<RedTeam />} />
+          <Route path="/solutions/software-integrity" element={<SoftwareIntegrity />} />
+          <Route path="/solutions/adversarial-ml" element={<AdversarialMl />} />
 
 
           {/* platforms */}
