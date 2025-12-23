@@ -53,6 +53,7 @@ import VulnManagement from "./solutions/VulnManagement";
 import RedTeam from "./solutions/RedTeam";
 import SoftwareIntegrity from "./solutions/SoftwareIntegrity";
 import AdversarialMl from "./solutions/AdversarialMl";
+import Grc from "./Grc";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -127,7 +128,7 @@ function App() {
 
           {/* platforms */}
           <Route path="/platforms/managed-security" element={<AiMss />} />
-          <Route path="/platforms/grc" element={<AiMss />} />
+          <Route path="/platforms/grc" element={<Grc />} />
           <Route path="/platforms/vuln-management" element={<AiMss />} />
           <Route path="/platforms/esg" element={<AiMss />} />
 
