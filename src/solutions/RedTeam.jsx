@@ -5,23 +5,20 @@ import HeroBanner from "@/components/ServiceHero";
 import { Link } from "react-router";
 import KeyRisks from "@/components/Risks";
 import {
-    Package,
-    CloudOff,
-    AlertTriangle,
-    Container,
-    Globe,
     KeyRound,
-    Scan,
-    BellOff,
-
-    Bug,
-    Target,
-    PackageCheck,
-    ShieldCheck,
-    Wrench,
     Crosshair,
+    Route,
+    Radar,
+    Shuffle,
+    Users,
+    Network,
+    Sliders,
+    Server,
+    AlertOctagon,
+    BarChart3,
+    GitMerge,
+    AlertTriangle,
 } from "lucide-react";
-
 import ContactCta from "@/components/ContactCta";
 import ServiceSolution from "@/components/ServiceSolution";
 import FaqSection from "@/components/Faq";
@@ -31,165 +28,167 @@ import YouTubeAutoplaySection from "@/components/Video";
 
 export default function RedTeam() {
 
-
-
-
     const risks = [
         {
-            title: "Software Supply Chain Vulnerabilities",
+            title: "Undetected Attack Paths",
             subtext:
-                "Compromised open-source libraries and third-party components introduce hidden risks across multiple applications and environments.",
-            icon: Package,
+                "Security controls appear effective in isolation but fail when chained together by skilled adversaries to reach critical assets.",
+            icon: Route,
         },
         {
-            title: "Cloud & Infrastructure Misconfigurations",
+            title: "Ineffective Detection & Response",
             subtext:
-                "Exposed storage, overly permissive IAM roles, and infrastructure-as-code drift lead to data breaches and unauthorized access.",
-            icon: CloudOff,
+                "SOC teams fail to detect or contain sophisticated attacks within acceptable timeframes due to tooling gaps and alert overload.",
+            icon: Radar,
         },
         {
-            title: "Unpatched Critical CVEs & Zero-Day Exposure",
+            title: "Lateral Movement & Privilege Escalation",
             subtext:
-                "Rapid weaponization of disclosed vulnerabilities leaves organizations exposed during slow or manual patch cycles.",
-            icon: AlertTriangle,
+                "Attackers move silently across networks and escalate privileges without triggering meaningful alerts.",
+            icon: Shuffle,
         },
         {
-            title: "Runtime & Container Exploits",
+            title: "Social Engineering & Human Exploitation",
             subtext:
-                "Kernel-level attacks, container breakouts, and memory exploits bypass static scanning and compromise live workloads.",
-            icon: Container,
+                "Phishing, pretexting, and insider manipulation exploit human weaknesses to bypass technical security controls.",
+            icon: Users,
         },
         {
-            title: "Web Application & API Vulnerabilities",
+            title: "Perimeter & Network Segmentation Failures",
             subtext:
-                "OWASP Top 10 flaws, insecure APIs, and weak authentication enable data theft and account takeover attacks.",
-            icon: Globe,
+                "Flat or poorly segmented networks allow attackers to pivot freely once initial access is achieved.",
+            icon: Network,
         },
         {
-            title: "Identity & Credential Exposure",
+            title: "Identity & Credential Abuse",
             subtext:
-                "Leaked secrets, tokens, and credentials allow attackers to move laterally and escalate privileges within environments.",
+                "Compromised credentials enable long-term persistence and stealthy access that blends in with legitimate activity.",
             icon: KeyRound,
         },
         {
-            title: "Incomplete Asset Visibility",
+            title: "Security Control Misconfiguration",
             subtext:
-                "Ephemeral cloud workloads, containers, and serverless services remain unscanned and unmanaged, creating blind spots.",
-            icon: Scan,
+                "EDR, SIEM, firewalls, and IAM tools are deployed but poorly tuned, misaligned, or not continuously validated.",
+            icon: Sliders,
         },
         {
-            title: "Alert Fatigue & Slow Triage",
+            title: "Business-Critical System Exposure",
             subtext:
-                "Excessive false positives overwhelm teams and delay remediation of truly exploitable vulnerabilities.",
-            icon: BellOff,
+                "High-value and mission-critical assets remain accessible during attacks due to weak asset prioritization.",
+            icon: Server,
+        },
+        {
+            title: "Incident Response Gaps",
+            subtext:
+                "Lack of playbooks, coordination, authority, or rehearsals delays containment, eradication, and recovery.",
+            icon: AlertOctagon,
+        },
+        {
+            title: "Executive & Board Visibility Gaps",
+            subtext:
+                "Leadership lacks realistic insight into true cyber readiness, attack feasibility, and business risk exposure.",
+            icon: BarChart3,
         },
     ];
 
 
-
-
-
-
     const solutions = [
         {
-            title: "Continuous Vulnerability Management (CVM)",
+            title: "Full-Scope Adversary Simulation",
             description:
-                "Ongoing discovery, classification, risk scoring, and remediation tracking across infrastructure, cloud, endpoints, and workloads.",
-            icon: Scan,
-        },
-        {
-            title: "Application Security Testing (SAST, DAST, IAST & SCA)",
-            description:
-                "Shift-left application security testing embedded into CI/CD pipelines to detect vulnerabilities early and reduce production risk.",
-            icon: Bug,
-        },
-        {
-            title: "Risk-Based Vulnerability Prioritization",
-            description:
-                "Advanced prioritization using CVSS, EPSS, Known Exploited Vulnerabilities (KEV), threat intelligence, and business impact context.",
-            icon: Target,
-        },
-        {
-            title: "Software Supply Chain Security & SBOM Management",
-            description:
-                "Generation, monitoring, and analysis of SBOMs to rapidly identify affected systems when new open-source vulnerabilities emerge.",
-            icon: PackageCheck,
-        },
-        {
-            title: "Runtime Protection & Validation",
-            description:
-                "Continuous runtime validation using RASP, EDR/XDR, and eBPF-based monitoring to detect exploitation attempts in real time.",
-            icon: ShieldCheck,
-        },
-        {
-            title: "Automated Patch & Remediation Orchestration",
-            description:
-                "Workflow-driven remediation using ServiceNow, Jira, and CI/CD integrations with rollback and change safety controls.",
-            icon: Wrench,
-        },
-        {
-            title: "Red Team Validation & Attack Simulation",
-            description:
-                "Continuous attack simulation mapped to MITRE ATT&CK to validate that vulnerabilities are effectively mitigated.",
+                "End-to-end attack scenarios simulating external, internal, and hybrid threat vectors aligned with real-world threat actors and tactics.",
             icon: Crosshair,
+        },
+        {
+            title: "Network, Infrastructure & Application Red Teaming",
+            description:
+                "Targeted exploitation testing across networks, servers, endpoints, applications, and cloud environments to identify real attack paths.",
+            icon: Network,
+        },
+        {
+            title: "Identity & Privilege-Based Attack Testing",
+            description:
+                "Simulation of credential theft, privilege escalation, and abuse of IAM and PAM controls to test identity resilience.",
+            icon: KeyRound,
+        },
+        {
+            title: "Social Engineering & Insider Threat Simulation",
+            description:
+                "Controlled phishing, vishing, physical intrusion, and insider threat scenarios to evaluate human and process weaknesses.",
+            icon: Users,
+        },
+        {
+            title: "Purple Teaming (Red + Blue Collaboration)",
+            description:
+                "Live collaboration between red teams and SOC/IR teams to improve detection, response, and defensive tooling effectiveness.",
+            icon: GitMerge,
+        },
+        {
+            title: "Detection Engineering & Use-Case Validation",
+            description:
+                "Testing and tuning SIEM, XDR, EDR, and SOAR detection use cases against real-world attack techniques.",
+            icon: Radar,
+        },
+        {
+            title: "Incident Response & Crisis Readiness Exercises",
+            description:
+                "Tabletop and live-fire simulations validating executive decision-making, legal response, communications, and operational readiness.",
+            icon: AlertTriangle,
         },
     ];
 
     const faqs = [
         {
-            question: "What is vulnerability management in cybersecurity?",
+            question: "What is red teaming in cybersecurity?",
             answer:
-                "Vulnerability management is the continuous process of identifying, prioritizing, remediating, and validating security weaknesses across systems, applications, and infrastructure.",
+                "Red teaming is an adversarial security assessment that simulates real-world attackers to test an organization’s detection, response, and overall cyber resilience.",
         },
         {
-            question: "How is risk-based vulnerability management different from traditional scanning?",
+            question: "How is red teaming different from penetration testing?",
             answer:
-                "Risk-based programs prioritize vulnerabilities based on exploitability, real-world threat intelligence, and business impact—not just severity scores.",
+                "Penetration testing focuses on identifying vulnerabilities, while red teaming evaluates how effectively an organization can detect, respond to, and contain an active, multi-stage attack.",
         },
         {
-            question: "Why are SBOMs important for vulnerability management?",
+            question: "Who should conduct red teaming exercises?",
             answer:
-                "SBOMs provide visibility into software components, enabling rapid identification of impacted systems when new vulnerabilities are disclosed.",
+                "Enterprises, financial institutions, healthcare organizations, government agencies, and critical infrastructure providers benefit most from red teaming engagements.",
         },
         {
-            question: "What tools does Mociber use for vulnerability management?",
+            question: "How often should red teaming be performed?",
             answer:
-                "Mociber works with platforms such as Tenable, Qualys, Rapid7, Snyk, Veracode, CrowdStrike, Palo Alto Cortex XDR, and other best-in-class security tools.",
+                "Red teaming should be conducted at least annually or after significant changes to infrastructure, identity systems, or security architecture.",
         },
         {
-            question: "Can vulnerability management be automated?",
+            question: "Does red teaming disrupt business operations?",
             answer:
-                "Yes. Automation enables faster discovery, prioritization, patching, and validation, significantly reducing remediation time and operational overhead.",
+                "No. Engagements are carefully scoped and executed to avoid operational disruption while delivering realistic and actionable results.",
         },
         {
-            question: "How does Mociber handle cloud and container vulnerabilities?",
+            question: "What is purple teaming?",
             answer:
-                "We use continuous asset discovery, cloud security posture management, container image scanning, and runtime protection for cloud-native workloads.",
+                "Purple teaming is a collaborative approach where red teams and blue teams work together to improve detection, response, and defensive capabilities in real time.",
         },
         {
-            question: "Is vulnerability management required for compliance?",
+            question: "Does red teaming help with compliance?",
             answer:
-                "Yes. Most regulations and security standards require continuous vulnerability identification, remediation, and evidence of control effectiveness.",
+                "Yes. Many regulations and security frameworks recommend or require adversarial testing to validate the effectiveness of security controls.",
         },
         {
-            question: "How often should vulnerabilities be tested?",
+            question: "What outcomes should organizations expect from red teaming?",
             answer:
-                "Continuously. Modern cloud and DevOps environments change daily, making continuous testing essential for effective risk reduction.",
+                "Improved detection capabilities, faster incident response, reduced breach impact, and clear executive visibility into real-world cyber risk.",
         },
         {
-            question: "Does Mociber provide managed vulnerability services?",
+            question: "Can red teaming test people and processes?",
             answer:
-                "Yes. We offer fully managed and co-managed vulnerability management programs with defined SLAs, reporting, and continuous improvement.",
+                "Yes. Red teaming evaluates technology, human behavior, and operational processes together to assess true organizational readiness.",
         },
         {
-            question: "How can an organization start improving its vulnerability posture?",
+            question: "How can we start a red teaming engagement?",
             answer:
-                "Start with a vulnerability maturity and exposure assessment to define priorities and build a focused 90-day remediation roadmap.",
+                "The engagement typically begins with a threat-based scoping and readiness assessment to align objectives, rules of engagement, and expectations.",
         },
     ];
-
-
-
 
     const tools = [
         "Threat Intelligence Platforms (TIPs) & IOC feeds",
@@ -243,20 +242,20 @@ export default function RedTeam() {
                     {/* PROBLEM */}
                     <section id="problems" className="mt-10 grid md:grid-cols-3 gap-6">
                         <div className="md:col-span-2 bg-white/4 rounded-2xl p-6">
-                            <h2 className="text-2xl font-semibold">Why Traditional Vulnerability Programs Fail</h2>
+                            <h2 className="text-2xl font-semibold">Challenges in Red Teaming</h2>
 
 
                             <ol className="mt-4 space-y-2 list-decimal list-inside text-slate-200">
-                                <li>CVE volume outpaces manual remediation</li>
-                                <li>Tool sprawl creates noise without context</li>
-                                <li>Scanning without exploitability prioritization wastes effort</li>
-                                <li>DevOps speed outstrips security validation</li>
-                                <li>Lack of SBOMs blocks rapid impact analysis</li>
-                                <li>Runtime threats remain undetected</li>
+                                <li>Compliance-driven testing does not reflect real attacker behavior</li>
+                                <li>Point-in-time assessments miss evolving threats</li>
+                                <li>Automated scans ignore human and process weaknesses</li>
+                                <li>Blue teams rarely face sustained, stealthy adversaries</li>
+                                <li>Security investments are not validated end-to-end</li>
+
 
                             </ol>
                             <p className="mt-3 text-slate-200">
-                                Effective vulnerability management must be continuous, contextual, and automation-driven.
+                                Red teaming measures real cyber resilience—not theoretical security.
                             </p>
                         </div>
 
@@ -276,13 +275,13 @@ export default function RedTeam() {
 
                     {/* KEY RISKS */}
                     <KeyRisks
-                        title="Key Vulnerability & Cyber Risks"
+                        title="Red Teaming Risks "
                         subtitle="Modern organizations face a combination of regulatory, operational, and cyber risks that directly impact compliance integrity:"
                         risks={risks}
                     />
                     <YouTubeAutoplaySection />
 
-                    <ServiceSolution solutions={solutions} heading={"Mociber Vulnerability Management & Testing Solutions"} />
+                    <ServiceSolution solutions={solutions} heading={"Mociber Red Teaming Solutions & Services"} />
 
 
 
@@ -316,7 +315,7 @@ export default function RedTeam() {
                     <ContactCta id="contact" />
 
                     <FaqSection
-                        title="Vulnerability Management - FAQs"
+                        title="Red Teaming & AI – FAQs"
                         subtitle="Common questions about our Data Privacy & Protection."
                         faqs={faqs}
                     />

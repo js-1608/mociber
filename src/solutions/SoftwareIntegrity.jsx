@@ -5,21 +5,20 @@ import HeroBanner from "@/components/ServiceHero";
 import { Link } from "react-router";
 import KeyRisks from "@/components/Risks";
 import {
-    Package,
-    CloudOff,
-    AlertTriangle,
-    Container,
-    Globe,
-    KeyRound,
-    Scan,
-    BellOff,
-
-    Bug,
-    Target,
-    PackageCheck,
+    PackageX,
+    GitPullRequest,
+    MemoryStick,
+    RefreshCcw,
+    ShieldOff,
+    Fingerprint,
+    Boxes,
+    UserX,
+    Cpu,
+    Activity,
+    ClipboardList,
     ShieldCheck,
-    Wrench,
-    Crosshair,
+    BadgeCheck,
+    FileCheck,
 } from "lucide-react";
 
 import ContactCta from "@/components/ContactCta";
@@ -34,157 +33,168 @@ export default function SoftwareIntegrity() {
 
 
 
+
     const risks = [
         {
-            title: "Software Supply Chain Vulnerabilities",
+            title: "Software Supply Chain Tampering",
             subtext:
-                "Compromised open-source libraries and third-party components introduce hidden risks across multiple applications and environments.",
-            icon: Package,
+                "Compromised third-party libraries, dependencies, or build tools introduce malicious code into otherwise trusted software.",
+            icon: PackageX,
         },
         {
-            title: "Cloud & Infrastructure Misconfigurations",
+            title: "CI/CD Pipeline Compromise",
             subtext:
-                "Exposed storage, overly permissive IAM roles, and infrastructure-as-code drift lead to data breaches and unauthorized access.",
-            icon: CloudOff,
+                "Attackers manipulate build servers, pipelines, or artifacts to inject rogue binaries during automated build and release processes.",
+            icon: GitPullRequest,
         },
         {
-            title: "Unpatched Critical CVEs & Zero-Day Exposure",
+            title: "Runtime Code Injection & Memory Tampering",
             subtext:
-                "Rapid weaponization of disclosed vulnerabilities leaves organizations exposed during slow or manual patch cycles.",
-            icon: AlertTriangle,
+                "Unauthorized modification of running applications enables stealthy persistence, data theft, and evasion of static controls.",
+            icon: MemoryStick,
         },
         {
-            title: "Runtime & Container Exploits",
+            title: "Unauthorized Updates & Rollback Attacks",
             subtext:
-                "Kernel-level attacks, container breakouts, and memory exploits bypass static scanning and compromise live workloads.",
-            icon: Container,
+                "Fake updates or forced downgrades are used to reintroduce known vulnerabilities or deliver malicious payloads.",
+            icon: RefreshCcw,
         },
         {
-            title: "Web Application & API Vulnerabilities",
+            title: "Counterfeit or Repackaged Software",
             subtext:
-                "OWASP Top 10 flaws, insecure APIs, and weak authentication enable data theft and account takeover attacks.",
-            icon: Globe,
+                "Seemingly legitimate software components are altered, repackaged, and redistributed with embedded malware.",
+            icon: ShieldOff,
         },
         {
-            title: "Identity & Credential Exposure",
+            title: "Lack of Software Provenance & Traceability",
             subtext:
-                "Leaked secrets, tokens, and credentials allow attackers to move laterally and escalate privileges within environments.",
-            icon: KeyRound,
+                "Organizations cannot verify where code originated, how it was built, or whether it was altered across the supply chain.",
+            icon: Fingerprint,
         },
         {
-            title: "Incomplete Asset Visibility",
+            title: "Open-Source Component Risk",
             subtext:
-                "Ephemeral cloud workloads, containers, and serverless services remain unscanned and unmanaged, creating blind spots.",
-            icon: Scan,
+                "Unverified or unmanaged open-source dependencies expose environments to hidden vulnerabilities and malicious inserts.",
+            icon: Boxes,
         },
         {
-            title: "Alert Fatigue & Slow Triage",
+            title: "Insider Threats in Build Environments",
             subtext:
-                "Excessive false positives overwhelm teams and delay remediation of truly exploitable vulnerabilities.",
-            icon: BellOff,
+                "Privileged developers or administrators abuse access to introduce unauthorized or malicious changes into software.",
+            icon: UserX,
+        },
+        {
+            title: "Firmware & Embedded Software Integrity Failures",
+            subtext:
+                "IoT, OT, and device firmware are tampered with due to weak signing, validation, and update verification mechanisms.",
+            icon: Cpu,
+        },
+        {
+            title: "Absence of Continuous Integrity Monitoring",
+            subtext:
+                "Organizations fail to detect when production software deviates from its trusted baseline over time.",
+            icon: Activity,
         },
     ];
-
-
 
 
 
 
     const solutions = [
         {
-            title: "Continuous Vulnerability Management (CVM)",
+            title: "End-to-End Software Integrity Assessment",
             description:
-                "Ongoing discovery, classification, risk scoring, and remediation tracking across infrastructure, cloud, endpoints, and workloads.",
-            icon: Scan,
+                "Comprehensive evaluation of software assets, CI/CD pipelines, dependencies, provenance gaps, and runtime integrity risks across the entire software lifecycle.",
+            icon: ClipboardList,
         },
         {
-            title: "Application Security Testing (SAST, DAST, IAST & SCA)",
+            title: "Secure Build Pipeline Hardening & Artifact Attestation",
             description:
-                "Shift-left application security testing embedded into CI/CD pipelines to detect vulnerabilities early and reduce production risk.",
-            icon: Bug,
-        },
-        {
-            title: "Risk-Based Vulnerability Prioritization",
-            description:
-                "Advanced prioritization using CVSS, EPSS, Known Exploited Vulnerabilities (KEV), threat intelligence, and business impact context.",
-            icon: Target,
-        },
-        {
-            title: "Software Supply Chain Security & SBOM Management",
-            description:
-                "Generation, monitoring, and analysis of SBOMs to rapidly identify affected systems when new open-source vulnerabilities emerge.",
-            icon: PackageCheck,
-        },
-        {
-            title: "Runtime Protection & Validation",
-            description:
-                "Continuous runtime validation using RASP, EDR/XDR, and eBPF-based monitoring to detect exploitation attempts in real time.",
+                "Implementation of signed builds, immutable artifacts, cryptographic attestations, CI/CD gating controls, and Software Bill of Materials (SBOM).",
             icon: ShieldCheck,
         },
         {
-            title: "Automated Patch & Remediation Orchestration",
+            title: "Runtime Integrity Monitoring & Verification",
             description:
-                "Workflow-driven remediation using ServiceNow, Jira, and CI/CD integrations with rollback and change safety controls.",
-            icon: Wrench,
+                "Continuous verification that deployed software remains unaltered, detecting code injection, memory tampering, and execution anomalies in real time.",
+            icon: Activity,
         },
         {
-            title: "Red Team Validation & Attack Simulation",
+            title: "Open-Source Governance & SBOM Management",
             description:
-                "Continuous attack simulation mapped to MITRE ATT&CK to validate that vulnerabilities are effectively mitigated.",
-            icon: Crosshair,
+                "Discovery, tracking, and risk management of open-source components with full lineage visibility, policy enforcement, and remediation workflows.",
+            icon: Boxes,
+        },
+        {
+            title: "Update Mechanism & Patch Integrity Security",
+            description:
+                "Securing auto-update and patching systems using signature validation, rollback protection, and tamper-resistant delivery controls.",
+            icon: RefreshCcw,
+        },
+        {
+            title: "Counterfeit Software Detection & Authenticity Assurance",
+            description:
+                "Identification of repackaged or fraudulent software through code-signing verification, provenance validation, and runtime authenticity checks.",
+            icon: BadgeCheck,
+        },
+        {
+            title: "Compliance, Governance & Audit Readiness",
+            description:
+                "Alignment with ISO 27001, secure software lifecycle controls, emerging software assurance regulations, and automated audit evidence generation.",
+            icon: FileCheck,
         },
     ];
 
     const faqs = [
         {
-            question: "What is vulnerability management in cybersecurity?",
+            question: "What is software integrity?",
             answer:
-                "Vulnerability management is the continuous process of identifying, prioritizing, remediating, and validating security weaknesses across systems, applications, and infrastructure.",
+                "Software integrity ensures that software is authentic, unmodified, and behaves exactly as intended throughout its entire lifecycle.",
         },
         {
-            question: "How is risk-based vulnerability management different from traditional scanning?",
+            question: "Why is software integrity important for cybersecurity?",
             answer:
-                "Risk-based programs prioritize vulnerabilities based on exploitability, real-world threat intelligence, and business impact—not just severity scores.",
+                "Compromised software can bypass traditional security controls, leading to data breaches, ransomware infections, and large-scale systemic risk.",
         },
         {
-            question: "Why are SBOMs important for vulnerability management?",
+            question: "What is a software supply chain attack?",
             answer:
-                "SBOMs provide visibility into software components, enabling rapid identification of impacted systems when new vulnerabilities are disclosed.",
+                "A software supply chain attack occurs when adversaries compromise third-party components, build systems, or update mechanisms to insert malicious code into trusted software.",
         },
         {
-            question: "What tools does Mociber use for vulnerability management?",
+            question: "How does Mociber help protect software integrity?",
             answer:
-                "Mociber works with platforms such as Tenable, Qualys, Rapid7, Snyk, Veracode, CrowdStrike, Palo Alto Cortex XDR, and other best-in-class security tools.",
+                "Mociber secures the entire software lifecycle—from source code and build pipelines to deployment, updates, and continuous runtime integrity monitoring.",
         },
         {
-            question: "Can vulnerability management be automated?",
+            question: "What is an SBOM and why does it matter?",
             answer:
-                "Yes. Automation enables faster discovery, prioritization, patching, and validation, significantly reducing remediation time and operational overhead.",
+                "A Software Bill of Materials (SBOM) lists all components used in software, enabling visibility, traceability, faster vulnerability response, and effective risk management.",
         },
         {
-            question: "How does Mociber handle cloud and container vulnerabilities?",
+            question: "Can software integrity be monitored continuously?",
             answer:
-                "We use continuous asset discovery, cloud security posture management, container image scanning, and runtime protection for cloud-native workloads.",
+                "Yes. Continuous runtime integrity monitoring detects unauthorized changes, tampering, and anomalies even after software has been deployed.",
         },
         {
-            question: "Is vulnerability management required for compliance?",
+            question: "Is software integrity required for compliance?",
             answer:
-                "Yes. Most regulations and security standards require continuous vulnerability identification, remediation, and evidence of control effectiveness.",
+                "Increasingly, yes. Many cybersecurity standards and regulations now expect strong software provenance, integrity controls, and auditability.",
         },
         {
-            question: "How often should vulnerabilities be tested?",
+            question: "Which industries need software integrity the most?",
             answer:
-                "Continuously. Modern cloud and DevOps environments change daily, making continuous testing essential for effective risk reduction.",
+                "BFSI, healthcare, government, critical infrastructure, SaaS providers, and IoT-heavy organizations benefit the most from strong software integrity controls.",
         },
         {
-            question: "Does Mociber provide managed vulnerability services?",
+            question: "Does software integrity slow down DevOps?",
             answer:
-                "Yes. We offer fully managed and co-managed vulnerability management programs with defined SLAs, reporting, and continuous improvement.",
+                "No. When embedded correctly into DevSecOps pipelines, software integrity enables faster and safer releases with reduced rework and incident response effort.",
         },
         {
-            question: "How can an organization start improving its vulnerability posture?",
+            question: "How can an organization start improving software integrity?",
             answer:
-                "Start with a vulnerability maturity and exposure assessment to define priorities and build a focused 90-day remediation roadmap.",
+                "Organizations should begin with a software integrity assessment to identify gaps and define a phased, risk-driven improvement roadmap.",
         },
     ];
 
@@ -204,7 +214,7 @@ export default function SoftwareIntegrity() {
         <>
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<>Red Teaming & AI</>}
+                heading={<>Software Integrity</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""
@@ -216,12 +226,12 @@ export default function SoftwareIntegrity() {
 
                     <section className="grid md:grid-cols-2 gap-8 items-center bg-white/3 rounded-2xl p-6  shadow-lg">
                         <div>
-                            <h1 className="text-3xl md:text-3xl font-bold">Real-World Adversarial Testing for Enterprise & Critical Infrastructure Security</h1>
+                            <h1 className="text-3xl md:text-3xl font-bold">End-to-End Trust, Assurance, and Protection Across the Software Lifecycle</h1>
                             <p className="mt-4 text-slate-200">
-                                Modern cyber adversaries do not follow rules, scopes, or assumptions. They exploit human behavior, weak processes, technical gaps, and operational blind spots. Traditional vulnerability assessments and compliance audits are no longer sufficient to measure true cyber resilience.</p>
-                            <p className="mt-4 text-slate-200">Mociber’s Red Teaming services simulate real-world attackers to test your organization’s ability to prevent, detect, respond to, and recover from advanced cyber threats.</p>
+                                In today’s hyper-connected, cloud-native, and dependency-driven digital ecosystem, software integrity has become a critical business and national security concern. Organizations rely on complex software supply chains built from open-source components, third-party libraries, CI/CD pipelines, and automated update mechanisms. Any compromise at any stage can result in hidden backdoors, malicious insertions, operational disruption, regulatory exposure, and loss of trust.</p>
+                            <p className="mt-4 text-slate-200">Mociber enables organizations to ensure that the software they build, deploy, and operate is authentic, untampered, verifiable, and continuously trustworthy—across development, build, delivery, deployment, updates, and runtime.</p>
                             <p className="mt-4 text-slate-200">
-                                Our adversarial engagements deliver measurable insight into how your people, processes, and technologies perform under realistic attack conditions.
+                                We position software integrity not as a point control, but as a continuous assurance discipline embedded into DevSecOps and business operations.
                             </p>
                             <div className="mt-6 flex gap-3">
                                 <Link to="/services/cybersecurity" className="inline-block border border-white/20 px-5 py-3 rounded-md text-white">View Solutions</Link>
@@ -243,20 +253,20 @@ export default function SoftwareIntegrity() {
                     {/* PROBLEM */}
                     <section id="problems" className="mt-10 grid md:grid-cols-3 gap-6">
                         <div className="md:col-span-2 bg-white/4 rounded-2xl p-6">
-                            <h2 className="text-2xl font-semibold">Why Traditional Vulnerability Programs Fail</h2>
+                            <h2 className="text-2xl font-semibold">Industry Challenges in Software Integrity</h2>
 
 
                             <ol className="mt-4 space-y-2 list-decimal list-inside text-slate-200">
-                                <li>CVE volume outpaces manual remediation</li>
-                                <li>Tool sprawl creates noise without context</li>
-                                <li>Scanning without exploitability prioritization wastes effort</li>
-                                <li>DevOps speed outstrips security validation</li>
-                                <li>Lack of SBOMs blocks rapid impact analysis</li>
-                                <li>Runtime threats remain undetected</li>
-
+                                <li>Highly complex and opaque software supply chains</li>
+                                <li>Accelerated DevOps cycles outpacing assurance controls</li>
+                                <li>Integrity treated only at development, not runtime</li>
+                                <li>Fragmented tools with no end-to-end visibility</li>
+                                <li>Increasing regulatory expectations for software assurance</li>
+                                <li>Attackers targeting update mechanisms and build systems</li>
+                                <li>Limited metrics to measure integrity maturity</li>
                             </ol>
                             <p className="mt-3 text-slate-200">
-                                Effective vulnerability management must be continuous, contextual, and automation-driven.
+                                Modern software changes continuously—integrity assurance must do the same.
                             </p>
                         </div>
 
@@ -276,13 +286,13 @@ export default function SoftwareIntegrity() {
 
                     {/* KEY RISKS */}
                     <KeyRisks
-                        title="Key Vulnerability & Cyber Risks"
+                        title="Software Integrity Risks"
                         subtitle="Modern organizations face a combination of regulatory, operational, and cyber risks that directly impact compliance integrity:"
                         risks={risks}
                     />
                     <YouTubeAutoplaySection />
 
-                    <ServiceSolution solutions={solutions} heading={"Mociber Vulnerability Management & Testing Solutions"} />
+                    <ServiceSolution solutions={solutions} heading={"Mociber Software Integrity Solutions & Services"} />
 
 
 
@@ -316,7 +326,7 @@ export default function SoftwareIntegrity() {
                     <ContactCta id="contact" />
 
                     <FaqSection
-                        title="Vulnerability Management - FAQs"
+                        title="Software Integrity - FAQs"
                         subtitle="Common questions about our Data Privacy & Protection."
                         faqs={faqs}
                     />

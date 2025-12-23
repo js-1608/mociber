@@ -5,22 +5,24 @@ import HeroBanner from "@/components/ServiceHero";
 import { Link } from "react-router";
 import KeyRisks from "@/components/Risks";
 import {
-    Package,
-    CloudOff,
-    AlertTriangle,
-    Container,
-    Globe,
-    KeyRound,
-    Scan,
-    BellOff,
-
-    Bug,
-    Target,
-    PackageCheck,
     ShieldCheck,
-    Wrench,
     Crosshair,
+    Boxes,
+    Fingerprint,
+    FileCheck,
+    GitBranch,
+    ShieldOff,
+    FlaskConical,
+    Copy,
+    AlertCircle,
+    Bot,
+    EyeOff,
+    PackageX,
+    Layers3,
+    SlidersHorizontal,
+    Radar,
 } from "lucide-react";
+
 
 import ContactCta from "@/components/ContactCta";
 import ServiceSolution from "@/components/ServiceSolution";
@@ -32,161 +34,169 @@ import YouTubeAutoplaySection from "@/components/Video";
 export default function AdversarialMl() {
 
 
-
-
     const risks = [
         {
-            title: "Software Supply Chain Vulnerabilities",
+            title: "Prompt Injection & Jailbreak Attacks",
             subtext:
-                "Compromised open-source libraries and third-party components introduce hidden risks across multiple applications and environments.",
-            icon: Package,
+                "Malicious inputs override system instructions, bypass guardrails, and force unsafe or unauthorized model behavior.",
+            icon: ShieldOff,
         },
         {
-            title: "Cloud & Infrastructure Misconfigurations",
+            title: "Model Poisoning & Training Backdoors",
             subtext:
-                "Exposed storage, overly permissive IAM roles, and infrastructure-as-code drift lead to data breaches and unauthorized access.",
-            icon: CloudOff,
+                "Manipulated datasets or embedded triggers during training compromise model behavior in production environments.",
+            icon: FlaskConical,
         },
         {
-            title: "Unpatched Critical CVEs & Zero-Day Exposure",
+            title: "Model Extraction & Intellectual Property Theft",
             subtext:
-                "Rapid weaponization of disclosed vulnerabilities leaves organizations exposed during slow or manual patch cycles.",
-            icon: AlertTriangle,
+                "Attackers replicate or infer proprietary models through repeated queries and systematic output analysis.",
+            icon: Copy,
         },
         {
-            title: "Runtime & Container Exploits",
+            title: "Adversarial Inputs & Evasion Techniques",
             subtext:
-                "Kernel-level attacks, container breakouts, and memory exploits bypass static scanning and compromise live workloads.",
-            icon: Container,
+                "Carefully crafted text, image, or audio perturbations cause misclassification or unsafe model responses.",
+            icon: AlertCircle,
         },
         {
-            title: "Web Application & API Vulnerabilities",
+            title: "Autonomous Agent Manipulation",
             subtext:
-                "OWASP Top 10 flaws, insecure APIs, and weak authentication enable data theft and account takeover attacks.",
-            icon: Globe,
+                "Chained LLM agents are exploited to escalate privileges, trigger unintended actions, or bypass workflow controls.",
+            icon: Bot,
         },
         {
-            title: "Identity & Credential Exposure",
+            title: "Inference-Time Data Leakage",
             subtext:
-                "Leaked secrets, tokens, and credentials allow attackers to move laterally and escalate privileges within environments.",
-            icon: KeyRound,
+                "Sensitive training data or user information is unintentionally exposed through model responses.",
+            icon: EyeOff,
         },
         {
-            title: "Incomplete Asset Visibility",
+            title: "AI Supply Chain & Third-Party Model Risk",
             subtext:
-                "Ephemeral cloud workloads, containers, and serverless services remain unscanned and unmanaged, creating blind spots.",
-            icon: Scan,
+                "Pre-trained models, plugins, and fine-tuned assets introduce hidden vulnerabilities and trust gaps.",
+            icon: PackageX,
         },
         {
-            title: "Alert Fatigue & Slow Triage",
+            title: "Multi-Modal Attack Vectors",
             subtext:
-                "Excessive false positives overwhelm teams and delay remediation of truly exploitable vulnerabilities.",
-            icon: BellOff,
+                "Combined text, image, audio, and API-based attacks exploit weaknesses across cross-modal AI pipelines.",
+            icon: Layers3,
+        },
+        {
+            title: "Guardrail & Safety Failures",
+            subtext:
+                "Weak prompt controls, misalignment, and emergent behaviors undermine trust, safety, and compliance.",
+            icon: SlidersHorizontal,
+        },
+        {
+            title: "Lack of Continuous Monitoring & Incident Readiness",
+            subtext:
+                "Without ongoing adversarial testing and monitoring, models drift and remain vulnerable to new attack techniques.",
+            icon: Radar,
         },
     ];
-
-
-
-
 
 
     const solutions = [
         {
-            title: "Continuous Vulnerability Management (CVM)",
+            title: "Adversarial Red Teaming for LLMs & Agents",
             description:
-                "Ongoing discovery, classification, risk scoring, and remediation tracking across infrastructure, cloud, endpoints, and workloads.",
-            icon: Scan,
+                "Simulated real-world attacks including prompt injection, jailbreaks, agent chaining, and model extraction to validate AI guardrails and security controls.",
+            icon: Crosshair,
         },
         {
-            title: "Application Security Testing (SAST, DAST, IAST & SCA)",
+            title: "Model Supply Chain Assurance & Model-SBOM",
             description:
-                "Shift-left application security testing embedded into CI/CD pipelines to detect vulnerabilities early and reduce production risk.",
-            icon: Bug,
+                "End-to-end provenance tracking, third-party model vetting, dependency mapping, and continuous risk scoring across AI and LLM components.",
+            icon: Boxes,
         },
         {
-            title: "Risk-Based Vulnerability Prioritization",
+            title: "Robustness Hardening & Adversarial Training",
             description:
-                "Advanced prioritization using CVSS, EPSS, Known Exploited Vulnerabilities (KEV), threat intelligence, and business impact context.",
-            icon: Target,
-        },
-        {
-            title: "Software Supply Chain Security & SBOM Management",
-            description:
-                "Generation, monitoring, and analysis of SBOMs to rapidly identify affected systems when new open-source vulnerabilities emerge.",
-            icon: PackageCheck,
-        },
-        {
-            title: "Runtime Protection & Validation",
-            description:
-                "Continuous runtime validation using RASP, EDR/XDR, and eBPF-based monitoring to detect exploitation attempts in real time.",
+                "Generation of adversarial examples, poisoned-data detection, resilience tuning, and secure fine-tuning strategies to harden models against attacks.",
             icon: ShieldCheck,
         },
         {
-            title: "Automated Patch & Remediation Orchestration",
+            title: "Model Theft Detection & Watermarking",
             description:
-                "Workflow-driven remediation using ServiceNow, Jira, and CI/CD integrations with rollback and change safety controls.",
-            icon: Wrench,
+                "Query anomaly detection, usage analytics, watermarking, and intellectual property protection for proprietary AI and LLM models.",
+            icon: Fingerprint,
         },
         {
-            title: "Red Team Validation & Attack Simulation",
+            title: "Continuous AI Security Monitoring & Incident Response",
             description:
-                "Continuous attack simulation mapped to MITRE ATT&CK to validate that vulnerabilities are effectively mitigated.",
-            icon: Crosshair,
+                "Always-on monitoring for adversarial behavior, model drift, misuse, and AI-specific incident response playbooks and workflows.",
+            icon: Radar,
+        },
+        {
+            title: "AI Security Governance, Audit & Compliance",
+            description:
+                "Enterprise AI governance frameworks, adversarial readiness metrics, audit evidence generation, and executive dashboards aligned with global AI regulations.",
+            icon: FileCheck,
+        },
+        {
+            title: "Secure MLOps & DevSecML Integration",
+            description:
+                "Embedding adversarial testing, security gates, and telemetry into CI/CD pipelines for secure ML and LLM development and deployment.",
+            icon: GitBranch,
         },
     ];
 
+
     const faqs = [
         {
-            question: "What is vulnerability management in cybersecurity?",
+            question: "What is Adversarial Machine Learning security?",
             answer:
-                "Vulnerability management is the continuous process of identifying, prioritizing, remediating, and validating security weaknesses across systems, applications, and infrastructure.",
+                "Adversarial ML security focuses on protecting AI models from malicious inputs, poisoned data, model theft, and manipulation that can alter model behavior or leak sensitive information.",
         },
         {
-            question: "How is risk-based vulnerability management different from traditional scanning?",
+            question: "Why are LLMs vulnerable to adversarial attacks?",
             answer:
-                "Risk-based programs prioritize vulnerabilities based on exploitability, real-world threat intelligence, and business impact—not just severity scores.",
+                "LLMs process natural language and multi-modal inputs, making them susceptible to prompt injection, jailbreaks, data leakage, and misuse when guardrails and monitoring are weak.",
         },
         {
-            question: "Why are SBOMs important for vulnerability management?",
+            question: "What is prompt injection and why is it dangerous?",
             answer:
-                "SBOMs provide visibility into software components, enabling rapid identification of impacted systems when new vulnerabilities are disclosed.",
+                "Prompt injection occurs when attackers override system instructions using crafted inputs, causing AI systems to generate harmful, misleading, or unauthorized outputs.",
         },
         {
-            question: "What tools does Mociber use for vulnerability management?",
+            question: "How does Mociber secure enterprise AI and LLM systems?",
             answer:
-                "Mociber works with platforms such as Tenable, Qualys, Rapid7, Snyk, Veracode, CrowdStrike, Palo Alto Cortex XDR, and other best-in-class security tools.",
+                "Mociber applies adversarial red-teaming, continuous monitoring, model supply chain assurance, secure MLOps integration, and enterprise-grade AI governance frameworks.",
         },
         {
-            question: "Can vulnerability management be automated?",
+            question: "Can AI models be stolen or copied?",
             answer:
-                "Yes. Automation enables faster discovery, prioritization, patching, and validation, significantly reducing remediation time and operational overhead.",
+                "Yes. Model extraction attacks can replicate proprietary models through repeated queries. Mociber mitigates this using watermarking, query anomaly detection, and rate controls.",
         },
         {
-            question: "How does Mociber handle cloud and container vulnerabilities?",
+            question: "Does Mociber support AI compliance and governance?",
             answer:
-                "We use continuous asset discovery, cloud security posture management, container image scanning, and runtime protection for cloud-native workloads.",
+                "Yes. We help organizations meet AI security, governance, and audit requirements aligned with emerging global AI regulations and enterprise risk frameworks.",
         },
         {
-            question: "Is vulnerability management required for compliance?",
+            question: "Are autonomous AI agents at risk?",
             answer:
-                "Yes. Most regulations and security standards require continuous vulnerability identification, remediation, and evidence of control effectiveness.",
+                "Absolutely. Autonomous agents can be manipulated to perform unintended or unsafe actions. Mociber tests and secures agent workflows using supervision, guardrails, and behavior validation.",
         },
         {
-            question: "How often should vulnerabilities be tested?",
+            question: "Is adversarial testing a one-time activity?",
             answer:
-                "Continuously. Modern cloud and DevOps environments change daily, making continuous testing essential for effective risk reduction.",
+                "No. Adversarial threats evolve continuously. Ongoing testing, monitoring, and validation are essential to maintain AI and LLM security over time.",
         },
         {
-            question: "Does Mociber provide managed vulnerability services?",
+            question: "Which industries need Adversarial ML security the most?",
             answer:
-                "Yes. We offer fully managed and co-managed vulnerability management programs with defined SLAs, reporting, and continuous improvement.",
+                "Financial services, healthcare, government, technology, telecom, and enterprises deploying LLMs or autonomous systems at scale benefit the most.",
         },
         {
-            question: "How can an organization start improving its vulnerability posture?",
+            question: "How can organizations start securing their AI systems?",
             answer:
-                "Start with a vulnerability maturity and exposure assessment to define priorities and build a focused 90-day remediation roadmap.",
+                "Organizations should begin with an adversarial readiness assessment to identify vulnerabilities across data pipelines, models, agents, and inference environments.",
         },
     ];
+
 
 
 
@@ -204,7 +214,7 @@ export default function AdversarialMl() {
         <>
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<>Red Teaming & AI</>}
+                heading={<>Adversarial ML & LLM Security</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""
@@ -243,20 +253,19 @@ export default function AdversarialMl() {
                     {/* PROBLEM */}
                     <section id="problems" className="mt-10 grid md:grid-cols-3 gap-6">
                         <div className="md:col-span-2 bg-white/4 rounded-2xl p-6">
-                            <h2 className="text-2xl font-semibold">Why Traditional Vulnerability Programs Fail</h2>
+                            <h2 className="text-2xl font-semibold">Why Traditional Security Fails for AI Systems</h2>
 
 
                             <ol className="mt-4 space-y-2 list-decimal list-inside text-slate-200">
-                                <li>CVE volume outpaces manual remediation</li>
-                                <li>Tool sprawl creates noise without context</li>
-                                <li>Scanning without exploitability prioritization wastes effort</li>
-                                <li>DevOps speed outstrips security validation</li>
-                                <li>Lack of SBOMs blocks rapid impact analysis</li>
-                                <li>Runtime threats remain undetected</li>
-
+                                <li>AI systems are deployed faster than they are secured</li>
+                                <li>Adversarial threats evolve more rapidly than static controls</li>
+                                <li>Model behavior is opaque and difficult to predict</li>
+                                <li>AI supply chains lack transparency and standardized assurance</li>
+                                <li>Multi-modal and agent-based systems multiply risk complexity</li>
+                                <li>Few organizations have AI-specific incident response playbooks</li>
                             </ol>
                             <p className="mt-3 text-slate-200">
-                                Effective vulnerability management must be continuous, contextual, and automation-driven.
+                                AI security requires purpose-built adversarial defense—not traditional application security alone.
                             </p>
                         </div>
 
@@ -276,13 +285,13 @@ export default function AdversarialMl() {
 
                     {/* KEY RISKS */}
                     <KeyRisks
-                        title="Key Vulnerability & Cyber Risks"
+                        title="Critical Adversarial Risks Facing AI & LLM Systems"
                         subtitle="Modern organizations face a combination of regulatory, operational, and cyber risks that directly impact compliance integrity:"
                         risks={risks}
                     />
                     <YouTubeAutoplaySection />
 
-                    <ServiceSolution solutions={solutions} heading={"Mociber Vulnerability Management & Testing Solutions"} />
+                    <ServiceSolution solutions={solutions} heading={"Mociber’s Adversarial ML & LLM Security Services"} />
 
 
 
@@ -316,7 +325,7 @@ export default function AdversarialMl() {
                     <ContactCta id="contact" />
 
                     <FaqSection
-                        title="Vulnerability Management - FAQs"
+                        title="Adversarial ML & LLM Security - FAQs"
                         subtitle="Common questions about our Data Privacy & Protection."
                         faqs={faqs}
                     />
