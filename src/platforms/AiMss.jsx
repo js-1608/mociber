@@ -241,7 +241,7 @@ export default function AiMss() {
       <section className="bg-[#050814] py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-10">
-            Why Traditional SOC Models Fail
+            Why Traditional SOC & Managed Security Models Fail
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -269,7 +269,7 @@ export default function AiMss() {
         risks={risks}
       />
 
-      <ServiceSolution solutions={solutions} heading={"Mociber’s Adversarial ML & LLM Security Services"} />
+      <ServiceSolution solutions={solutions} heading={"Mociber AI-Powered Managed Security Solutions & Services"} />
 
 
       {/* ================= HOW IT WORKS ================= */}
@@ -296,7 +296,7 @@ export default function AiMss() {
 
       {/* ================= FAQ ================= */}
       <FaqSection
-        title="AI-Powered Managed Security FAQs"
+        title="AI-Powered Managed Security Services FAQs"
         subtitle=""
         faqs={faqs}
       />

@@ -30,7 +30,7 @@ import FaqSection from "@/components/Faq";
 import ServiceSolution from "@/components/ServiceSolution";
 import KeyRisks from "@/components/Risks";
 
-export default function Grc() {
+export default function VulnManagementPlatform() {
     const faqs = [
         {
             question: "What is a GRC & Auditing platform?",
@@ -290,7 +290,7 @@ export default function Grc() {
                 risks={risks}
             />
 
-            <ServiceSolution solutions={solutions} heading={"Mociber GRC & Auditing Platform – Solutions & Services"} />
+            <ServiceSolution solutions={solutions} heading={"Mociber’s Adversarial ML & LLM Security Services"} />
 
 
             {/* ================= HOW IT WORKS ================= */}
@@ -317,7 +317,7 @@ export default function Grc() {
 
             {/* ================= FAQ ================= */}
             <FaqSection
-                title="GRC & Auditing Platform - FAQs"
+                title="AI-Powered Managed Security FAQs"
                 subtitle=""
                 faqs={faqs}
             />
