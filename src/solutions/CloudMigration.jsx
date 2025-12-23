@@ -4,7 +4,21 @@ import ContactForm from "@/components/ContactForm";
 import HeroBanner from "@/components/ServiceHero";
 import { Link } from "react-router";
 import KeyRisks from "@/components/Risks";
-import { AlignVerticalJustifyCenter, BriefcaseConveyorBeltIcon, ChartBarIcon, FileDigit, Globe2, Globe2Icon, GlobeIcon, GlobeLock, icons, MoveDownLeft, Network, Proportions, RegexIcon, Satellite, Shield, Theater, ToolCase } from "lucide-react";
+import {
+    Users,
+    Layers,
+    Wrench,
+    Scale,
+    ShieldAlert,
+    DollarSign,
+    ActivityIcon,
+
+    Cloud,
+    ShieldCheck,
+    GitBranch,
+    Database,
+} from "lucide-react";
+
 import ContactCta from "@/components/ContactCta";
 import ServiceSolution from "@/components/ServiceSolution";
 import FaqSection from "@/components/Faq";
@@ -13,134 +27,91 @@ import YouTubeAutoplaySection from "@/components/Video";
 
 
 export default function CloudMigration() {
+
+
     const risks = [
         {
-            title: "AI-Adaptive Malware & Evasive Attacks",
+            title: "Cloud Skill Shortages",
             subtext:
-                "Malware dynamically alters behavior in real time to bypass signature-based, rule-based, and static detection controls.",
-            icon: Shield
+                "Limited cloud expertise slows migration timelines, increases misconfiguration risk, and raises operational dependency on third parties.",
+            icon: Users,
         },
         {
-            title: "Automated Phishing & Social Engineering",
+            title: "Multi-Cloud Complexity",
             subtext:
-                "Generative AI enables hyper-personalized phishing, voice spoofing, and impersonation attacks at massive scale.",
-            icon: GlobeIcon
+                "Operating across multiple cloud platforms increases architectural complexity and expands the overall attack surface.",
+            icon: Layers,
         },
         {
-            title: "Adversarial Attacks on Security Models",
+            title: "Legacy Application Constraints",
             subtext:
-                "Attackers manipulate inputs and signals to mislead AI detection engines and evade alerts.",
-            icon: Theater
+                "Monolithic and legacy applications require refactoring or re-architecting before migration, delaying cloud adoption.",
+            icon: Wrench,
         },
         {
-            title: "Model Poisoning & Data Integrity Risks",
+            title: "Regulatory & Data Sovereignty Pressure",
             subtext:
-                "Compromised or tainted training data degrades model accuracy, reliability, and trustworthiness.",
-            icon: Shield
+                "Compliance requirements demand greater transparency, auditability, and control over where and how data is stored and processed.",
+            icon: Scale,
         },
         {
-            title: "AI-Enabled Credential Abuse",
+            title: "Cloud-Targeted Ransomware Threats",
             subtext:
-                "Machine-learning bots automate credential stuffing, session abuse, and account takeover attacks at scale.",
-            icon: Network
+                "Attackers increasingly target cloud-native workloads, backups, and identities to maximize operational and financial impact.",
+            icon: ShieldAlert,
         },
         {
-            title: "Over-Automation Without Governance",
+            title: "Cost Overruns & FinOps Gaps",
             subtext:
-                "Uncontrolled automation can trigger false positives, service disruptions, or missed threats without human oversight.",
-            icon: ChartBarIcon
+                "Poor visibility, uncontrolled consumption, and lack of FinOps discipline lead to unexpected cloud spend and budget overruns.",
+            icon: DollarSign,
         },
-        {
-            title: "Shadow AI & Unauthorized Tools",
-            subtext:
-                "Unapproved AI models and tools introduce data leakage risks, IP exposure, and compliance violations.",
-            icon: GlobeIcon
-        },
-        {
-            title: "Unsecured AI Pipelines & APIs",
-            subtext:
-                "Training, inference, and automation pipelines create new attack surfaces when APIs and workflows are not secured.",
-            icon: Network
-        },
-        {
-            title: "Opaque AI Decisions",
-            subtext:
-                "Lack of explainability and transparency creates audit, compliance, and accountability gaps.",
-            icon: Proportions
-        },
-        {
-            title: "Regulatory & Ethical AI Exposure",
-            subtext:
-                "Mismanaged AI security can violate data protection laws, cybersecurity mandates, and industry regulations.",
-            icon: RegexIcon
-        }
     ];
+
+
 
 
 
 
     const solutions = [
         {
-            title: "AI-Adaptive Threat Detection & Defense",
+            title: "Secure Cloud Architecture & Zero Trust Design",
             description:
-                "Behavior-based and AI-powered detection to identify adaptive malware, polymorphic attacks, and evasive techniques beyond signatures and static rules.",
-            icon: Shield
+                "Cloud-native architecture built on Zero Trust principles including continuous identity verification, least-privilege access, micro-segmentation, and automated policy enforcement.",
+            icon: ShieldCheck,
         },
         {
-            title: "AI-Resilient Phishing & Social Engineering Protection",
+            title: "End-to-End Cloud Migration & Modernization",
             description:
-                "Advanced detection for AI-generated phishing, voice spoofing, impersonation, and deepfake-based social engineering attacks.",
-            icon: GlobeIcon
+                "Application and data migration using re-hosting, re-platforming, re-factoring, or re-architecting strategies aligned with business objectives.",
+            icon: Cloud,
         },
         {
-            title: "Adversarial ML Defense & Model Hardening",
+            title: "Multi-Cloud Governance, Compliance & FinOps",
             description:
-                "Protection against adversarial inputs, model evasion techniques, and manipulation targeting AI detection engines.",
-            icon: Theater
+                "Centralized governance with continuous compliance monitoring, policy standardization, and cost optimization across AWS, Azure, and Google Cloud.",
+            icon: Layers,
         },
         {
-            title: "Model Integrity & Data Poisoning Protection",
+            title: "AI-Powered Cloud Threat Detection & Incident Response",
             description:
-                "Safeguards for training data, model pipelines, and inference workflows to preserve accuracy, integrity, and trust.",
-            icon: Proportions
+                "Real-time threat detection and response using cloud-native SIEM, UEBA, and AI analytics across workloads, identities, and networks.",
+            icon: ActivityIcon,
         },
         {
-            title: "AI-Driven Identity & Credential Abuse Prevention",
+            title: "DevSecOps & Secure CI/CD Enablement",
             description:
-                "Detection and mitigation of automated credential stuffing, session abuse, and account takeover using ML-driven bots.",
-            icon: Network
+                "Security embedded into CI/CD pipelines through infrastructure-as-code, automated scanning, container security, and policy-as-code.",
+            icon: GitBranch,
         },
         {
-            title: "Human-in-the-Loop AI Governance",
+            title: "Data Security, Backup & Disaster Recovery",
             description:
-                "Controlled automation with approval workflows, guardrails, and oversight to prevent false positives and operational disruption.",
-            icon: ChartBarIcon
+                "End-to-end data protection with encryption, immutable backups, multi-region replication, and automated disaster recovery for resilience.",
+            icon: Database,
         },
-        {
-            title: "Shadow AI Discovery & Control",
-            description:
-                "Discovery, monitoring, and governance of unauthorized AI tools to prevent data leakage, IP exposure, and compliance violations.",
-            icon: Globe2
-        },
-        {
-            title: "Secure AI Pipelines & API Protection",
-            description:
-                "Security controls for AI training, inference, orchestration pipelines, and APIs to reduce emerging attack surfaces.",
-            icon: FileDigit
-        },
-        {
-            title: "Explainable & Auditable AI Security",
-            description:
-                "Transparent, explainable AI decisions with audit trails to support compliance, accountability, and forensic analysis.",
-            icon: RegexIcon
-        },
-        {
-            title: "Regulatory & Ethical AI Risk Management",
-            description:
-                "Alignment with global AI, cybersecurity, and data protection regulations through policy, governance, and continuous monitoring.",
-            icon: GlobeLock
-        }
     ];
+
 
 
 
@@ -264,8 +235,8 @@ export default function CloudMigration() {
                             </p>
 
                             <ol className="mt-4 space-y-2 list-decimal list-inside text-slate-200">
-                                <li>Cloud misconfigurations leading to data breaches</li>
-                                <li>Identity and access control weaknesses</li>
+                                <li>Cloud misconfigurations leading to data breaches </li>
+                                <li>Identity and access control weaknesses </li>
                                 <li>Vendor lock-in and limited portability</li>
                                 <li>Unplanned downtime and regional outages</li>
                                 <li>Escalating and unpredictable cloud costs</li>
@@ -274,7 +245,6 @@ export default function CloudMigration() {
                                 <li>Compliance failures and data sovereignty violations</li>
                                 <li>Insecure SaaS and third-party integrations</li>
                                 <li>Uncontrolled AI/ML workloads and automation pipelines</li>
-
                             </ol>
                         </div>
 
@@ -294,13 +264,13 @@ export default function CloudMigration() {
 
                     {/* KEY RISKS */}
                     <KeyRisks
-                        title="Key AI-Driven Security Risks Facing Organizations"
+                        title="Key Cloud Computing & Migration Risks Enterprises Face"
                         subtitle="Modern organizations face a combination of regulatory, operational, and cyber risks that directly impact compliance integrity:"
                         risks={risks}
                     />
                     <YouTubeAutoplaySection />
 
-                    <ServiceSolution solutions={solutions} heading={"  Mociber’s AI-Powered Security & Automation Services"} />
+                    <ServiceSolution solutions={solutions} heading={" Mociber’s Cloud Computing & Migration Services"} />
 
 
 

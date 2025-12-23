@@ -47,6 +47,7 @@ import AiMss from "./platforms/AiMss";
 import CloudMigration from "./solutions/CloudMigration";
 import ZeroTrustPage from "./solutions/zero-trust";
 import AiAutomation from "./solutions/AiAutomation";
+import IAM from "./solutions/IAM";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -111,6 +112,7 @@ function App() {
           <Route path="/solutions/zero-trust" element={<ZeroTrustPage />} />
           <Route path="/solutions/ai-automation" element={<AiAutomation />} />
           <Route path="/solutions/cloud" element={<CloudMigration />} />
+          <Route path="/solutions/iam" element={<IAM />} />
 
 
           {/* platforms */}
