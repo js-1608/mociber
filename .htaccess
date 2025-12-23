@@ -1,0 +1,85 @@
+# /path/to/site/.htaccess  (place this in the folder that contains index.html)
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Optional: force HTTPS + canonical www or non-www (uncomment / edit if needed)
+  # RewriteCond %{HTTPS} !=on
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # If the request is for an existing file or directory, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Otherwise rewrite all requests to index.html (SPA entry)
+  RewriteRule ^ /index.html [L,QSA]
+</IfModule>
+
+# If mod_rewrite unavailable, fall back to 404 -> index (optional)
+ErrorDocument 404 /index.html
+
+
+ # 1️⃣ Clickjacking protection (MODERN + LEGACY)
+<IfModule mod_headers.c>
+  Header always append X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# 2️⃣ Prevent MIME-type sniffing
+<IfModule mod_headers.c>
+
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# 3️⃣ Cross-site scripting (XSS) protection
+<IfModule mod_headers.c>
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# 4️⃣ Referrer Policy
+<IfModule mod_headers.c>
+
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+</IfModule>
+
+# 5️⃣ Content Security Policy (CSP) - basic example, customize as needed
+<IfModule mod_headers.c>
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'self';"
+</IfModule>
+
+# 6️⃣ Enable HSTS (HTTP Strict Transport Security) - adjust max-age as needed
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# 7️⃣ Disable server signature
+<IfModule mod_headers.c>
+  ServerSignature Off
+</IfModule> 
+# 8️⃣ Caching policies (example, customize as needed)
+<IfModule mod_expires.c>
+
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds" 
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# 9️⃣ Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+# 10️⃣ Disable directory browsing
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
+
+
+
+
+
+
