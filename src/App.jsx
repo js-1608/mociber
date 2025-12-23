@@ -48,6 +48,8 @@ import CloudMigration from "./solutions/CloudMigration";
 import ZeroTrustPage from "./solutions/zero-trust";
 import AiAutomation from "./solutions/AiAutomation";
 import IAM from "./solutions/IAM";
+import Devsecops from "./solutions/Devsecops";
+import VulnManagement from "./solutions/VulnManagement";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -113,6 +115,8 @@ function App() {
           <Route path="/solutions/ai-automation" element={<AiAutomation />} />
           <Route path="/solutions/cloud" element={<CloudMigration />} />
           <Route path="/solutions/iam" element={<IAM />} />
+          <Route path="/solutions/devsecops" element={<Devsecops />} />
+          <Route path="/solutions/vuln-management" element={<VulnManagement />} />
 
 
           {/* platforms */}
