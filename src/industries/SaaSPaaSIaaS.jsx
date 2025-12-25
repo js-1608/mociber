@@ -24,6 +24,7 @@ import ContactCta from "@/components/ContactCta";
 import KeyRisks from "@/components/Risks";
 import ServiceSolution from "@/components/ServiceSolution";
 import TrustedLogos from "@/components/TrustedLogos";
+import IndustriesLatestBlogs from "./IndustiresBlogs";
 
 export default function SaaSPaaSIaaS() {
 
@@ -186,7 +187,7 @@ export default function SaaSPaaSIaaS() {
             <section className="relative min-h-[80vh] flex items-center">
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                        src="/Industries-banner.webp"
                         alt="Cloud Platform Security"
                         className="w-full h-full object-cover"
                     />
@@ -265,24 +266,11 @@ export default function SaaSPaaSIaaS() {
                                 </div>
                             </section>
 
-                            {/* Case studies */}
+                            {/* Blogs */}
                             <section id="case-studies" className="space-y-6 mt-8 p-2 lg:p-4">
-                                <h3 className="text-3xl md:text-4xl font-semibold mb-8">Case studies</h3>
+                                <h3 className="text-3xl md:text-4xl font-semibold mb-8">Blogs</h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {[1, 2].map((i) => (
-                                        <article key={i} className="bg-[#071226] rounded-xl overflow-hidden border border-white/6 shadow-md">
-                                            <img
-                                                src={`https://images.unsplash.com/photo-1505686994434-e3cc3d4a5f6d?q=80&w=1200&auto=format&fit=crop`}
-                                                alt={`case ${i}`}
-                                                className="w-full h-44 object-cover"
-                                            />
-                                            <div className="p-5">
-                                                <h4 className="font-semibold mb-2">Cloud migration for GlobalBank</h4>
-                                                <p className="text-sm text-gray-300 mb-3">Reduced TCO by 32% and improved security posture across core systems.</p>
-                                                <a href="#" className="text-sm inline-flex items-center gap-2 text-indigo-300">Read story →</a>
-                                            </div>
-                                        </article>
-                                    ))}
+                                    <IndustriesLatestBlogs category="industries" limit={2} />
                                 </div>
                             </section>
                         </div>
