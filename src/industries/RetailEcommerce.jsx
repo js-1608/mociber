@@ -24,7 +24,7 @@ import ContactCta from "@/components/ContactCta";
 import KeyRisks from "@/components/Risks";
 import ServiceSolution from "@/components/ServiceSolution";
 import TrustedLogos from "@/components/TrustedLogos";
-import IndustriesLatestBlogs from "./IndustiresBlogs";
+import LatestBlogsByTag from "./IndustiresBlogs";
 
 export default function RetailEcommerce() {
 
@@ -246,29 +246,21 @@ export default function RetailEcommerce() {
 
                                     {/* Bullet Points */}
                                     <ul className="space-y-1 text-slate-300 text-lg">
-                                       <li> •	High transaction volumes and peak traffic events</li>
-                                       <li> •	Always-on digital storefronts with zero downtime tolerance</li>
-                                       <li> •	Rapid feature releases and frequent integrations</li>
-                                       <li> •	Distributed attack surface across cloud, apps, POS, and APIs</li>
-                                       <li> •	Strong dependence on customer trust and brand reputation</li>
+                                        <li> •	High transaction volumes and peak traffic events</li>
+                                        <li> •	Always-on digital storefronts with zero downtime tolerance</li>
+                                        <li> •	Rapid feature releases and frequent integrations</li>
+                                        <li> •	Distributed attack surface across cloud, apps, POS, and APIs</li>
+                                        <li> •	Strong dependence on customer trust and brand reputation</li>
                                     </ul>
 
                                     {/* Highlight Line */}
                                     <p className="mt-10 text-xl font-medium text-white">
-                                       In retail, cybersecurity directly 
+                                        In retail, cybersecurity directly
                                         <span className="text-cyan-400">
                                             {" "}
                                             protects revenue and customer loyalty.
                                         </span>
                                     </p>
-                                </div>
-                            </section>
-
-                            {/* Blogs */}
-                            <section id="case-studies" className="space-y-6 mt-8 p-2 lg:p-4">
-                                <h3 className="text-3xl md:text-4xl font-semibold mb-8">Blogs</h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <IndustriesLatestBlogs category="industries" limit={2} />
                                 </div>
                             </section>
                         </div>
@@ -297,6 +289,12 @@ export default function RetailEcommerce() {
                     </aside>
                 </div>
             </main>
+
+            {/* Blogs */}
+            <section id="case-studies" className="space-y-2 mt-2  max-w-7xl mx-auto">
+                <h3 className="text-3xl md:text-4xl font-semibold mb-2 text-center">Blogs</h3>
+                <LatestBlogsByTag tag="retail-Ecommerce" limit={3} />
+            </section>
 
             <TrustedLogos />
 

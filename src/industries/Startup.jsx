@@ -24,7 +24,7 @@ import ContactCta from "@/components/ContactCta";
 import KeyRisks from "@/components/Risks";
 import ServiceSolution from "@/components/ServiceSolution";
 import TrustedLogos from "@/components/TrustedLogos";
-import IndustriesLatestBlogs from "./IndustiresBlogs";
+import LatestBlogsByTag from "./IndustiresBlogs";
 
 
 export default function ServiceDetail() {
@@ -228,7 +228,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* MAIN CONTENT + RIGHT SIDEBAR */}
-      <main className="max-w-7xl mx-auto pb-20">
+      <main className="max-w-7xl mx-auto pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left — main content */}
           <article className="lg:col-span-8 space-y-10">
@@ -260,17 +260,6 @@ export default function ServiceDetail() {
                   </p>
                 </div>
               </section>
-
-              {/* Blogs */}
-              <section id="case-studies" className="space-y-6 mt-8 p-2 lg:p-4">
-                <h3 className="text-3xl md:text-4xl font-semibold mb-8">Blogs</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <IndustriesLatestBlogs category="industries" limit={2} />
-                </div>
-              </section>
-
-
-
             </div>
           </article>
 
@@ -297,6 +286,11 @@ export default function ServiceDetail() {
           </aside>
         </div>
       </main>
+      {/* Blogs */}
+      <section id="case-studies" className="space-y-2 mt-2  max-w-7xl mx-auto">
+        <h3 className="text-3xl md:text-4xl font-semibold mb-2 text-center">Blogs</h3>
+          <LatestBlogsByTag tag="startups" limit={3} />
+      </section>
 
       <TrustedLogos />
 

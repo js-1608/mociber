@@ -24,7 +24,7 @@ import ContactCta from "@/components/ContactCta";
 import KeyRisks from "@/components/Risks";
 import ServiceSolution from "@/components/ServiceSolution";
 import TrustedLogos from "@/components/TrustedLogos";
-import IndustriesLatestBlogs from "./IndustiresBlogs";
+import LatestBlogsByTag from "./IndustiresBlogs";
 
 export default function SaaSPaaSIaaS() {
 
@@ -257,20 +257,12 @@ export default function SaaSPaaSIaaS() {
 
                                     {/* Highlight Line */}
                                     <p className="mt-10 text-xl font-medium text-white">
-                                        For cloud providers, security failures scale instantly 
+                                        For cloud providers, security failures scale instantly
                                         <span className="text-cyan-400">
                                             {" "}
                                             across customers and geographies.
                                         </span>
                                     </p>
-                                </div>
-                            </section>
-
-                            {/* Blogs */}
-                            <section id="case-studies" className="space-y-6 mt-8 p-2 lg:p-4">
-                                <h3 className="text-3xl md:text-4xl font-semibold mb-8">Blogs</h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <IndustriesLatestBlogs category="industries" limit={2} />
                                 </div>
                             </section>
                         </div>
@@ -300,6 +292,11 @@ export default function SaaSPaaSIaaS() {
                 </div>
             </main>
 
+            {/* Blogs */}
+            <section id="case-studies" className="space-y-2 mt-2  max-w-7xl mx-auto">
+                <h3 className="text-3xl md:text-4xl font-semibold mb-2 text-center">Blogs</h3>
+                <LatestBlogsByTag tag="saas-Ai" limit={3} />
+            </section>
             <TrustedLogos />
 
             <KeyRisks
