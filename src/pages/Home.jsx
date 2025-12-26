@@ -357,11 +357,11 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full bg-gradient-to-r from-[#0040FF] to-[#001F5F] text-white font-semibold hover:opacity-90 rounded-lg px-5 py-2 text-center">
+                            {/* <div className="w-full bg-gradient-to-r from-[#0040FF] to-[#001F5F] text-white font-semibold hover:opacity-90 rounded-lg px-5 py-2 text-center">
                                 <Link to="/about">
                                     Learn More →
                                 </Link>
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Right Side - Images Grid */}

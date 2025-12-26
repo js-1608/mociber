@@ -83,9 +83,11 @@ const partners = [
   { src: "/Recognised/Recognised (1).jpeg", alt: "CREST" },
   { src: "https://entrepreneurstoday.in/wp-content/uploads/2021/09/1.png", alt: "MSSP Alert" },
   { src: "/Recognised/Recognised (3).jpeg", alt: "InfoSec Awards Winner" },
+  { src: "/Recognised/msme.png", alt: "CREST" },
   { src: "/Recognised/Recognised (1).jpeg", alt: "CREST" },
   { src: "https://entrepreneurstoday.in/wp-content/uploads/2021/09/1.png", alt: "MSSP Alert" },
   { src: "/Recognised/Recognised (3).jpeg", alt: "InfoSec Awards Winner" },
+  { src: "/Recognised/msme.png", alt: "CREST" },
 ];
 
 const PartnersCarousel = () => {
