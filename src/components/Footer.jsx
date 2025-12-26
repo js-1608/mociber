@@ -63,29 +63,37 @@ export default function Footer() {
         </div>
 
         {/* Column 4 - Newsletter */}
+        {/* ================= Column 4 : Policies ================= */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Subscribe To Newsletter</h3>
-          <p className="text-gray-200 text-sm mb-4">
-            Stay informed with the latest cybersecurity news and expert tips.
-          </p>
-
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="flex bg-white/90 rounded-md overflow-hidden w-full max-w-xs"
-          >
-            <input
-              type="email"
-              placeholder="Email Address *"
-              className="flex-grow px-3 py-2 text-sm text-gray-900 focus:outline-none"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-white text-blue-700 px-4 py-2 font-medium hover:bg-gray-100 transition"
-            >
-              Subscribe
-            </button>
-          </form>
+          <h3 className="text-lg font-semibold mb-4">
+            Policies & Legal
+          </h3>
+          <ul className="space-y-3 text-sm text-gray-300">
+            <li>
+              <Link
+                to="/privacy-policy"
+                className="hover:text-white transition"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/terms-and-conditions"
+                className="hover:text-white transition"
+              >
+                Terms & Conditions
+              </Link>
+            </li>
+            {/* <li>
+              <Link
+                to="/cookie-policy"
+                className="hover:text-white transition"
+              >
+                Cookie Policy
+              </Link>
+            </li> */}
+          </ul>
         </div>
       </div>
 
@@ -105,9 +113,9 @@ export default function Footer() {
             <li className="hover:text-white/80 transition">
               <Link to="/about">About Us</Link>
             </li>
-            <li className="hover:text-white/80 transition">
+            {/* <li className="hover:text-white/80 transition">
               <Link to="/services">Services</Link>
-            </li>
+            </li> */}
             <li className="hover:text-white/80 transition">
               <Link to="/blog">Blogs</Link>
             </li>

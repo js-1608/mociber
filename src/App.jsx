@@ -57,6 +57,8 @@ import Grc from "./platforms/Grc";
 import VulnManagementPlatform from "./platforms/VulnManagementPlatform";
 import ESGPlatform from "./platforms/ESGPlatform";
 import WhatsAppButton from "./components/Whatsapp";
+import PrivacyPolicy from "./pages/Policy";
+import TermsAndConditions from "./pages/Terms&Condition";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -137,10 +139,15 @@ function App() {
 
 
           <Route path="/about" element={<About />} />
+
+          {/* policy */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
           <Route path="*" element={<h1 className="text-white">Page Not Found</h1>} />
         </Routes>
         <Footer />
-        <WhatsAppButton/>
+        <WhatsAppButton />
       </div>
     </Router>
   );
