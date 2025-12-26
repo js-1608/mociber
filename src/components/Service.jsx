@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
             description: 'Manage human and non-human identity and privileged accesses',
             icon: Shield,
             gradient: 'from-blue-600 to-blue-800',
-            bgPattern: 'identity'
+            bgPattern: 'identity',
+            link:'/services/risk-management'
         },
         {
             id: 2,
@@ -16,7 +17,8 @@ import { Link } from "react-router-dom";
             description: 'Secure your cloud environments and ensure safe migration with compliance-ready solutions.',
             icon: Cloud,
             gradient: 'from-slate-700 to-slate-900',
-            bgPattern: 'cloud'
+            bgPattern: 'cloud',
+            link:'/services/cybersecurity'
         },
         {
             id: 3,
@@ -24,7 +26,8 @@ import { Link } from "react-router-dom";
             description: 'Keep sensitive information safe with advanced encryption and secure storage solutions.',
             icon: Lock,
             gradient: 'from-slate-700 to-slate-900',
-            bgPattern: 'data'
+            bgPattern: 'data',
+            link:'/services/data-privacy'
         },
         {
             id: 4,
@@ -32,14 +35,16 @@ import { Link } from "react-router-dom";
             description: 'Protect laptops, mobiles, and IoT devices with AI-powered endpoint defense solutions.',
             icon: Laptop,
             gradient: 'from-slate-700 to-slate-900',
-            bgPattern: 'endpoint'
+            bgPattern: 'endpoint',
+            link:'/services/ai-defense'
         }, {
             id: 5,
             title: 'Ransomware & Business Resilience',
             description: 'Turn disruption into resilience through intelligence and preparedness',
             icon: Vibrate,
             gradient: 'from-blue-600 to-blue-800',
-            bgPattern: 'identity'
+            bgPattern: 'identity',
+            link:'/services/ransomware'
         },
         {
             id: 6,
@@ -47,7 +52,8 @@ import { Link } from "react-router-dom";
             description: 'Ensures compliances and auditing of most complex processes, technologies and ERP systems',
             icon: ShieldPlus,
             gradient: 'from-slate-700 to-slate-900',
-            bgPattern: 'cloud'
+            bgPattern: 'cloud',
+            link:'/services/compliance'
         },
         {
             id: 7,
@@ -55,7 +61,8 @@ import { Link } from "react-router-dom";
             description: 'On-demand niche talent in emerging technologies consulting, implementation and auditing',
             icon: Codesandbox,
             gradient: 'from-slate-700 to-slate-900',
-            bgPattern: 'data'
+            bgPattern: 'data',
+            link:'/services/talent'
         },
         {
             id: 8,
@@ -63,7 +70,8 @@ import { Link } from "react-router-dom";
             description: 'brings data, technology, ethics and strategy together for sustainable transformation and resilience',
             icon: DatabaseZap,
             gradient: 'from-slate-700 to-slate-900',
-            bgPattern: 'endpoint'
+            bgPattern: 'endpoint',
+            link:'/services/esg'
         }
     ];
 
@@ -101,6 +109,7 @@ function Service() {
                     {services.map((service, index) => {
                         const Icon = service.icon;
                         return (
+                            <Link to={service.link} key={service.id} className="no-underline">
                             <div
                                 key={service.id}
                                 className="relative rounded-2xl p-6 overflow-hidden group cursor-pointer 
@@ -175,6 +184,7 @@ function Service() {
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                         );
                     })}
                 </div>
