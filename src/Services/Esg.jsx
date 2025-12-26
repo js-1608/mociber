@@ -222,7 +222,7 @@ const faqs = [
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<></>}
+                heading={<>ESG Advisory</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""

@@ -216,7 +216,7 @@ export default function DataPrivacy() {
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<></>}
+                heading={<>Data Privacy & Protection</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""

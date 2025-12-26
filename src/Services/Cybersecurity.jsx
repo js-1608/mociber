@@ -200,7 +200,7 @@ export default function MociberCybersecurityPage() {
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<></>}
+                heading={<>Cybersecurity Services</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""

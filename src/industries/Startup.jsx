@@ -25,6 +25,7 @@ import KeyRisks from "@/components/Risks";
 import ServiceSolution from "@/components/ServiceSolution";
 import TrustedLogos from "@/components/TrustedLogos";
 import LatestBlogsByTag from "./IndustiresBlogs";
+import { Link } from "react-router-dom";
 
 
 export default function ServiceDetail() {

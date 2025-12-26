@@ -212,7 +212,7 @@ export default function Compliance() {
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<></>}
+                heading={<>Compliance & Auditing Services</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""

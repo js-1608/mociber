@@ -56,6 +56,7 @@ import AdversarialMl from "./solutions/AdversarialMl";
 import Grc from "./platforms/Grc";
 import VulnManagementPlatform from "./platforms/VulnManagementPlatform";
 import ESGPlatform from "./platforms/ESGPlatform";
+import WhatsAppButton from "./components/Whatsapp";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -139,6 +140,7 @@ function App() {
           <Route path="*" element={<h1 className="text-white">Page Not Found</h1>} />
         </Routes>
         <Footer />
+        <WhatsAppButton/>
       </div>
     </Router>
   );

@@ -260,11 +260,12 @@ export default function Grc() {
                             </h3>
 
                             <div className="grid grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm">
-                                <Stat label="Threat Signals / Day" value="10M+" />
-                                <Stat label="Mean Response Time" value="< 30 sec" />
-                                <Stat label="Automation Coverage" value="90%" />
-                                <Stat label="SOC Availability" value="24×7×365" />
+                                <Stat label="Controls Monitored" value="25K+" />
+                                <Stat label="Compliance Coverage" value="40+ Frameworks" />
+                                <Stat label="Audit Readiness Time" value="< 48 hrs" />
+                                <Stat label="Risk Assessments / Month" value="100K+" />
                             </div>
+
                         </div>
                     </div>
 

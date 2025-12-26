@@ -184,7 +184,7 @@ export default function CloudMigration() {
     return (
         <>
             <HeroBanner
-                image="/Banners/About.jpg"
+                image="/solution.webp"
                 heading={<>Cloud Computing & Migration</>}
                 subtext=""
                 primaryCta=""
@@ -251,9 +251,8 @@ export default function CloudMigration() {
                         <aside className="bg-white/6 rounded-2xl p-6">
                             <h3 className="font-semibold">Quick Contacts</h3>
                             <div className="mt-3 text-slate-200 text-sm">
-                                <div><strong>Contact:</strong> <a className="underline" href="mailto:sales@mociber.com">info@mociber.com</a></div>
+                                <div><strong>Mobile No.:</strong> <a className="underline" href="tel:+(91) 9811257526">+(91) 9811257526</a></div>
                                 <div className="mt-2"><strong>Email</strong> <a className="underline" href="mailto:connect@mociber.com">connect@mociber.com</a></div>
-
                                 <div className="mt-3 text-xs text-slate-300">We respond to enterprise enquiries within 48 hours (business days).</div>
                             </div>
                             <div className="mt-6 border-t border-white/8 pt-4 text-sm text-slate-300">

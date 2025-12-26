@@ -225,7 +225,7 @@ export default function SupplyChain() {
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<></>}
+                heading={<>Supply Chain Security</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""

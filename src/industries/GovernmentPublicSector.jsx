@@ -25,6 +25,7 @@ import KeyRisks from "@/components/Risks";
 import ServiceSolution from "@/components/ServiceSolution";
 import TrustedLogos from "@/components/TrustedLogos";
 import LatestBlogsByTag from "./IndustiresBlogs";
+import { Link } from "react-router-dom";
 
 export default function GovernmentPublicSector() {
 
@@ -284,7 +285,7 @@ export default function GovernmentPublicSector() {
                             <div id="contact" className="bg-linear-to-br from-[#6f2df2] to-[#5b2bd6] p-6 rounded-xl shadow-lg">
                                 <h4 className="text-lg font-semibold mb-2">Talk to an expert</h4>
                                 <p className="text-sm text-white/90 mb-4">Book a free consultation to discuss migration strategy and security plan.</p>
-                                <a href="#" className="block text-center bg-white text-[#4b21b8] px-4 py-3 rounded-md font-semibold">Request a consultation</a>
+                                <Link to="contact" className="block text-center bg-white text-[#4b21b8] px-4 py-3 rounded-md font-semibold">Request a consultation</Link>
                             </div>
                         </div>
                     </aside>

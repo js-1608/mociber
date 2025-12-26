@@ -235,7 +235,7 @@ export default function OtIot() {
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<></>}
+                heading={<>OT, IoT & Edge Security</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""

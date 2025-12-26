@@ -217,9 +217,9 @@ export default function VulnManagementPlatform() {
                         </span>
 
                         <h1 className="text-2xl  md:text-4xl lg:text-4xl font-bold ">
-                            Predictive, Risk-Driven Vulnerability Reduction for 
+                            Predictive, Risk-Driven Vulnerability Reduction for
                             <span className="text-cyan-400 ml-2">
-                              Modern Enterprises
+                                Modern Enterprises
                             </span>
                         </h1>
 
@@ -247,11 +247,12 @@ export default function VulnManagementPlatform() {
                             </h3>
 
                             <div className="grid grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm">
-                                <Stat label="Threat Signals / Day" value="10M+" />
-                                <Stat label="Mean Response Time" value="< 30 sec" />
-                                <Stat label="Automation Coverage" value="90%" />
-                                <Stat label="SOC Availability" value="24×7×365" />
+                                <Stat label="Assets Continuously Assessed" value="5M+" />
+                                <Stat label="Critical Exposures Prioritized" value="99%" />
+                                <Stat label="Mean Time to Remediate" value="< 24 hrs" />
+                                <Stat label="Attack Surface Coverage" value="Cloud • On-Prem • SaaS" />
                             </div>
+
                         </div>
                     </div>
 

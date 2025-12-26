@@ -190,7 +190,7 @@ export default function Talent() {
         <div className="min-h-screen">
             <HeroBanner
                 image="/Banners/About.jpg"
-                heading={<></>}
+                heading={<>Niche Talent Services</>}
                 subtext=""
                 primaryCta=""
                 secondaryCta=""

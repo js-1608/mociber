@@ -215,37 +215,56 @@ export default function ESGPlatform() {
 
     return (
         <div className="bg-[#060917] text-white overflow-hidden">
-            <HeroBanner
-                image="/Banners/About.jpg"
-                heading={<>ESG & Sustainability Management</>}
-                subtext=""
-                primaryCta=""
-                secondaryCta=""
-            />
-
             {/* ================= HERO ================= */}
-            <section className="relative py-24 flex items-center">
+            <section className="relative min-h-screen flex items-center overflow-hidden">
+                {/* Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#5b2df2]/30 via-[#0b1220] to-[#020617]" />
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6 gap-16 items-center">
-                    <div>
-                        <h1 className="text-5xl md:text-4xl font-bold leading-tight text-center">
-                            Technology-Driven ESG Governance, Risk Control, and  <br />
-                            <span className="text-cyan-400">Sustainable Business Transformation</span>
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                    {/* ================= LEFT ================= */}
+                    <div className="text-center lg:text-left">
+                        <span className="inline-block mb-4 px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs sm:text-sm">
+                            ESG & Sustainability Management
+                        </span>
+
+                        <h1 className="text-2xl  md:text-4xl lg:text-4xl font-bold ">
+                            Technology-Driven ESG Governance, Risk Control, and
+                            <span className="text-cyan-400 ml-2">
+                                Sustainable Business Transformation
+                            </span>
                         </h1>
-                        <p className="mt-6 text-base text-slate-300 ">
-                            Environmental, Social, and Governance (ESG) is no longer a reporting exercise—it is a board-level, investor-driven, and regulator-mandated business imperative. Organizations must demonstrate measurable sustainability performance, transparent governance, and defensible ESG data across global operations and supply chains.
+
+                        <p className="mt-5 sm:mt-6 text-sm sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0">
+                            ESG is no longer optional—it is a regulatory, investor, and board-mandated business imperative. Mociber helps enterprises transform ESG from compliance reporting into a technology-enabled sustainability and risk intelligence program, delivering audit-ready disclosures, real-time visibility, and long-term value creation.
                         </p>
-
-                        <p className="mt-6 text-base text-slate-300">
-                            Mociber’s ESG & Sustainability Management services help organizations move from fragmented compliance to integrated, technology-enabled sustainability leadership.
-                            We combine AI, automation, advanced analytics, and global ESG frameworks to deliver audit-ready reporting, risk visibility, and long-term value creation.
-
-                        </p>
-
                     </div>
+
+                    {/* ================= RIGHT ================= */}
+                    <div className="relative w-full max-w-md mx-auto lg:max-w-none">
+                        {/* Glow (disabled on very small screens) */}
+                        <div className="absolute -inset-6 bg-cyan-500/20 blur-3xl rounded-full hidden sm:block" />
+
+                        <div className="relative bg-[#0b1220] border border-white/10 rounded-3xl p-6 sm:p-8">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-6 text-center lg:text-left">
+                                AI-Driven Security Metrics
+                            </h3>
+
+                            <div className="grid grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm">
+                                <Stat label="Emissions Sources Tracked" value="1M+" />
+                                <Stat label="ESG Data Automation" value="85%" />
+                                <Stat label="Reporting Frameworks Supported" value="30+" />
+                                <Stat label="Audit-Ready Disclosures" value="100%" />
+                            </div>
+
+
+                        </div>
+                    </div>
+
                 </div>
             </section>
+     
+
 
             {/* ================= RISKS ================= */}
 
@@ -285,7 +304,7 @@ export default function ESGPlatform() {
             <ServiceSolution solutions={solutions} heading={"Mociber ESG & Sustainability Solutions & Servicess"} />
 
 
-          
+
 
             {/* ================= CTA ================= */}
             <ContactCta
