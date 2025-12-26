@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { sendForm } from "@emailjs/browser";
+import { Link } from "react-router";
 
 export default function ContactForm() {
   const formRef = useRef(null);
@@ -110,6 +111,7 @@ export default function ContactForm() {
               placeholder="Any Message..."
             />
           </div>
+          <p className="text-sm text-gray-300">By submitting , I agree to the <Link className="text-blue-500" to="/terms-and-conditions">Terms & Conditions </Link>and <Link className="text-blue-500" to="/privacy-policy">Privacy Policy</Link>, and I give my consent to the processing of my personal information as described</p>
 
           <div>
             <button

@@ -57,7 +57,7 @@ export default function PrivacyPolicy() {
           <p className="text-slate-300">
             You may request access, correction, deletion, or restriction of your
             data by contacting us at{" "}
-            <span className="text-cyan-400">privacy@mociber.com</span>.
+            <span className="text-cyan-400">connect@mociber.com</span>.
           </p>
         </Section>
 

@@ -5,7 +5,6 @@ import About from "./pages/About";
 import Career from "./pages/Career";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
-import ServiceDetail from "./pages/Service";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
