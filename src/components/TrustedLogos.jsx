@@ -4,22 +4,22 @@ export default function TrustedLogos() {
   const logos = [
     {
       name: "Xcitium",
-      logo: "https://www.xcitium.com/assets/images/logo/logo-xcitium.svg",
+      logo: "/tech/xctium.svg",
       url: "https://www.xcitium.com/",
     },
     {
       name: "Microsoft",
-      logo: "https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png",
+      logo: "/tech/microsft.png",
       url: "https://www.microsoft.com/",
     },
     {
       name: "Oracle",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
+      logo: "/tech/oracle.svg",
       url: "https://www.oracle.com/",
     },
     {
       name: "AWS",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+      logo: "/tech/aws.svg",
       url: "https://aws.amazon.com/",
     },
     {
@@ -29,17 +29,17 @@ export default function TrustedLogos() {
     },
     {
       name: "SAP",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
+      logo: "/tech/sap.svg",
       url: "https://www.sap.com/",
     },
     {
       name: "Cisco",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg",
+      logo: "/tech/cisco.svg",
       url: "https://www.cisco.com/",
     },
     {
       name: "Salesforce",
-      logo: "https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-with-type-logo.svg",
+      logo: "/tech/saleforce.svg",
       url: "https://www.salesforce.com/",
     },
     {
@@ -49,7 +49,7 @@ export default function TrustedLogos() {
     },
     {
       name: "RSA Archer",
-      logo: "https://www.rsa.com/wp-content/themes/rsa-s10/public/images/logos/RSA-Red-Logo.d50ac7.svg",
+      logo: "/tech/rsa.svg",
       url: "https://www.rsa.com/",
     },
   ];

@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Partners from "./pages/Partners";
 import ScrollToTop from "./components/ScrollToTop";
 import Blogs from "./pages/Blogs";
