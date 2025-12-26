@@ -59,6 +59,7 @@ import ESGPlatform from "./platforms/ESGPlatform";
 import WhatsAppButton from "./components/Whatsapp";
 import PrivacyPolicy from "./pages/Policy";
 import TermsAndConditions from "./pages/Terms&Condition";
+import PlaylistVideos from "./pages/PlaylistVideos";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -82,7 +83,8 @@ function App() {
           <Route path="/blog" element={<Blogs />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/whitepaper" element={<WhitePapersPage />} />
-          <Route path="/videos" element={<Videos playlistId="" />} />
+
+          <Route path="/videos" element={<PlaylistVideos />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/ebooks" element={<EBooks />} />
           <Route path="/webinars" element={<WebinarsPage />} />

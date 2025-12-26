@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-12 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-3 py-3 rounded-full shadow-lg transition"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-3 py-3 rounded-full shadow-lg transition"
     >
       {/* WhatsApp Icon */}
       <svg
