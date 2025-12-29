@@ -184,9 +184,10 @@ const Header = () => {
             {openSection === "services" && (
               <div
                 id="panel-services"
-                className="absolute left-0 w-full max-w-[900px] bg-linear-to-r from-[#00060f] to-[#001836] 
-                  text-gray-200 shadow-2xl rounded-lg p-6 grid grid-cols-2 gap-6 border border-gray-800"
+                className="absolute left-0 w-full max-w-[900px] bg-linear-to-r from-[#010b1a] to-[#001836] text-gray-200
+                 shadow-2xl rounded-lg p-6 grid grid-cols-2 gap-6 border border-gray-800"
               >
+
                 <div>
                   <h4 className="text-sm font-semibold text-gray-400 uppercase mb-3">
                     Core Offerings
@@ -453,7 +454,7 @@ const Header = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-gray-400 uppercase mb-3">Knowledge Base</h4>
                     <ul className="space-y-2">
-                      <li><Link to="/blog" onClick={closeAll} className="text-white">Blog</Link></li>
+                      <li><Link to="/blogs" onClick={closeAll} className="text-white">Blog</Link></li>
                       <li><Link to="/case-studies" onClick={closeAll} className="text-white">Case Studies</Link></li>
                       <li><Link to="/videos" onClick={closeAll} className="text-white">Videos</Link></li>
                       <li><Link to="/whitepaper" onClick={closeAll} className="text-white">Whitepaper</Link></li>
@@ -522,21 +523,21 @@ const Header = () => {
               <div className="px-4 pb-4 bg-[#141418]">
                 <div className="mt-3">
                   <h4 className="text-sm font-semibold text-gray-400 uppercase mb-2">Core Offerings</h4>
-                  <ul className="space-y-2">
-                    <li><Link to="/services/cybersecurity" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Cybersecurity</Link></li>
-                    <li><Link to="/services/risk-management" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Risk Management</Link></li>
-                    <li><Link to="/services/ai-defense" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">AI-Powered Defense &amp; Governance</Link></li>
-                    <li><Link to="/services/ransomware" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Ransomware &amp; Business Resilience</Link></li>
-                    <li><Link to="/services/compliance" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Compliance &amp; Auditing</Link></li>
+                  <ul className="space-y-3">
+                    <li><Link to="/services/cybersecurity" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Cybersecurity</Link></li>
+                    <li><Link to="/services/risk-management" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Risk Management</Link></li>
+                    <li><Link to="/services/ai-defense" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">AI-Powered Defense &amp; Governance</Link></li>
+                    <li><Link to="/services/ransomware" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Ransomware &amp; Business Resilience</Link></li>
+                    <li><Link to="/services/compliance" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Compliance &amp; Auditing</Link></li>
                   </ul>
 
                   <h4 className="text-sm font-semibold text-gray-400 uppercase mt-4 mb-2">Advanced Services</h4>
-                  <ul className="space-y-2">
-                    <li><Link to="/services/data-privacy" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Data Privacy &amp; Protection</Link></li>
-                    <li><Link to="/services/esg" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">ESG Advisory</Link></li>
-                    <li><Link to="/services/talent" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Niche Talent</Link></li>
-                    <li><Link to="/services/supply-chain" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Supply Chain Security</Link></li>
-                    <li><Link to="/services/ot-iot" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">OT, IoT &amp; Edge Security</Link></li>
+                  <ul className="space-y-3">
+                    <li><Link to="/services/data-privacy" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Data Privacy &amp; Protection</Link></li>
+                    <li><Link to="/services/esg" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">ESG Advisory</Link></li>
+                    <li><Link to="/services/talent" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Niche Talent</Link></li>
+                    <li><Link to="/services/supply-chain" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Supply Chain Security</Link></li>
+                    <li><Link to="/services/ot-iot" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">OT, IoT &amp; Edge Security</Link></li>
                   </ul>
                 </div>
               </div>
@@ -558,21 +559,21 @@ const Header = () => {
               <div className="px-4 pb-4 bg-[#141418]">
                 <div className="mt-3">
                   <h4 className="text-sm font-semibold text-gray-400 uppercase mb-2">Security Architecture</h4>
-                  <ul className="space-y-2">
-                    <li><Link to="/solutions/geopolitical" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Geopolitical Risk &amp; Cyber Warfare</Link></li>
-                    <li><Link to="/solutions/zero-trust" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Zero Trust Security &amp; Architecture</Link></li>
-                    <li><Link to="/solutions/ai-automation" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">AI-Power Security &amp; Automation</Link></li>
-                    <li><Link to="/solutions/cloud" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Cloud Computing &amp; Migration</Link></li>
-                    <li><Link to="/solutions/iam" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">IAM, PAM &amp; Rights Management</Link></li>
+                  <ul className="space-y-3">
+                    <li><Link to="/solutions/geopolitical" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Geopolitical Risk &amp; Cyber Warfare</Link></li>
+                    <li><Link to="/solutions/zero-trust" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Zero Trust Security &amp; Architecture</Link></li>
+                    <li><Link to="/solutions/ai-automation" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">AI-Power Security &amp; Automation</Link></li>
+                    <li><Link to="/solutions/cloud" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Cloud Computing &amp; Migration</Link></li>
+                    <li><Link to="/solutions/iam" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">IAM, PAM &amp; Rights Management</Link></li>
                   </ul>
 
                   <h4 className="text-sm font-semibold text-gray-400 uppercase mt-4 mb-2">Offensive &amp; Resilience</h4>
-                  <ul className="space-y-2">
-                    <li><Link to="/solutions/devsecops" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">DevSecOps, AIOps, MLOps</Link></li>
-                    <li><Link to="/solutions/vuln-management" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Vulnerability Management &amp; Testing</Link></li>
-                    <li><Link to="/solutions/red-team" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Red Teaming &amp; AI</Link></li>
-                    <li><Link to="/solutions/software-integrity" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Software Integrity</Link></li>
-                    <li><Link to="/solutions/adversarial-ml" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Adversarial ML &amp; LLM Security</Link></li>
+                  <ul className="space-y-3">
+                    <li><Link to="/solutions/devsecops" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">DevSecOps, AIOps, MLOps</Link></li>
+                    <li><Link to="/solutions/vuln-management" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Vulnerability Management &amp; Testing</Link></li>
+                    <li><Link to="/solutions/red-team" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Red Teaming &amp; AI</Link></li>
+                    <li><Link to="/solutions/software-integrity" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Software Integrity</Link></li>
+                    <li><Link to="/solutions/adversarial-ml" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Adversarial ML &amp; LLM Security</Link></li>
                   </ul>
                 </div>
               </div>
@@ -592,11 +593,11 @@ const Header = () => {
 
             {mobileActive === "platform" && (
               <div className="px-4 pb-4 bg-[#141418]">
-                <ul className="space-y-2">
-                  <li><Link to="/platforms/managed-security" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">AI-Powered Managed Security</Link></li>
-                  <li><Link to="/platforms/vuln-management" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">AI-Powered Vulnerability Management</Link></li>
-                  <li><Link to="/platforms/grc" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">GRC &amp; Auditing Platform</Link></li>
-                  <li><Link to="/platforms/esg" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">ESG &amp; Sustainability Management</Link></li>
+                <ul className="space-y-3">
+                  <li><Link to="/platforms/managed-security" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">AI-Powered Managed Security</Link></li>
+                  <li><Link to="/platforms/vuln-management" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">AI-Powered Vulnerability Management</Link></li>
+                  <li><Link to="/platforms/grc" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">GRC &amp; Auditing Platform</Link></li>
+                  <li><Link to="/platforms/esg" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">ESG &amp; Sustainability Management</Link></li>
                 </ul>
               </div>
             )}
@@ -616,13 +617,13 @@ const Header = () => {
 
             {mobileActive === "Industries" && (
               <div className="px-4 pb-4 bg-[#141418]">
-                <ul className="space-y-2">
-                  <li><Link to="/industries/manufacturing" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Manufacturing</Link></li>
-                  <li><Link to="/industries/tech" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Tech &amp; SaaS, PaaS, IaaS</Link></li>
-                  <li><Link to="/industries/aerospace" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Aerospace &amp; Defense</Link></li>
-                  <li><Link to="/industries/automotive" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Automotive</Link></li>
-                  <li><Link to="/industries/retail" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Retail &amp; E-Commerce</Link></li>
-                  <li><Link to="/industries/gov" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Government &amp; Public Sector</Link></li>
+                <ul className="space-y-3">
+                  <li><Link to="/industries/manufacturing" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Manufacturing</Link></li>
+                  <li><Link to="/industries/tech" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Tech &amp; SaaS, PaaS, IaaS</Link></li>
+                  <li><Link to="/industries/aerospace" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Aerospace &amp; Defense</Link></li>
+                  <li><Link to="/industries/automotive" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Automotive</Link></li>
+                  <li><Link to="/industries/retail" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Retail &amp; E-Commerce</Link></li>
+                  <li><Link to="/industries/gov" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Government &amp; Public Sector</Link></li>
                 </ul>
               </div>
             )}
@@ -643,15 +644,15 @@ const Header = () => {
 
             {mobileActive === "Resources" && (
               <div className="px-4 pb-4 bg-[#141418]">
-                <ul className="space-y-2">
+                <ul className="space-y-3">
 
-                  <li><Link to="/Resources/managed-security" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Blog</Link></li>
-                  <li><Link to="/Resources/vuln-management" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Case Studies</Link></li>
-                  <li><Link to="/Resources/grc" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Videos</Link></li>
-                  <li><Link to="/Resources/esg" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Whitepape</Link></li>
-                  <li><Link to="/Resources/vuln-management" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">E-Books</Link></li>
-                  <li><Link to="/Resources/grc" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Reports</Link></li>
-                  <li><Link to="/Resources/esg" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Webinar</Link></li>
+                  <li><Link to="/Resources/managed-security" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Blog</Link></li>
+                  <li><Link to="/Resources/vuln-management" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Case Studies</Link></li>
+                  <li><Link to="/Resources/grc" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Videos</Link></li>
+                  <li><Link to="/Resources/esg" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Whitepape</Link></li>
+                  <li><Link to="/Resources/vuln-management" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">E-Books</Link></li>
+                  <li><Link to="/Resources/grc" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Reports</Link></li>
+                  <li><Link to="/Resources/esg" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Webinar</Link></li>
                 </ul>
               </div>
             )}
@@ -671,13 +672,13 @@ const Header = () => {
 
             {mobileActive === "Company" && (
               <div className="px-4 pb-4 bg-[#141418]">
-                <ul className="space-y-2">
-                  <li><Link to="/about" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">About Us</Link></li>
-                  <li><Link to="/partners" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Partners</Link></li>
-                  {/* <li><Link to="/News" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">News</Link></li>
-                  <li><Link to="/events" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Events</Link></li> */}
-                  <li><Link to="/careers" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Career</Link></li>
-                  <li><Link to="/contact" onClick={closeAll} className="text-sm text-gray-300 pl-2 block">Contact Us</Link></li>
+                <ul className="space-y-3">
+                  <li><Link to="/about" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">About Us</Link></li>
+                  <li><Link to="/partners" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Partners</Link></li>
+                  {/* <li><Link to="/News" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">News</Link></li>
+                  <li><Link to="/events" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Events</Link></li> */}
+                  <li><Link to="/careers" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Career</Link></li>
+                  <li><Link to="/contact" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Contact Us</Link></li>
                 </ul>
               </div>
             )}

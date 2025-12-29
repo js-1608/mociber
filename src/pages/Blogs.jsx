@@ -67,7 +67,7 @@ import DOMPurify from "dompurify";
 */
 
 const WP_BASE = "https://blogs.esyride.in/wp-json/wp/v2";
-const HERO_IMG = "https://media.istockphoto.com/id/1086352374/photo/minimal-work-space-creative-flat-lay-photo-of-workspace-desk-top-view-office-desk-with-laptop.jpg?s=612x612&w=0&k=20&c=JYBNQsgeO13lU1rq3kUWfD-W0Xii3sFyYzijvsntplY=";
+const HERO_IMG = "./newbanners/Blog Banner.png"; // replace with your uploaded image path
 
 function formatDate(iso) {
   try {
@@ -150,7 +150,7 @@ export default function PostsList() {
   return (
     <div className="max-w-7xl mx-auto">
       {/* HERO */}
-      <div
+      {/* <div
         className="relative rounded-b-2xl overflow-hidden mb-8 mt-28"
         style={{ height: "340px", backgroundColor: "#111" }}
         aria-hidden
@@ -173,13 +173,15 @@ export default function PostsList() {
             <div className="ml-4 text-xs bg-white/10 px-3 py-1 rounded-full">•••</div>
           </div>
         </div>
-      </div>
+      </div> */}
+              <img src={HERO_IMG} alt="Blog hero" className="w-full h-full object-cover opacity-95" />
+
 
       {/* Page header & filters */}
-      <div className="px-4 sm:px-6 mb-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <div className="px-4 sm:px-6 mb-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mt-12">
         <div>
           <h2 className="text-2xl font-extrabold">Blog</h2>
-          <p className="text-gray-600 mt-1">Here, we share travel tips, destination guides, and stories that inspire your next adventure.</p>
+          {/* <p className="text-gray-600 mt-1">Here, we share travel tips, destination guides, and stories that inspire your next adventure.</p> */}
         </div>
 
         <div className="flex items-center gap-4">

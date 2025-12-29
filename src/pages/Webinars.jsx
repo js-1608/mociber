@@ -429,7 +429,7 @@ export default function WebinarsPage({ webinars = sampleWebinars }) {
                                 <div className="flex flex-col md:flex-row gap-6">
                                     <img
                                         src={selectedWebinar.thumbnail}
-                                        alt=""
+                                        alt="image"
                                         className="w-full md:w-48 h-auto object-cover rounded-md flex-none"
                                     />
 

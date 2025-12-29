@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Shield, Lock, Server, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 // Option A: import from src/assets (recommended for bundlers)
-import bannerImg from '/home_banner.jpeg';
+import bannerImg from '/home_banner.jpg';
 
 // import bannerImg from '/Banners/banner (1).jpg';
 
@@ -173,13 +173,13 @@ const Hero = () => {
                 </div>
 
                 {/* Main Title */}
-                <h1 className="text-3xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight">
+                <h2 className="text-3xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight">
                   <span className="text-white block mb-2">{slide.title}</span>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-400 block relative">
                     {slide.titleHighlight}
                     <span className="absolute -right-20 top-0 text-cyan-500/30 text-5xl">{slide.subtitle}</span>
                   </span>
-                </h1>
+                </h2>
 
                 {/* Description */}
                 <p className="text-gray-300 text-lg lg:text-xl mb-8 max-w-2xl leading-relaxed">{slide.description}</p>

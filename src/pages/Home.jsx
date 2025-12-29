@@ -381,19 +381,19 @@ const Home = () => {
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Top Left - Professional with tech background */}
                                 <div className="relative rounded-2xl overflow-hidden aspect-[3/4] bg-gradient-to-br from-slate-800 to-slate-900">
-                                    <img src="/Industry/SOC-HWCH.jpg" className='cover  w-full' />
+                                    <img src="/Industry/SOC-HWCH.jpg" className='cover  w-full' alt="cybersecurity image"/>
                                 </div>
 
                                 {/* Top Right - Person at desk */}
                                 <div className="relative rounded-2xl overflow-hidden aspect-[3/4] bg-gradient-to-br from-slate-800 to-slate-900">
-                                    <img src="/Industry/SOCaaS-Front Page.jpg" className='cover  h-full' />
+                                    <img src="/Industry/SOCaaS-Front Page.jpg" className='cover  h-full' alt="cybersecurity image"/>
 
                                 </div>
 
                                 {/* Bottom - Person working at night */}
                                 <div className="relative rounded-2xl overflow-hidden col-span-2 aspect-[2/1] bg-gradient-to-br from-slate-800 to-slate-950">
                                     <div className="absolute inset-0">
-                                        <img src="/Industry/SOC-Benefits.jpg" />
+                                        <img src="/Industry/SOC-Benefits.jpg" alt="cybersecurity image"/>
 
                                     </div>
 

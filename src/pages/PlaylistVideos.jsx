@@ -1,3 +1,4 @@
+import HeroBanner from "@/components/ServiceHero";
 import React, { useEffect, useState } from "react";
 
 const PLAYLIST_ID = "PL3HEfE6UXwE8t8fSIkpNpmWpLxs_X1P6n";
@@ -64,7 +65,15 @@ const PlaylistVideos = () => {
 
   return (
     <section className="bg-[#020617] text-white py-20 mt-4 lg:mt-10">
-      <div className="max-w-7xl mx-auto px-6">
+       <HeroBanner
+              image="/newbanners/video.png"
+              heading={<></>}
+              subtext=""
+              primaryCta=""
+              secondaryCta=""
+            />
+
+      <div className="max-w-7xl mx-auto px-6 mt-12">
         {/* ================= HEADER ================= */}
         <div className="mb-12">
           <h1 className="text-3xl md:text-4xl font-bold">

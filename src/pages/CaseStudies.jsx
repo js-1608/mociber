@@ -15,7 +15,7 @@ import HeroBanner from "@/components/ServiceHero";
 */
 
 const WP_BASE = "https://blogs.esyride.in/wp-json/wp/v2";
-const FALLBACK_IMG = "/mnt/data/8e321088-9348-4be6-910b-3ab5e1f949e4.png"; // developer-provided image path
+const FALLBACK_IMG = "./newbanners/Case Studies Banner.png"; // developer-provided image path
 
 function formatDate(iso) {
   try {
@@ -116,7 +116,7 @@ export default function CaseStudiesList() {
   return (
     <>
       <HeroBanner
-        image="/Banners/About.jpg"
+        image="/newbanners/casestudies.png"
         heading={<></>}
         subtext=""
         primaryCta=""

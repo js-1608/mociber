@@ -344,7 +344,7 @@ export default function EbooksPage({ ebooks = sampleEbooks }) {
                                 <div className="flex gap-4">
                                     <img
                                         src={selectedEbook.cover}
-                                        alt=""
+                                        alt="image"
                                         className="w-24 h-32 object-cover rounded-md flex-none"
                                     />
 
