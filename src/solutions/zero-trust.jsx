@@ -4,78 +4,91 @@ import ContactForm from "@/components/ContactForm";
 import HeroBanner from "@/components/ServiceHero";
 import { Link } from "react-router";
 import KeyRisks from "@/components/Risks";
-import { AlignVerticalJustifyCenter, BriefcaseConveyorBeltIcon, ChartBarIcon, FileDigit, Globe2, Globe2Icon, GlobeIcon, GlobeLock, icons, MoveDownLeft, Network, Proportions, Satellite, Shield, Theater, ToolCase } from "lucide-react";
+import { ChartBarIcon, FileDigit, Globe2, GlobeLock, MoveDownLeft, Proportions, } from "lucide-react";
 import ContactCta from "@/components/ContactCta";
 import ServiceSolution from "@/components/ServiceSolution";
 import FaqSection from "@/components/Faq";
 import YouTubeAutoplaySection from "@/components/Video";
-
+import {
+  ShieldAlert,
+  MoveRight,
+  UserX,
+  AppWindow,
+  Laptop,
+  CloudOff,
+  Users,
+  Network,
+  EyeOff,
+  Bot,
+} from "lucide-react";
 
 
 export default function ZeroTrustPage() {
+
+
+
   const risks = [
     {
-      title: "State-Sponsored Advanced Persistent Threats (APTs)",
+      title: "Identity Compromise & Credential Theft",
       subtext:
-        "Highly resourced nation-state actors conducting long-term espionage and disruption campaigns against governments, BFSI, telecom, defense, and critical industries.",
-      icon: GlobeIcon,
+        "Stolen passwords, MFA fatigue attacks, and token abuse allow attackers to impersonate legitimate users.",
+      icon: ShieldAlert,
     },
     {
-      title: "Critical Infrastructure Cyber Attacks",
+      title: "Lateral Movement After Initial Breach",
       subtext:
-        "Targeted cyber operations against energy grids, transportation systems, healthcare, water utilities, and telecom causing large-scale operational paralysis.",
+        "Flat networks enable attackers to move freely once inside, reaching high-value systems undetected.",
+      icon: MoveRight,
+    },
+    {
+      title: "Over-Privileged Access",
+      subtext:
+        "Excessive permissions violate least-privilege principles and create high-impact exploitation paths.",
+      icon: UserX,
+    },
+    {
+      title: "Shadow IT & Unsanctioned SaaS Usage",
+      subtext:
+        "Unapproved applications introduce unmanaged identities, data leakage, and critical visibility gaps.",
+      icon: AppWindow,
+    },
+    {
+      title: "Unsecured Endpoints & Devices",
+      subtext:
+        "BYOD, unmanaged laptops, IoT, and OT devices connect without proper validation or posture checks.",
+      icon: Laptop,
+    },
+    {
+      title: "Cloud & API Misconfigurations",
+      subtext:
+        "Weak IAM roles, exposed APIs, and permissive policies enable privilege escalation in cloud platforms.",
+      icon: CloudOff,
+    },
+    {
+      title: "Third-Party & Vendor Identity Risk",
+      subtext:
+        "Partners and contractors introduce indirect access paths with limited governance and oversight.",
+      icon: Users,
+    },
+    {
+      title: "Weak Network Segmentation",
+      subtext:
+        "Broad access zones allow attackers and insiders to reach sensitive assets unnecessarily.",
       icon: Network,
     },
     {
-      title: "Cyber Espionage & Strategic Intelligence Theft",
+      title: "Lack of Continuous Visibility",
       subtext:
-        "Theft of intellectual property, defense data, trade secrets, and national intelligence assets to gain geopolitical and economic advantage.",
-      icon: Shield,
+        "Disconnected monitoring tools delay detection of anomalous access and identity misuse.",
+      icon: EyeOff,
     },
     {
-      title: "Supply Chain Cyber Warfare",
+      title: "AI-Enabled & Automated Attacks",
       subtext:
-        "Compromise of third-party vendors, MSPs, and software supply chains to infiltrate and control entire digital ecosystems.",
-      icon: BriefcaseConveyorBeltIcon,
-    },
-    {
-      title: "Disinformation & Psychological Operations (PSYOPS)",
-      subtext:
-        "AI-generated propaganda, deepfakes, and information warfare campaigns manipulating public opinion, elections, markets, and social stability.",
-      icon: AlignVerticalJustifyCenter,
-    },
-    {
-      title: "Zero-Day Exploit Weaponization",
-      subtext:
-        "Stockpiling and deployment of unknown vulnerabilities by nation-states to bypass defenses and gain strategic cyber superiority.",
-      icon: Shield,
-    },
-    {
-      title: "AI-Driven Autonomous Cyber Attacks",
-      subtext:
-        "Self-learning malware and automated attack frameworks that adapt in real time to evade detection and response mechanisms.",
-      icon: Network,
-    },
-    {
-      title: "Ransomware as a Geopolitical Tool",
-      subtext:
-        "State-aligned criminal groups targeting hospitals, banks, and infrastructure to destabilize economies and exert political pressure.",
-      icon: ToolCase,
-    },
-    {
-      title: "Satellite & Space-Based Cyber Threats",
-      subtext:
-        "GPS spoofing, satellite hijacking, and cyber attacks on space-based communication, navigation, and surveillance systems.",
-      icon: Satellite,
-    },
-    {
-      title: "Cross-Border Regulatory & Sanctions Risk",
-      subtext:
-        "Conflicting national laws, sanctions, and data sovereignty requirements disrupting global operations and digital resilience.",
-      icon: Globe2,
+        "Attackers use automation and AI to rapidly test identities, sessions, and access controls at scale.",
+      icon: Bot,
     },
   ];
-
 
   const solutions = [
     {
@@ -198,14 +211,16 @@ export default function ZeroTrustPage() {
 
           <section className="grid md:grid-cols-2 gap-8 items-center bg-white/3 rounded-2xl p-6  shadow-lg">
             <div>
-              <h1 className="text-3xl md:text-3xl font-bold">Intelligence-Led Protection Against State-Sponsored Threats, Hybrid Warfare, and Global Instability</h1>
+              <h1 className="text-3xl md:text-3xl font-bold">Identity-First, Policy-Driven Cyber Defense for Hybrid, Cloud & Enterprise Environments</h1>
               <p className="mt-4 text-slate-200">
-                In an era of escalating geopolitical tensions, economic fragmentation, and state-sponsored cyber operations, cyber warfare has become a strategic instrument of power. Organizations are no longer collateral damage—they are primary targets. Financial systems, critical infrastructure, supply chains, healthcare networks, and digital platforms are increasingly weaponized to achieve political, economic, and strategic objectives
+                The traditional network perimeter is no longer relevant. Users, devices, applications, APIs, and data now operate across cloud, SaaS, remote work, OT, and IoT environments—making implicit trust a critical security flaw.
               </p>
               <p className="mt-4 text-slate-200">
-                Mociber helps enterprises and governments anticipate, withstand, and recover from geopolitical and cyber warfare risks through intelligence-driven monitoring, AI-powered cyber defense, and resilient risk management frameworks.
-                Our approach shifts organizations from reactive defense to predictive, decision-ready resilience.
+                Zero Trust Security is built on one uncompromising principle: Never Trust, Always Verify.
+                Mociber designs and implements enterprise-grade Zero Trust architectures that continuously validate identity, device posture, access context, and behavior—reducing breach impact, preventing lateral movement, and meeting modern regulatory expectations.
+
               </p>
+               <p className="mt-4 text-slate-200">Our Zero Trust programs are aligned with NIST 800-207, CISA Zero Trust Maturity Model, and leading industry frameworks, while remaining practical, scalable, and business-aligned.</p>
               <div className="mt-6 flex gap-3">
                 <Link to="/services/cybersecurity" className="inline-block border border-white/20 px-5 py-3 rounded-md text-white">View Solutions</Link>
               </div>
@@ -226,22 +241,20 @@ export default function ZeroTrustPage() {
           {/* PROBLEM */}
           <section id="problems" className="mt-10 grid md:grid-cols-3 gap-6">
             <div className="md:col-span-2 bg-white/4 rounded-2xl p-6">
-              <h2 className="text-2xl font-semibold">Major Challenges Organizations Face Today</h2>
-              <p className="mt-3 text-slate-200">
-                As geopolitics intensifies, organisations face targeted and persistent threats that traditional cyber programs are not built to handle. The intersection of political objectives and cyber operations produces unique operational, legal and
-                supply-chain challenges.
-              </p>
+              <h2 className="text-2xl font-semibold">Why Perimeter-Based Security Fails</h2>
+
 
               <ol className="mt-4 space-y-2 list-decimal list-inside text-slate-200">
-                <li>	Fragmentation of global political alliances</li>
-                <li>	Rapid expansion of state-backed cyber warfare units</li>
-                <li>	AI and emerging technologies accelerating attack sophistication</li>
-                <li>	Highly vulnerable global supply chains</li>
-                <li>	Regulatory conflicts across jurisdictions</li>
-                <li>	Insider threats influenced by political agendas</li>
-                <li>	Sanctions forcing risky technology and vendor decisions</li>
-                <li>	Rising cyberattacks on energy, finance, healthcare, and telecom sectors</li>
+                <li>	Hybrid and remote work dissolve network boundaries</li>
+                <li>	Identity sprawl across cloud and SaaS breaks centralized control</li>
+                <li>	Legacy systems resist granular segmentation</li>
+                <li>	Compliance now demands identity-based access and continuous verification</li>
+                <li>	Attackers exploit weak authentication faster than controls adapt</li>
+
               </ol>
+              <p className="mt-3 text-slate-200">
+                Zero Trust replaces assumptions with verification—every request, every time.
+              </p>
             </div>
 
             <aside className="bg-white/6 rounded-2xl p-6">
