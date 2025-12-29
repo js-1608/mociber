@@ -115,13 +115,15 @@ export default function CaseStudiesList() {
 
   return (
     <>
-      <HeroBanner
+      {/* <HeroBanner
         image="/newbanners/casestudies.png"
         heading={<></>}
         subtext=""
         primaryCta=""
         secondaryCta=""
-      />
+      /> */}
+      <img src="/newbanners/casestudies.png" alt="Blog hero" className="w-full h-full object-cover opacity-95 mt-20 lg:mt-1" />
+
       <div className="max-w-7xl mx-auto py-8 px-4">
         {/* HERO */}
         {/* <div className="relative rounded-b-2xl overflow-hidden mb-8" style={{ height: "340px" }}>
@@ -159,34 +161,82 @@ export default function CaseStudiesList() {
             const primaryCat = terms.find(t => t.taxonomy === 'category');
 
             return (
-              <article key={post.id} className="flex gap-4 items-start bg-white border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                <Link to={`/blog/${post.slug}`} className="flex-shrink-0 w-64 h-auto overflow-hidden rounded-md">
-                  <img src={img} alt={post.title.rendered} className="w-full h-full object-cover" />
+              <article
+                key={post.id}
+                className="
+    flex flex-col md:flex-row gap-4
+    bg-white border rounded-lg p-4
+    shadow-sm hover:shadow-md transition
+  "
+              >
+                {/* Image */}
+                <Link
+                  to={`/blog/${post.slug}`}
+                  className="
+      w-full md:w-64
+      h-48 md:h-auto
+      overflow-hidden rounded-md
+      flex-shrink-0
+    "
+                >
+                  <img
+                    src={img}
+                    alt={post.title.rendered}
+                    className="w-full h-full object-cover"
+                  />
                 </Link>
 
+                {/* Content */}
                 <div className="flex-1">
-                  <div className="flex items-start justify-between gap-3">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        {primaryCat && <span className="text-xs bg-gray-100 px-2 py-1 rounded-full text-gray-700">{primaryCat.name}</span>}
-                      </div>
+                      {/* Category */}
+                      {primaryCat && (
+                        <span className="inline-block mb-2 text-xs bg-gray-100 px-2 py-1 rounded-full text-gray-700">
+                          {primaryCat.name}
+                        </span>
+                      )}
 
-                      <h2 className="text-lg font-semibold leading-tight mb-2 text-black">
-                        <Link to={`/blog/${post.slug}`} className="hover:underline" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.title.rendered) }} />
+                      {/* Title */}
+                      <h2 className="text-base sm:text-lg font-semibold leading-tight mb-2 text-black">
+                        <Link
+                          to={`/blog/${post.slug}`}
+                          className="hover:underline"
+                          dangerouslySetInnerHTML={{
+                            __html: DOMPurify.sanitize(post.title.rendered),
+                          }}
+                        />
                       </h2>
 
-                      <p className="text-sm text-gray-600 mb-3">{excerptText(post.excerpt?.rendered || post.content?.rendered, 28)}</p>
+                      {/* Excerpt */}
+                      <p className="text-sm text-gray-600 mb-3">
+                        {excerptText(post.excerpt?.rendered || post.content?.rendered, 28)}
+                      </p>
 
-                      <div className="text-xs text-gray-500">{formatDate(post.date)} • {estimateReadTime(post.content.rendered)}</div>
+                      {/* Meta */}
+                      <div className="text-xs text-gray-500">
+                        {formatDate(post.date)} • {estimateReadTime(post.content.rendered)}
+                      </div>
                     </div>
 
-                    <div className="flex flex-col items-end gap-2">
-                      <Link to={`/blog/${post.slug}`} className="px-4 py-2 border rounded-full text-sm text-blue-800 hover:bg-gray-50">See Details</Link>
-                      {/* <button className="px-3 py-2 bg-black text-white rounded-full text-sm">Buy ticket</button> */}
+                    {/* CTA */}
+                    <div className="flex md:flex-col gap-2 md:items-end">
+                      <Link
+                        to={`/blog/${post.slug}`}
+                        className="
+            px-4 py-2 border rounded-full
+            text-sm text-blue-800
+            hover:bg-gray-50
+            w-fit
+          "
+                      >
+                        See Details
+                      </Link>
                     </div>
                   </div>
                 </div>
               </article>
+
             );
           })}
         </div>

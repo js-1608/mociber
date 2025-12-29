@@ -11,7 +11,7 @@ import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Partners from "./pages/Partners";
 import ScrollToTop from "./components/ScrollToTop";
-import Blogs from "./pages/Blogs";
+import PostsList from "./pages/Blogs";
 import BlogDetail from "./pages/BlogDetail";
 import WhitePapersPage from "./pages/Whitepaper";
 import Videos from "./pages/Video";
@@ -79,7 +79,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/partners" element={<Partners />} />
-          <Route path="/blog" element={<Blogs />} />
+          <Route path="/blog" element={<PostsList />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/whitepaper" element={<WhitePapersPage />} />
 

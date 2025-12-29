@@ -66,19 +66,19 @@ const Home = () => {
 
     const blogs = [
         {
-            img: "/blog/blog (1).jpg",
+            img: "/blogimages/blog (1).jpg",
             title: "Digital Leadership in the Age of AI and ML",
             author: "Johnson",
             date: "11/12/2024",
         },
         {
-            img: "/blog/blog (2).jpg",
+            img: "/blogimages/blog (2).jpg",
             title: "The changing roles of CISOs and GRC Consultants",
             author: "Johnson",
             date: "18/12/2024",
         },
         {
-            img: "/blog/blog (3).jpg",
+            img: "/blogimages/blog (3).jpg",
             title: "How Mociber transforming the change by emerging technologies",
             author: "Johnson",
             date: "27/12/2024",

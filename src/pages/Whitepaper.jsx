@@ -111,13 +111,8 @@ export default function WhitePapersPage() {
     return (
         <>
 
-            <HeroBanner
-                image="/Banners/About.jpg"
-                heading={<></>}
-                subtext=""
-                primaryCta=""
-                secondaryCta=""
-            />
+            <img src='/newbanners/whitepaper.png' alt="Blog hero" className="w-full h-full object-cover opacity-95 mt-20 lg:mt-1" />
+
             <div className="min-h-screen    py-12 px-6">
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
@@ -153,7 +148,7 @@ export default function WhitePapersPage() {
                                 aria-disabled={selected.size === 0}
                             >
                                 Download Selected
-                              </button>
+                            </button>
                         </div>
                     </div>
 

@@ -64,14 +64,9 @@ const PlaylistVideos = () => {
     );
 
   return (
-    <section className="bg-[#020617] text-white py-20 mt-4 lg:mt-10">
-       <HeroBanner
-              image="/newbanners/video.png"
-              heading={<></>}
-              subtext=""
-              primaryCta=""
-              secondaryCta=""
-            />
+    <section className="bg-[#020617] text-white ">
+
+      <img src='/newbanners/video.png' alt="Blog hero" className="w-full h-full object-cover opacity-95 mt-20 lg:mt-1" />
 
       <div className="max-w-7xl mx-auto px-6 mt-12">
         {/* ================= HEADER ================= */}

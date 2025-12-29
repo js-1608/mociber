@@ -48,13 +48,8 @@ const Career = () => {
     ];
     return (
         <>
-            <HeroBanner
-                image="/Banners/Career.jpg"
-                heading={<></>}
-                subtext=""
-                primaryCta=""
-                secondaryCta=""
-            />
+            <img src='/newbanners/career.png' alt="Blog hero" className="w-full h-full object-cover opacity-75 mt-20 lg:mt-1" />
+
             {/* <LifeAtMociberAccordion/> */}
 
             <section className="py-16 px-6 text-white">
@@ -77,10 +72,10 @@ const Career = () => {
                     {/* Right: heading + cards */}
                     <div className="lg:col-span-6">
                         <div className="max-w-4xl lg:ml-6">
-                           
+
 
                             <h2 className=" text-3xl md:text-4xl font-extrabold  mb-5" data-aos="fade-up">
-                                Mociber as an 
+                                Mociber as an
                                 <span className="text-blue-600"> Employer</span>
                             </h2>
 

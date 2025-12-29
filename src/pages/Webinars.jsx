@@ -207,13 +207,8 @@ export default function WebinarsPage({ webinars = sampleWebinars }) {
 
     return (
         <>
-            <HeroBanner
-                image="/Banners/About.jpg"
-                heading={<></>}
-                subtext=""
-                primaryCta=""
-                secondaryCta=""
-            />
+            <img src='/newbanners/Webinar.png' alt="Blog hero" className="w-full h-full object-cover opacity-95 mt-20 lg:mt-1" />
+
             <div className="min-h-screen py-12 px-4 md:px-10 lg:px-20">
                 <div className="max-w-6xl mx-auto">
                     {/* Header */}

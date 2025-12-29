@@ -454,7 +454,7 @@ const Header = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-gray-400 uppercase mb-3">Knowledge Base</h4>
                     <ul className="space-y-2">
-                      <li><Link to="/blogs" onClick={closeAll} className="text-white">Blog</Link></li>
+                      <li><Link to="/blog" onClick={closeAll} className="text-white">Blog</Link></li>
                       <li><Link to="/case-studies" onClick={closeAll} className="text-white">Case Studies</Link></li>
                       <li><Link to="/videos" onClick={closeAll} className="text-white">Videos</Link></li>
                       <li><Link to="/whitepaper" onClick={closeAll} className="text-white">Whitepaper</Link></li>
@@ -646,13 +646,13 @@ const Header = () => {
               <div className="px-4 pb-4 bg-[#141418]">
                 <ul className="space-y-3">
 
-                  <li><Link to="/Resources/managed-security" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Blog</Link></li>
-                  <li><Link to="/Resources/vuln-management" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Case Studies</Link></li>
-                  <li><Link to="/Resources/grc" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Videos</Link></li>
-                  <li><Link to="/Resources/esg" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Whitepape</Link></li>
-                  <li><Link to="/Resources/vuln-management" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">E-Books</Link></li>
-                  <li><Link to="/Resources/grc" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Reports</Link></li>
-                  <li><Link to="/Resources/esg" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Webinar</Link></li>
+                  <li><Link to="/blog" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Blog</Link></li>
+                  <li><Link to="/case-studies" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Case Studies</Link></li>
+                  <li><Link to="/videos" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Videos</Link></li>
+                  <li><Link to="/whitepaper" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Whitepape</Link></li>
+                  <li><Link to="/ebooks" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">E-Books</Link></li>
+                  <li><Link to="/reports" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Reports</Link></li>
+                  <li><Link to="/webinars" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Webinar</Link></li>
                 </ul>
               </div>
             )}

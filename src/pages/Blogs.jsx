@@ -174,7 +174,7 @@ export default function PostsList() {
           </div>
         </div>
       </div> */}
-              <img src={HERO_IMG} alt="Blog hero" className="w-full h-full object-cover opacity-95" />
+              <img src={HERO_IMG} alt="Blog hero" className="w-full h-full object-cover opacity-95 mt-20" />
 
 
       {/* Page header & filters */}

@@ -125,13 +125,7 @@ export default function ReportsPage({ reports = sampleReports }) {
 
   return (
     <>
-      <HeroBanner
-        image="/Banners/About.jpg"
-        heading={<></>}
-        subtext=""
-        primaryCta=""
-        secondaryCta=""
-      />
+       <img src='/newbanners/reports.png' alt="Blog hero" className="w-full h-full object-cover opacity-95 mt-20 lg:mt-1" />
 
       <div className="min-h-screen py-12 px-4 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
