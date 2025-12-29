@@ -186,7 +186,7 @@ export default function ZeroTrustPage() {
     <>
       <HeroBanner
         image="/solution.webp"
-        heading={<>Geopolitical Risk & Cyber Warfare</>}
+        heading={<>Zero Trust Security & Architecture</>}
         subtext=""
         primaryCta=""
         secondaryCta=""
