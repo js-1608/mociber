@@ -220,3 +220,86 @@
 .animate-scroll {
   animation: scroll 18s linear infinite;
 }
+
+
+/* ===============================
+   Google Translate – Clean UI
+================================ */
+
+/* Sticky position */
+.translate-sticky {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+/* Container */
+.translate-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: black;
+  border: 1px solid #000000;         
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Force SINGLE dropdown */
+#google_translate_element > div {
+  margin: 0 !important;
+}
+
+/* Dropdown styling */
+#google_translate_element select {
+  background: black !important;
+  color: #000000 !important;      
+  border: none !important;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Dropdown arrow */
+#google_translate_element select option {
+  color: #000000 !important;
+  background: black !important;
+}
+
+/* Remove duplicate selects */
+.goog-te-gadget div {
+  display: inline-block !important;
+}
+
+/* Hide Google branding */
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+/* Prevent extra spacing */
+.goog-te-gadget {
+  color: transparent !important;
+  white-space: nowrap;
+}
+
+/* Hover effect */
+.translate-box:hover {
+  border-color: #000000;
+}
+
+/* Mobile fix */
+@media (max-width: 640px) {
+  .translate-sticky {
+    bottom: 14px;
+    right: 14px;
+  }
+}
+
+/* RTL support (Arabic) */
+html[dir="rtl"] {
+  direction: rtl;
+}

@@ -2,6 +2,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom"; // keep Link; useNavigate optional
+import { Trans } from "react-i18next";
+import { Translate } from "./Translate";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -150,6 +152,7 @@ const Header = () => {
           <div>
             {/* Desktop actions */}
             <div className="cursor-pointer pointer hidden lg:flex">
+              
               <Link
                 to="/contact"
                 onClick={closeAll}

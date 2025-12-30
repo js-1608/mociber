@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core Pages -->
+  <url><loc>https://www.mociber.com/</loc></url>
+  <url><loc>https://www.mociber.com/about</loc></url>
+  <url><loc>https://www.mociber.com/contact</loc></url>
+  <url><loc>https://www.mociber.com/careers</loc></url>
+  <url><loc>https://www.mociber.com/partners</loc></url>
+
+  <!-- Content -->
+  <url><loc>https://www.mociber.com/blog</loc></url>
+  <url><loc>https://www.mociber.com/whitepaper</loc></url>
+  <url><loc>https://www.mociber.com/videos</loc></url>
+  <url><loc>https://www.mociber.com/case-studies</loc></url>
+  <url><loc>https://www.mociber.com/ebooks</loc></url>
+  <url><loc>https://www.mociber.com/webinars</loc></url>
+  <url><loc>https://www.mociber.com/reports</loc></url>
+
+  <!-- Industries -->
+  <url><loc>https://www.mociber.com/industries/startups</loc></url>
+  <url><loc>https://www.mociber.com/industries/Bfsi</loc></url>
+  <url><loc>https://www.mociber.com/industries/fintech</loc></url>
+  <url><loc>https://www.mociber.com/industries/healthcare</loc></url>
+  <url><loc>https://www.mociber.com/industries/energy</loc></url>
+  <url><loc>https://www.mociber.com/industries/telecom</loc></url>
+  <url><loc>https://www.mociber.com/industries/manufacturing</loc></url>
+  <url><loc>https://www.mociber.com/industries/tech</loc></url>
+  <url><loc>https://www.mociber.com/industries/aerospace</loc></url>
+  <url><loc>https://www.mociber.com/industries/automotive</loc></url>
+  <url><loc>https://www.mociber.com/industries/retail</loc></url>
+  <url><loc>https://www.mociber.com/industries/gov</loc></url>
+
+  <!-- Services -->
+  <url><loc>https://www.mociber.com/services/cybersecurity</loc></url>
+  <url><loc>https://www.mociber.com/services/risk-management</loc></url>
+  <url><loc>https://www.mociber.com/services/ai-defense</loc></url>
+  <url><loc>https://www.mociber.com/services/ransomware</loc></url>
+  <url><loc>https://www.mociber.com/services/compliance</loc></url>
+  <url><loc>https://www.mociber.com/services/data-privacy</loc></url>
+  <url><loc>https://www.mociber.com/services/esg</loc></url>
+  <url><loc>https://www.mociber.com/services/talent</loc></url>
+  <url><loc>https://www.mociber.com/services/supply-chain</loc></url>
+  <url><loc>https://www.mociber.com/services/ot-iot</loc></url>
+
+  <!-- Solutions -->
+  <url><loc>https://www.mociber.com/solutions/geopolitical</loc></url>
+  <url><loc>https://www.mociber.com/solutions/zero-trust</loc></url>
+  <url><loc>https://www.mociber.com/solutions/ai-automation</loc></url>
+  <url><loc>https://www.mociber.com/solutions/cloud</loc></url>
+  <url><loc>https://www.mociber.com/solutions/iam</loc></url>
+  <url><loc>https://www.mociber.com/solutions/devsecops</loc></url>
+  <url><loc>https://www.mociber.com/solutions/vuln-management</loc></url>
+  <url><loc>https://www.mociber.com/solutions/red-team</loc></url>
+  <url><loc>https://www.mociber.com/solutions/software-integrity</loc></url>
+  <url><loc>https://www.mociber.com/solutions/adversarial-ml</loc></url>
+
+  <!-- Platforms -->
+  <url><loc>https://www.mociber.com/platforms/managed-security</loc></url>
+  <url><loc>https://www.mociber.com/platforms/grc</loc></url>
+  <url><loc>https://www.mociber.com/platforms/vuln-management</loc></url>
+  <url><loc>https://www.mociber.com/platforms/esg</loc></url>
+
+  <!-- Legal -->
+  <url><loc>https://www.mociber.com/privacy-policy</loc></url>
+  <url><loc>https://www.mociber.com/terms-and-conditions</loc></url>
+
+</urlset>

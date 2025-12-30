@@ -59,6 +59,7 @@ import WhatsAppButton from "./components/Whatsapp";
 import PrivacyPolicy from "./pages/Policy";
 import TermsAndConditions from "./pages/Terms&Condition";
 import PlaylistVideos from "./pages/PlaylistVideos";
+import { Translate } from "./components/Translate";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -148,6 +149,7 @@ function App() {
           <Route path="*" element={<h1 className="text-white">Page Not Found</h1>} />
         </Routes>
         <Footer />
+        <Translate />
         <WhatsAppButton />
       </div>
     </Router>
