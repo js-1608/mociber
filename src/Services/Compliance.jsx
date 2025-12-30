@@ -296,7 +296,7 @@ export default function Compliance() {
                             {/* LEFT — IMAGE */}
                             <div className="flex justify-center">
                                 <img
-                                    src="https://skill-mine.com/wp-content/uploads/2022/10/hologram-padlock-sunset-panoramic-cityscape-bangkok-southeast-asia-concept-cyber-security-intelligence-multi-exposure-1024x683.jpg" // update path
+                                    src="/security_image.jpg" // update path
                                     alt="Integrated Risk Visualization"
                                     className="w-full rounded-xl shadow-lg"
                                 />
