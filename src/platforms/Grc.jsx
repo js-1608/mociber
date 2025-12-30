@@ -211,6 +211,37 @@ export default function Grc() {
     return (
         <div className="bg-[#060917] text-white overflow-hidden">
 
+            <section className="relative min-h-[80vh] flex items-center">
+                <div className="absolute inset-0">
+                    <img
+                        src="/platformbanner/GRC & Audit Platform.png"
+                        alt="GRC & Auditing Platform"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0b1220] via-[#0b1220cc] to-transparent" />
+                </div>
+
+                <div className="relative z-10 max-w-7xl mx-auto px-6">
+                    <h1 className="text-4xl md:text-6xl font-bold max-w-4xl leading-tight  text-center">
+                        GRC & Auditing
+                        <span className="text-cyan-400"> Platform</span>
+                    </h1>
+                    {/* <p className="mt-6 text-lg text-slate-300 max-w-3xl">
+            Secure growth, protect investor confidence, and achieve compliance
+            readiness—without slowing innovation or increasing burn.
+          </p>
+
+          <div className="mt-8 flex gap-4">
+            <button className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold">
+              Get Security Assessment
+            </button>
+            <button className="border border-white/30 px-6 py-3 rounded-xl">
+              Talk to an Expert
+            </button>
+          </div> */}
+                </div>
+            </section>
+
             {/* ================= HERO ================= */}
             <section className="relative min-h-screen flex items-center overflow-hidden">
                 {/* Background */}

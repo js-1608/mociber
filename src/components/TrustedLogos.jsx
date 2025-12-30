@@ -5,52 +5,42 @@ export default function TrustedLogos() {
     {
       name: "Xcitium",
       logo: "/tech/xctium.svg",
-      url: "https://www.xcitium.com/",
     },
     {
       name: "Microsoft",
       logo: "/tech/microsft.png",
-      url: "https://www.microsoft.com/",
     },
     {
       name: "Oracle",
       logo: "/tech/oracle.svg",
-      url: "https://www.oracle.com/",
     },
     {
       name: "AWS",
       logo: "/tech/aws.svg",
-      url: "https://aws.amazon.com/",
     },
     {
       name: "Azure",
       logo: "/Azure.png",
-      url: "https://azure.microsoft.com/",
     },
     {
       name: "SAP",
       logo: "/tech/sap.svg",
-      url: "https://www.sap.com/",
     },
     {
       name: "Cisco",
       logo: "/tech/cisco.svg",
-      url: "https://www.cisco.com/",
     },
     {
       name: "Salesforce",
       logo: "/tech/saleforce.svg",
-      url: "https://www.salesforce.com/",
     },
     {
       name: "ServiceNow",
       logo: "/serviceNow.png",
-      url: "https://www.servicenow.com/",
     },
     {
       name: "RSA Archer",
       logo: "/tech/rsa.svg",
-      url: "https://www.rsa.com/",
     },
   ];
 
