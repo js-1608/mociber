@@ -188,7 +188,7 @@ export default function RetailEcommerce() {
             <section className="relative min-h-[80vh] flex items-center">
                 <div className="absolute inset-0">
                     <img
-                        src="/Industries-banner.webp"
+                        src="/industries.jpeg"
                         alt="Retail and E-Commerce Cybersecurity"
                         className="w-full h-full object-cover"
                     />

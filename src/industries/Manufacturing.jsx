@@ -182,7 +182,7 @@ export default function Manufacturing() {
             <section className="relative min-h-[80vh] flex items-center">
                 <div className="absolute inset-0">
                     <img
-                        src="/Industries-banner.webp"
+                        src="/industries.jpeg"
                         alt="Manufacturing Cybersecurity"
                         className="w-full h-full object-cover"
                     />

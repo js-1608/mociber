@@ -182,7 +182,7 @@ export default function Automotive() {
             <section className="relative min-h-[80vh] flex items-center">
                 <div className="absolute inset-0">
                     <img
-                        src="/Industries-banner.webp"
+                        src="/industries.jpeg"
                         alt="Automotive Cybersecurity"
                         className="w-full h-full object-cover"
                     />

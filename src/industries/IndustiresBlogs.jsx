@@ -118,7 +118,7 @@ export default function LatestBlogsByTag({ tag, limit = 2 }) {
           return (
             <article
               key={post.id}
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition"
+              className="bg-[#151522] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition "
             >
               <Link to={`/blog/${post.slug}`}>
                 <img
@@ -128,20 +128,20 @@ export default function LatestBlogsByTag({ tag, limit = 2 }) {
                 />
               </Link>
 
-              <div className="p-5">
+              <div className="p-5 justify-between flex flex-col">
                 <h3
-                  className="text-lg font-semibold text-black mb-2"
+                  className="text-base font-semibold text-white mb-2"
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(post.title.rendered),
                   }}
                 />
 
-                <p className="text-sm text-gray-600 mb-4">
+                {/* <p className="text-sm text-gray-600 mb-4">
                   {DOMPurify.sanitize(
                     post.excerpt?.rendered || "",
                     { ALLOWED_TAGS: [] }
                   )}
-                </p>
+                </p> */}
 
                 <Link
                   to={`/blog/${post.slug}`}

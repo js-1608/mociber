@@ -1,6 +1,6 @@
 import React from 'react';
 import ClientsSection from '@/components/ClientSection';
-import {  Shield,  Gem,  } from 'lucide-react';
+import { Shield, Gem, } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import PartnersCarousel from '@/components/partners';
 import Hero from '@/components/Hero';
@@ -12,9 +12,10 @@ import TrustedLogos from '@/components/TrustedLogos';
 import { Link } from 'react-router';
 import Video from '@/components/Video';
 import Service from '@/components/Service';
+import LatestBlogsByTag from '@/industries/IndustiresBlogs';
 
 const Home = () => {
-    
+
 
 
     const faqs = [
@@ -61,7 +62,7 @@ const Home = () => {
         );
     }
 
-  
+
 
 
     const blogs = [
@@ -257,9 +258,9 @@ const Home = () => {
 
             </div>
 
-            
 
-            <Service/>
+
+            <Service />
 
 
 
@@ -381,19 +382,19 @@ const Home = () => {
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Top Left - Professional with tech background */}
                                 <div className="relative rounded-2xl overflow-hidden aspect-[3/4] bg-gradient-to-br from-slate-800 to-slate-900">
-                                    <img src="/Industry/SOC-HWCH.jpg" className='cover  w-full' alt="cybersecurity image"/>
+                                    <img src="/Industry/SOC-HWCH.jpg" className='cover  w-full' alt="cybersecurity image" />
                                 </div>
 
                                 {/* Top Right - Person at desk */}
                                 <div className="relative rounded-2xl overflow-hidden aspect-[3/4] bg-gradient-to-br from-slate-800 to-slate-900">
-                                    <img src="/Industry/SOCaaS-Front Page.jpg" className='cover  h-full' alt="cybersecurity image"/>
+                                    <img src="/Industry/SOCaaS-Front Page.jpg" className='cover  h-full' alt="cybersecurity image" />
 
                                 </div>
 
                                 {/* Bottom - Person working at night */}
                                 <div className="relative rounded-2xl overflow-hidden col-span-2 aspect-[2/1] bg-gradient-to-br from-slate-800 to-slate-950">
                                     <div className="absolute inset-0">
-                                        <img src="/Industry/SOC-Benefits.jpg" alt="cybersecurity image"/>
+                                        <img src="/Industry/SOC-Benefits.jpg" alt="cybersecurity image" />
 
                                     </div>
 
@@ -435,6 +436,8 @@ const Home = () => {
                 </h2>
 
                 {/* Blog Cards */}
+                <LatestBlogsByTag tag="cybersecurity" limit={3} />
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl">
                     {blogs.map((blog, i) => (
                         <div

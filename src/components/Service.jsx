@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
             icon: Shield,
             gradient: 'from-blue-600 to-blue-800',
             bgPattern: 'identity',
-            link:'/services/risk-management'
+            link:'/solutions/iam'
         },
         {
             id: 2,
@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
             icon: Cloud,
             gradient: 'from-slate-700 to-slate-900',
             bgPattern: 'cloud',
-            link:'/services/cybersecurity'
+            link:'/solutions/cloud'
         },
         {
             id: 3,
@@ -36,7 +36,7 @@ import { Link } from "react-router-dom";
             icon: Laptop,
             gradient: 'from-slate-700 to-slate-900',
             bgPattern: 'endpoint',
-            link:'/services/ai-defense'
+            link:'/services/ot-iot'
         }, {
             id: 5,
             title: 'Ransomware & Business Resilience',
