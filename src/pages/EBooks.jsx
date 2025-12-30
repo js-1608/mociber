@@ -12,45 +12,31 @@ import React, { useMemo, useState } from "react";
 const sampleEbooks = [
     {
         id: "ebook-1",
-        title: "Ultimate Cybersecurity",
+        title: "Cybersecurity in the Emerging Tech Era",
         subtitle: "Practical guidance for modern threats",
         description:
             "An operational guide covering detection, response, and continuous monitoring for cloud systems.",
-        cover: "/ebooks/ebook1.jpg",
-        size: "4.2 MB",
-        pages: 72,
+        cover: "ebookpdf/ebook1.PNG",
+        size: "0.5 MB",
+        pages: 9,
         tags: ["Security", "Cloud"],
-        fileUrl: "/downloads/ultimate-cybersecurity-handbook.pdf",
-        gated: true,
+        fileUrl: "/ebookpdf/E-Book Cybersecurity in the Emerging Tech Era.pdf",
+        gated: false,
         publishedAt: "2025-07-01",
     },
     {
         id: "ebook-2",
-        title: "Cloud Security Essentials",
+        title: "Cybersecurity in the Era of Emerging Tech",
         subtitle: "Design patterns & best practices",
         description:
             "Short, actionable checklist for architects and SREs to harden workloads in public clouds.",
-        cover: "/ebooks/ebook2.jpg",
-        size: "2.1 MB",
-        pages: 36,
+        cover: "ebookpdf/ebook2.PNG",
+        size: "0.5 MB",
+        pages: 10,
         tags: ["Cloud"],
-        fileUrl: "/downloads/cloud-security-essentials.pdf",
-        gated: true,
+        fileUrl: "/ebookpdf/E-Book Cybersecurity in the Era of Emerging Tech.pdf",
+        gated: false,
         publishedAt: "2024-11-15",
-    },
-    {
-        id: "ebook-3",
-        title: "Threat Intelligence 101",
-        subtitle: "From signals to action",
-        description:
-            "How to build a lean threat intel practice and operationalize feeds into detections.",
-        cover: "/ebooks/ebook3.jpg",
-        size: "3.5 MB",
-        pages: 48,
-        tags: ["Threat Intel"],
-        fileUrl: "/downloads/threat-intel-101.pdf",
-        gated: true,
-        publishedAt: "2025-02-10",
     },
 ];
 
@@ -232,11 +218,11 @@ export default function EbooksPage({ ebooks = sampleEbooks }) {
                                 key={eb.id}
                                 className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden flex flex-col"
                             >
-                                <div className="h-48 bg-slate-100">
+                                <div className="h-64 bg-slate-100">
                                     <img
                                         src={eb.cover}
                                         alt={`Cover of ${eb.title}`}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-fill"
                                         loading="lazy"
                                     />
                                 </div>

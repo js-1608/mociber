@@ -14,44 +14,15 @@ export default function WhitePapersPage() {
         () => [
             {
                 id: "wp-1",
-                title: "Modern E‑Commerce: Growth Strategies 2025",
-                subtitle: "Data-driven playbook for scaling D2C brands.",
+                title: "DPDP Rules 2025: Guidance to Digital Personal Data Protection Act Implementation",
+                subtitle: " Industry Stakeholders, Privacy Leaders & Compliance Teams",
                 date: "2025-07-01",
-                size: "3.4 MB",
+                size: "15.4 MB",
                 tags: ["E‑commerce", "Growth"],
-                url: "/papers/modern-ecommerce-2025.pdf",
-                cover: "/papers/covers/ecommerce.jpg",
+                url: "/whitepaperPdf/MOCIBER PDPL.pdf",
+                cover: "whitepaper_thumb.PNG",
             },
-            {
-                id: "wp-2",
-                title: "Headless Commerce — Practical Guide",
-                subtitle: "Architecture, tradeoffs and migration checklist.",
-                date: "2024-11-15",
-                size: "2.8 MB",
-                tags: ["Headless", "Architecture"],
-                url: "/papers/headless-commerce-guide.pdf",
-                cover: "/papers/covers/headless.jpg",
-            },
-            {
-                id: "wp-3",
-                title: "SEO for Marketplaces",
-                subtitle: "How to win organic discoverability on marketplaces.",
-                date: "2023-12-06",
-                size: "1.9 MB",
-                tags: ["SEO", "Marketplaces"],
-                url: "/papers/seo-marketplaces.pdf",
-                cover: "/papers/covers/seo.jpg",
-            },
-            {
-                id: "wp-4",
-                title: "Payments & Fraud Prevention",
-                subtitle: "Best practices for secure, low-friction checkout.",
-                date: "2025-02-20",
-                size: "4.1 MB",
-                tags: ["Payments", "Security"],
-                url: "/papers/payments-fraud.pdf",
-                cover: "/papers/covers/payments.jpg",
-            },
+            
         ],
         []
     );
@@ -173,11 +144,11 @@ export default function WhitePapersPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filtered.map((wp) => (
                             <article key={wp.id} className="group bg-white rounded-2xl shadow-sm border hover:shadow-md transition-shadow overflow-hidden">
-                                <div className="relative h-44 md:h-36 lg:h-44">
+                                <div className="relative h-44 lg:h-64 overflow-hidden">
                                     <img
                                         src={wp.cover}
                                         alt={wp.title}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-fill group-hover:scale-105 transition-transform"
                                     />
                                     <div className="absolute top-3 right-3 flex gap-2">
                                         <label className="inline-flex items-center bg-white/80 backdrop-blur rounded-full p-1">
