@@ -210,8 +210,9 @@ export default function Grc() {
 
     return (
         <div className="bg-[#060917] text-white overflow-hidden">
-
-            <section className="relative min-h-[80vh] flex items-center">
+        <img  src="/platformbanner/GRC & Audit Platform.png"
+        alt="Blog hero" className="w-full h-full object-cover opacity-95 mt-20" />
+            {/* <section className="relative min-h-[80vh] flex items-center">
                 <div className="absolute inset-0">
                     <img
                         src="/platformbanner/GRC & Audit Platform.png"
@@ -226,21 +227,8 @@ export default function Grc() {
                         GRC & Auditing
                         <span className="text-cyan-400"> Platform</span>
                     </h1>
-                    {/* <p className="mt-6 text-lg text-slate-300 max-w-3xl">
-            Secure growth, protect investor confidence, and achieve compliance
-            readiness—without slowing innovation or increasing burn.
-          </p>
-
-          <div className="mt-8 flex gap-4">
-            <button className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold">
-              Get Security Assessment
-            </button>
-            <button className="border border-white/30 px-6 py-3 rounded-xl">
-              Talk to an Expert
-            </button>
-          </div> */}
                 </div>
-            </section>
+            </section> */}
 
             {/* ================= HERO ================= */}
             <section className="relative min-h-screen flex items-center overflow-hidden">
