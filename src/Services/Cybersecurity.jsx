@@ -260,7 +260,7 @@ export default function MociberCybersecurityPage() {
                         </div>
 
                         <div className=" w-full h-64 md:h-96 rounded-2xl overflow-hidden  m-auto">
-                            <img src="https://skill-mine.com/wp-content/uploads/2024/06/12.jpg" className="w-full h-auto object-cover object-center" />
+                            <img src="/Services_Images/Cybersecurity.jpeg" className="w-full h-auto object-cover object-center" />
                         </div>
                     </div>
                 </motion.section>

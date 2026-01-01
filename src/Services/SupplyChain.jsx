@@ -266,8 +266,8 @@ export default function SupplyChain() {
                             </div> */}
                         </div>
 
-                        <div className=" w-full h-64 md:h-82 rounded-2xl overflow-hidden  m-auto ">
-                            <img src="https://skill-mine.com/wp-content/uploads/2024/06/12.jpg" className="w-full h-auto object-     object-center" />
+                        <div className=" w-full rounded-2xl overflow-hidden  m-auto ">
+                            <img src="/Services_Images/Supply Chain Security.jpeg" className="w-full h-auto object-     object-center" />
                         </div>
                     </div>
                 </motion.section>
@@ -289,7 +289,7 @@ export default function SupplyChain() {
                             {/* LEFT — IMAGE */}
                             <div className="flex justify-center">
                                 <img
-                                    src="/security_image.jpg" // update path
+                                    src="/Services_Images/Supply Chain Security 2.jpeg"
                                     alt="Integrated Risk Visualization"
                                     className="w-full rounded-xl shadow-lg"
                                 />

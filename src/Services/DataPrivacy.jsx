@@ -225,7 +225,7 @@ export default function DataPrivacy() {
             <main className="">
                 {/* HERO / INTRO */}
                 <motion.section id="intro" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-linear-to-b from-[#000A1F] to-[#0c1b34]">
-                    <div className="grid md:grid-cols-2 gap-8 items-center max-w-7xl m-auto ">
+                    <div className="grid md:grid-cols-2 gap-8 items-center max-w-7xl m-auto mt-8 ">
                         <div className=" rounded-2xl py-16 p-4">
                             <h2 className="text-2xl md:text-4xl font-bold mt-6 mb-4">Data Privacy & Protection</h2>
                             <h4 className="font-semibold text-blue-500">Safeguard Sensitive Data. Strengthen Compliance. Build Digital Trust</h4>
@@ -257,8 +257,8 @@ export default function DataPrivacy() {
                             </div> */}
                         </div>
 
-                        <div className=" w-full h-64 md:h-82 rounded-2xl overflow-hidden  m-auto ">
-                            <img src="https://skill-mine.com/wp-content/uploads/2024/06/12.jpg" className="w-full h-auto object-     object-center" />
+                        <div className=" w-full  rounded-2xl overflow-hidden  m-auto ">
+                            <img src="/Services_Images/DataprivacyProtection.jpeg" className="w-full h-auto object-center" />
                         </div>
                     </div>
                 </motion.section>
@@ -280,7 +280,7 @@ export default function DataPrivacy() {
                             {/* LEFT — IMAGE */}
                             <div className="flex justify-center">
                                 <img
-                                    src="/security_image.jpg" // update path
+                                    src="/Services_Images/DataprivacyProtection 2.jpeg"
                                     alt="Integrated Risk Visualization"
                                     className="w-full rounded-xl shadow-lg"
                                 />
