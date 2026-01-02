@@ -222,7 +222,7 @@ export default function GovernmentPublicSector() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1589395937772-f67057e2336e"
+                        src="/IndustriesImages/Government and Public Sector.jpeg"
                         alt="Digital government services"
                         className="w-full h-full object-cover"
                     />

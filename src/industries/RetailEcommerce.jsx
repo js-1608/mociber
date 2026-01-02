@@ -223,7 +223,7 @@ export default function RetailEcommerce() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1555529771-835f59fc5efe"
+                        src="/IndustriesImages/Retail and E-Commerce.jpeg"
                         alt="Omnichannel retail operations"
                         className="w-full h-full object-cover"
                     />

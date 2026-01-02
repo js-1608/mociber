@@ -231,7 +231,7 @@ export default function Bfsi() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1553729459-efe14ef6055d"
+                        src="/IndustriesImages/bfsi.jpeg"
                         alt="BFSI operations"
                         className="w-full h-full object-cover"
                     />

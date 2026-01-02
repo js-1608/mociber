@@ -216,7 +216,7 @@ export default function EnergyOilGas() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1581091870627-3f9c1d43d6c8"
+                        src="/IndustriesImages/energy.jpeg"
                         alt="Energy operations"
                         className="w-full h-full object-cover"
                     />

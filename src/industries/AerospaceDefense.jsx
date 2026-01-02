@@ -216,7 +216,7 @@ export default function AerospaceDefense() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1523966211575-eb4a0170c45b"
+                        src="/IndustriesImages/Aerospace and Defense.jpeg"
                         alt="Defense operations"
                         className="w-full h-full object-cover"
                     />

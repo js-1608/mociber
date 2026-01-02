@@ -224,7 +224,7 @@ export default function Fintech() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1565372910294-0a9b7b4f1a8f"
+                        src="/IndustriesImages/Fintech.jpeg"
                         alt="FinTech operations"
                         className="w-full h-full object-cover"
                     />

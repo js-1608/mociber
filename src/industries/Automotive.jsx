@@ -217,7 +217,7 @@ export default function Automotive() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1493238792000-8113da705763"
+                        src="/IndustriesImages/Automotive.jpeg"
                         alt="Connected vehicle ecosystem"
                         className="w-full h-full object-cover"
                     />

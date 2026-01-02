@@ -217,7 +217,7 @@ export default function Healthcare() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3"
+                        src="/IndustriesImages/healtcare.jpeg"
                         alt="Healthcare operations"
                         className="w-full h-full object-cover"
                     />

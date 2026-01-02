@@ -222,7 +222,7 @@ export default function SaaSPaaSIaaS() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+                        src="/IndustriesImages/tech.jpeg"
                         alt="SaaS platform operations"
                         className="w-full h-full object-cover"
                     />

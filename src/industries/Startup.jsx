@@ -221,7 +221,7 @@ export default function ServiceDetail() {
 
         <div className="rounded-3xl overflow-hidden border border-white/10">
           <img
-            src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+            src="/IndustriesImages/Startups.jpeg"
             alt="Startup engineering team"
             className="w-full h-full object-cover"
           />

@@ -223,7 +223,7 @@ export default function TelecomMedia() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+                        src="/IndustriesImages/Telecom.jpeg"
                         alt="Telecom operations"
                         className="w-full h-full object-cover"
                     />

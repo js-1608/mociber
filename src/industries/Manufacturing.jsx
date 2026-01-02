@@ -217,7 +217,7 @@ export default function Manufacturing() {
 
                 <div className="rounded-3xl overflow-hidden border border-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1581093458791-9c6f9d1c9f9f"
+                        src="/IndustriesImages/Manufacturing.jpeg"
                         alt="Smart factory operations"
                         className="w-full h-full object-cover"
                     />
