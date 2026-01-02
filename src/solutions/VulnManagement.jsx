@@ -233,8 +233,8 @@ export default function VulnManagement() {
                             {/* side pic - replace src with a real asset */}
                             <div className="w-full max-w rounded-lg overflow-hidden border border-white/8">
                                 <img
-                                    alt="Geopolitical cybersecurity"
-                                    src="/banner (3).jpg"
+                                    alt="vuln manegement cybersecurity"
+                                    src="/SolutionsImages/Vulnerability.jpeg"
                                     className="object-cover w-full h-auto"
                                 />
                             </div>

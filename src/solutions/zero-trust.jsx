@@ -231,7 +231,7 @@ export default function ZeroTrustPage() {
               <div className="w-full max-w rounded-lg overflow-hidden border border-white/8">
                 <img
                   alt="Geopolitical cybersecurity"
-                  src="/banner (3).jpg"
+                  src="/SolutionsImages/Zerotrust.jpeg"
                   className="object-cover w-full h-auto"
                 />
               </div>

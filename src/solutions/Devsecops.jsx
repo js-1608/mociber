@@ -226,8 +226,8 @@ export default function Devsecops() {
                             {/* side pic - replace src with a real asset */}
                             <div className="w-full max-w rounded-lg overflow-hidden border border-white/8">
                                 <img
-                                    alt="Geopolitical cybersecurity"
-                                    src="/banner (3).jpg"
+                                    alt="Devsecops cybersecurity"
+                                     src="/SolutionsImages/DevSecOps.jpeg"
                                     className="object-cover w-full h-auto"
                                 />
                             </div>

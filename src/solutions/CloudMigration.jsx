@@ -218,8 +218,8 @@ export default function CloudMigration() {
                             {/* side pic - replace src with a real asset */}
                             <div className="w-full max-w rounded-lg overflow-hidden border border-white/8">
                                 <img
-                                    alt="Geopolitical cybersecurity"
-                                    src="/banner (3).jpg"
+                                    alt="cloud computing cybersecurity"
+                                    src="/SolutionsImages/Cloud Computing.jpeg"
                                     className="object-cover w-full h-auto"
                                 />
                             </div>
