@@ -436,7 +436,7 @@ const Home = () => {
                 </h2>
 
                 {/* Blog Cards */}
-                <LatestBlogsByTag tag="cybersecurity" limit={3} />
+                <LatestBlogsByTag tag="cybersecurity" limit={3}/>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl">
                     {blogs.map((blog, i) => (

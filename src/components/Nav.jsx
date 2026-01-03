@@ -423,12 +423,12 @@ const Header = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-gray-400 uppercase mb-3">Industries Served</h4>
                     <ul className="space-y-2">
-                      <li><Link to="/industries/startups" onClick={closeAll} className="text-white">Startups</Link></li>
-                      <li><Link to="/industries/bfsi" onClick={closeAll} className="text-white">BFSI</Link></li>
-                      <li><Link to="/industries/fintech" onClick={closeAll} className="text-white">FinTech &amp; Payments</Link></li>
-                      <li><Link to="/industries/healthcare" onClick={closeAll} className="text-white">Healthcare &amp; HealthTech</Link></li>
-                      <li><Link to="/industries/energy" onClick={closeAll} className="text-white">Energy, Oil &amp; Gas</Link></li>
-                      <li><Link to="/industries/telecom" onClick={closeAll} className="text-white">Telecommunications</Link></li>
+                        <li><Link to="/industries/startups" onClick={closeAll} className="text-white">Startups</Link></li>
+                        <li><Link to="/industries/bfsi" onClick={closeAll} className="text-white">BFSI</Link></li>
+                        <li><Link to="/industries/fintech" onClick={closeAll} className="text-white">FinTech &amp; Payments</Link></li>
+                        <li><Link to="/industries/healthcare" onClick={closeAll} className="text-white">Healthcare &amp; HealthTech</Link></li>
+                        <li><Link to="/industries/energy" onClick={closeAll} className="text-white">Energy, Oil &amp; Gas</Link></li>
+                        <li><Link to="/industries/telecom" onClick={closeAll} className="text-white">Telecommunications</Link></li>
                     </ul>
                   </div>
 
@@ -621,12 +621,19 @@ const Header = () => {
             {mobileActive === "Industries" && (
               <div className="px-4 pb-4 bg-[#141418]">
                 <ul className="space-y-3">
+                   <li><Link to="/industries/startups" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Startups</Link></li>
+                  <li><Link to="/industries/bfsi" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">BFSI</Link></li>
+                  <li><Link to="/industries/fintech" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">FinTech &amp; Payments</Link></li>
+                  <li><Link to="/industries/healthcare" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Healthcare &amp; HealthTech</Link></li>
+                  <li><Link to="/industries/energy" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Energy, Oil &amp; Gas</Link></li>
+                  <li><Link to="/industries/telecom" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Telecommunications</Link></li>
+
                   <li><Link to="/industries/manufacturing" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Manufacturing</Link></li>
                   <li><Link to="/industries/tech" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Tech &amp; SaaS, PaaS, IaaS</Link></li>
                   <li><Link to="/industries/aerospace" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Aerospace &amp; Defense</Link></li>
                   <li><Link to="/industries/automotive" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Automotive</Link></li>
                   <li><Link to="/industries/retail" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Retail &amp; E-Commerce</Link></li>
-                  <li><Link to="/industries/gov" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Government &amp; Public Sector</Link></li>
+                  <li><Link to="/industries/gov" onClick={closeAll} className="text-base text-semibold text-gray-300 pl-2 block">Government &amp; Public Sector</Link></li>                 
                 </ul>
               </div>
             )}

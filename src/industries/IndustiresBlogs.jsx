@@ -108,7 +108,7 @@ export default function LatestBlogsByTag({ tag, limit = 2 }) {
      Render
   =============================== */
   return (
-    <section className=" mx-auto  py-10">
+    <section className=" mx-auto max-w-7xl py-10">
       <div className="grid md:grid-cols-3 gap-6">
         {posts.map(post => {
           const image =
