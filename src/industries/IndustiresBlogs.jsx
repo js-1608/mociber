@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import DOMPurify from "dompurify";
 
-const WP_BASE = "https://blogs.esyride.in/wp-json/wp/v2";
+const WP_BASE = "https://blogs.mociber.com/wp-json/wp/v2";
 const FALLBACK_IMG = "/images/blog-fallback.jpg";
 
 export default function LatestBlogsByTag({ tag, limit = 2 }) {

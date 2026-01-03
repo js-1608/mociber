@@ -4,7 +4,7 @@
 // export default function Blogs() {
 //   const [posts, setPosts] = useState([]);
 //   const [loading, setLoading] = useState(true);
-//   const WP_BASE = "https://blogs.esyride.in//wp-json/wp/v2";
+//   const WP_BASE = "https://blogs.mociber.com//wp-json/wp/v2";
 
 //   useEffect(() => {
 //     async function load() {
@@ -61,12 +61,12 @@ import DOMPurify from "dompurify";
   - Tailwind CSS required for styles.
   - Install DOMPurify: npm i dompurify
   - Set REACT_APP_WP_BASE in .env, e.g.
-      REACT_APP_WP_BASE=https://blogs.esyride.in/wp-json/wp/v2
+      REACT_APP_WP_BASE=https://blogs.mociber.com/wp-json/wp/v2
   - This component uses the local hero image uploaded by you:
       /mnt/data/ff22191b-2e62-4d1f-b59b-6a038f7dbfbb.png
 */
 
-const WP_BASE = "https://blogs.esyride.in/wp-json/wp/v2";
+const WP_BASE = "https://blogs.mociber.com/wp-json/wp/v2";
 const HERO_IMG = "./newbanners/Blog Banner.png"; // replace with your uploaded image path
 
 function formatDate(iso) {

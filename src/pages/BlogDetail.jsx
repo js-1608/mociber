@@ -12,7 +12,7 @@ import DOMPurify from "dompurify";
       /mnt/data/f7c8ca9b-cbbe-423f-a1d4-b163c032edb5.png
 */
 
-const WP_BASE = "https://blogs.esyride.in/wp-json/wp/v2";
+const WP_BASE = "https://blogs.mociber.com/wp-json/wp/v2";
 const FALLBACK_IMG = "/mnt/data/f7c8ca9b-cbbe-423f-a1d4-b163c032edb5.png";
 
 function formatDate(iso) {

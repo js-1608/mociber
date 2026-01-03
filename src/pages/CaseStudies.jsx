@@ -14,7 +14,7 @@ import HeroBanner from "@/components/ServiceHero";
   - Set REACT_APP_WP_BASE in .env to override WP_BASE if needed.
 */
 
-const WP_BASE = "https://blogs.esyride.in/wp-json/wp/v2";
+const WP_BASE = "https://blogs.mociber.com/wp-json/wp/v2";
 const FALLBACK_IMG = "./newbanners/Case Studies Banner.png"; // developer-provided image path
 
 function formatDate(iso) {

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-linear-to-r from-[#032152] to-[#000A1F] text-white pt-16 pb-8 px-6 border-t-2">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        
+
         {/* Column 1 - Logo */}
         <div>
           <div className="flex items-center gap-2 mb-4">
@@ -101,9 +101,9 @@ export default function Footer() {
       <div className="border-t border-white/20 mt-10 pt-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-100">
           <p>
-            Copyright © 2025 All Rights Reserved By 
-            <span className="font-semibold"> Mociber Global Technologies.</span>
+            Copyright © {new Date().getFullYear()} All Rights Reserved By Mociber Global Technologies Private Limited.
           </p>
+
 
           {/* Footer Links */}
           <ul className="flex gap-6">
